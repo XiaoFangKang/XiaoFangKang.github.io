@@ -1,0 +1,107 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小小的交流博客 on 小小的交流博客</title>
+    <link>https://xiaofangkang.gitee.io/</link>
+    <description>Recent content in 小小的交流博客 on 小小的交流博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Posts</title>
+      <link>https://xiaofangkang.gitee.io/posts/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>个人介绍</title>
+      <link>https://xiaofangkang.gitee.io/about/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/about/</guid>
+      <description>&lt;h2 id=&#34;关于版权&#34;&gt;关于版权:&lt;/h2&gt;
+&lt;p&gt;1.本站博文采用 本文采用知识共享署名-非商业性使用 4.0 国际许可协议 进行许可。&lt;/p&gt;
+&lt;p&gt;2.若未特别声明，您可以将本站文章用于非盈利目的，但请保留作者信息及文章原始链接。&lt;/p&gt;
+&lt;h2 id=&#34;关于我&#34;&gt;关于我:&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;个人信息&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;email&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;a href=&#34;mailto:x66128@qq.com&#34;&gt;x66128@qq.com&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;wx&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-aykdinw922ij4a081f/6d337f10-38f0-11eb-880a-0db19f4f74bb.png&#34; alt=&#34;照片&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;技能&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;编程语言：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;java , js , html , sql , css&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;编程框架:&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Spring , springMvc , springBoot ,springcloud  ….. spring全家桶 MyBatis ，MyBatis-Plus&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据库 :&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;mysql , Oracle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;No 数据库：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Redis&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;队列：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ActiveMQ , RabbitMQ , Kafka , RocketMQ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;定时任务&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Quartz , springTask&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大数据：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;hadoop(hdfs)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;搜索引擎：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;solr&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;前端框架：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;vue,uniapp&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;前端数据图形化框架&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;阿里： F2,G2 等，百度： echarts&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;额外技能：&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;小程序开发&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

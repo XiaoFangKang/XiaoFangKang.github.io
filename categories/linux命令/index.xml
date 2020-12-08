@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux命令 on 小小的交流博客</title>
+    <link>https://xiaofangkang.gitee.io/categories/linux%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in linux命令 on 小小的交流博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/categories/linux%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>systemctl使用方法</title>
+      <link>https://xiaofangkang.gitee.io/2020/systemctl/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/2020/systemctl/</guid>
+      <description>说明 每一个服务以.service结尾，一般会分为3部分：[Unit]、[Service]和[Install]
+vim /usr/lib/systemd/system/xxx.service 
+[Unit] # 主要是服务说明 Description=test # 简单描述服务 After=network.target # 描述服务类别，表示本服务需要在network服务启动后在启动 Before=xxx.service # 表示需要在某些服务启动之前启动，After和Before字段只涉及启动顺序，不涉及依赖关系。 [Service] # 核心区域 Type=forking # 表示后台运行模式。 User=user # 设置服务运行的用户 Group=user # 设置服务运行的用户组 KillMode=control-group # 定义systemd如何停止服务 PIDFile=/usr/local/test/test.pid # 存放PID的绝对路径 Restart=no # 定义服务进程退出后，systemd的重启方式，默认是不重启 ExecStart=/usr/local/test/bin/startup.sh # 服务启动命令，命令需要绝对路径 PrivateTmp=true # 表示给服务分配独立的临时空间 [Install] WantedBy=multi-user.target # 多用户 字段说明： Type的类型有：  simple(默认）：# 以ExecStart字段启动的进程为主进程 forking: # ExecStart字段以fork()方式启动，此时父进程将退出，子进程将成为主进程（后台运行）。一般都设置为forking oneshot: # 类似于simple，但只执行一次，systemd会等它执行完，才启动其他服务 dbus： # 类似于simple, 但会等待D-Bus信号后启动 notify: # 类似于simple, 启动结束后会发出通知信号，然后systemd再启动其他服务 idle： # 类似于simple，但是要等到其他任务都执行完，才会启动该服务。  EnvironmentFile: 指定配置文件，和连词号组合使用，可以避免配置文件不存在的异常。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="KangFang.Xiao">
+  
+  
+  
+  
+  <link rel="next" href="https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" />
+  <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           java 远程调试 | 小小的交流博客
+       
+  </title>
+  <meta name="title" content="java 远程调试 | 小小的交流博客">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/xiaofangkang.gitee.io"
+    },
+    "articleSection" : "posts",
+    "name" : "java 远程调试",
+    "headline" : "java 远程调试",
+    "description" : "远程JVM启用调试模式 java\r-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857\r-jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y\/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y\/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：\nSET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 linux 在catalina.sh中的首行添加：\nCATALINA_OPTS=\u0026quot;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n\u0026quot;\ridea 本地调试配置 ",
+    "inLanguage" : "zh-CN",
+    "author" : "KangFang.Xiao",
+    "creator" : "KangFang.Xiao",
+    "publisher": "KangFang.Xiao",
+    "accountablePerson" : "KangFang.Xiao",
+    "copyrightHolder" : "KangFang.Xiao",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-12-07 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2020-12-07 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/xiaofangkang.gitee.io\/2020\/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95\/",
+    "wordCount" : "44",
+    "keywords" : [ "java","调试", "小小的交流博客"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://xiaofangkang.gitee.io">小小的交流博客</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="/categories/" title="">类型</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">个人简介</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://xiaofangkang.gitee.io">小小的交流博客</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="/categories/" title="">类型</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">个人简介</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">java 远程调试</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://xiaofangkang.gitee.io" rel="author">KangFang.Xiao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-12-07 itemprop="datePublished">December 7, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://xiaofangkang.gitee.io/categories/java%E8%B0%83%E8%AF%95/"> java调试 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+            
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="远程jvm启用调试模式">远程JVM启用调试模式</h1>
+<pre><code>java
+-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857
+-jar *.jar 
+</code></pre><h2 id="描述">描述</h2>
+<ul>
+<li><code>-XDebug</code> 表示虚拟机启用调试功能</li>
+<li><code>-Xrunjdwp</code> 加载<code>JDWP</code></li>
+<li><code>transport</code> 调试程序JVM使用的进程之间通讯方式</li>
+<li><code>dt_socket</code> socket通讯</li>
+<li><code>server=y/n</code> JVM是否需要作为调试服务器执行</li>
+<li><code>address</code> 调试服务器监听的端口号</li>
+<li><code>suspend=y/n</code> 调试客户端建立连接之后启动虚拟机</li>
+<li>JVM启动之后用验证监听的端口号是否生效了 <code>netstat -anp | grep 1506</code></li>
+</ul>
+<h1 id="tomcat-远程调试">tomcat 远程调试</h1>
+<h2 id="windows">windows</h2>
+<p>进入目录下的<code>bin</code>目录，编辑打开 <strong>startup.bat</strong> 
+在前面添加：</p>
+<pre><code>SET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 
+</code></pre><h2 id="linux">linux</h2>
+<p>在<strong>catalina.sh</strong>中的首行添加：</p>
+<pre><code>CATALINA_OPTS=&quot;-Xdebug  -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&quot;
+</code></pre><h1 id="idea-本地调试配置">idea 本地调试配置</h1>
+<p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-aykdinw922ij4a081f/8c478950-38fa-11eb-880a-0db19f4f74bb.png" alt="图片"></p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>KangFang.Xiao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/>https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://xiaofangkang.gitee.io/tags/java/">
+                    #java</a></span>
+            
+            <span class="tag"><a href="https://xiaofangkang.gitee.io/tags/%E8%B0%83%E8%AF%95/">
+                    #调试</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://xiaofangkang.gitee.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+         
+        
+        <a href="https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" class="next" rel="next" title="hugo 使用方法">hugo 使用方法&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://xiaofangkang.gitee.io">KangFang.Xiao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <link href="//lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" rel="stylesheet">  
+      
+     <script src="/js/vendor_gallery.min.js" async="" ></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
