@@ -14,7 +14,7 @@
       
       <guid>https://xiaofangkang.gitee.io/2020/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/</guid>
       <description>使用代码：
- -Xms256m -Xmx1024m -XX:MaxNewSize=256m -XX:PermSize=64M -XX:MaxPermSize=128M </description>
+-Xms256m -Xmx1024m -XX:MaxNewSize=256m -XX:PermSize=64M -XX:MaxPermSize=128M </description>
     </item>
     
     <item>
@@ -23,9 +23,9 @@
       <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/</guid>
-      <description>远程JVM启用调试模式 java-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857-jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：
+      <description>远程JVM启用调试模式 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857 -jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：
 SET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 linux 在catalina.sh中的首行添加：
-CATALINA_OPTS=&amp;quot;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&amp;quot;idea 本地调试配置 </description>
+CATALINA_OPTS=&amp;#34;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&amp;#34; idea 本地调试配置 </description>
     </item>
     
   </channel>

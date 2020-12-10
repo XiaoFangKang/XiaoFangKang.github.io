@@ -12,11 +12,11 @@
   <link rel="prev" href="https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" />
   <link rel="next" href="https://xiaofangkang.gitee.io/2020/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/" />
   <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/systemctl/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>
@@ -149,24 +149,24 @@
           <h1 id="说明">说明</h1>
 <p><strong>每一个服务以.service结尾，一般会分为3部分：<code>[Unit]、[Service]和[Install]</code></strong></p>
 <p><code>vim /usr/lib/systemd/system/xxx.service </code></p>
-<pre><code>[Unit]   # 主要是服务说明
-Description=test   # 简单描述服务
-After=network.target    # 描述服务类别，表示本服务需要在network服务启动后在启动
-Before=xxx.service      # 表示需要在某些服务启动之前启动，After和Before字段只涉及启动顺序，不涉及依赖关系。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-service" data-lang="service"><span style="color:#960050;background-color:#1e0010">[Unit]</span>   <span style="color:#75715e"># 主要是服务说明</span>
+<span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">test   # 简单描述服务</span>
+<span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target    # 描述服务类别，表示本服务需要在network服务启动后在启动</span>
+<span style="color:#a6e22e">Before</span><span style="color:#f92672">=</span><span style="color:#e6db74">xxx.service      # 表示需要在某些服务启动之前启动，After和Before字段只涉及启动顺序，不涉及依赖关系。</span>
 
-[Service]  # 核心区域
-Type=forking     # 表示后台运行模式。
-User=user        # 设置服务运行的用户
-Group=user       # 设置服务运行的用户组
-KillMode=control-group   # 定义systemd如何停止服务
-PIDFile=/usr/local/test/test.pid    # 存放PID的绝对路径
-Restart=no        # 定义服务进程退出后，systemd的重启方式，默认是不重启
-ExecStart=/usr/local/test/bin/startup.sh    # 服务启动命令，命令需要绝对路径
-PrivateTmp=true                               # 表示给服务分配独立的临时空间
+<span style="color:#960050;background-color:#1e0010">[Service]</span>  <span style="color:#75715e"># 核心区域</span>
+<span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">forking     # 表示后台运行模式。</span>
+<span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">user        # 设置服务运行的用户</span>
+<span style="color:#a6e22e">Group</span><span style="color:#f92672">=</span><span style="color:#e6db74">user       # 设置服务运行的用户组</span>
+<span style="color:#a6e22e">KillMode</span><span style="color:#f92672">=</span><span style="color:#e6db74">control-group   # 定义systemd如何停止服务</span>
+<span style="color:#a6e22e">PIDFile</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/test/test.pid    # 存放PID的绝对路径</span>
+<span style="color:#a6e22e">Restart</span><span style="color:#f92672">=</span><span style="color:#e6db74">no        # 定义服务进程退出后，systemd的重启方式，默认是不重启</span>
+<span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/test/bin/startup.sh    # 服务启动命令，命令需要绝对路径</span>
+<span style="color:#a6e22e">PrivateTmp</span><span style="color:#f92672">=</span><span style="color:#e6db74">true                               # 表示给服务分配独立的临时空间</span>
    
-[Install]   
-WantedBy=multi-user.target  # 多用户
-</code></pre><h2 id="字段说明">字段说明：</h2>
+<span style="color:#960050;background-color:#1e0010">[Install]</span>   
+<span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target  # 多用户</span>
+</code></pre></div><h2 id="字段说明">字段说明：</h2>
 <h3 id="type的类型有">Type的类型有：</h3>
 <ul>
 <li>simple(默认）：# 以ExecStart字段启动的进程为主进程</li>

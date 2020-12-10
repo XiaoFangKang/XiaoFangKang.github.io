@@ -12,11 +12,11 @@
   <link rel="prev" href="https://xiaofangkang.gitee.io/2020/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/" />
   
   <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>
@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "canvas特效小人",
     "headline" : "canvas特效小人",
-    "description" : "介绍： 本站使用小人特效\n依赖 jquery.js\n源代码 \/** * 小人 *\/ function f2() { var S_width; var S_height; var isTouch = \u0027ontouchstart\u0027 in window, START_EVENT = isTouch ? \u0027touchstart\u0027 : \u0027mousedown\u0027, MOVE_EVENT = isTouch ? \u0027touchmove\u0027 : \u0027mousemove\u0027, END_EVENT = isTouch ? \u0027touchend\u0027 : \u0027mouseup\u0027; var powder = []; \/\/speed:7 var man = { x: 30, y: 110, step: 0, type: \u0027teststyle\u0027, speed: 7, armlength: 10, leglength: 15, head: 8, body: 25 }; var isspread = false; var ispowder = true; \/\/var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}]; \/\/不行 var teststyle = [ { armleft0: -45, armleft1: -65, armright0: 45, armright1: 25, legleft0: -45, legleft1: -65, legright0: 45, legright1: 25 }, { armleft0: -30, armleft1: -50, armright0: 30, armright1: 10, legleft0: -30, legleft1: -50, legright0: 30, legright1: 10 }, { armleft0: -15, armleft1: -35, armright0: 15, armright1: -5, legleft0: -15, legleft1: -35, legright0: 15, legright1: -5 }, { armleft0: 0, armleft1: -20, armright0: 0, armright1: -20, legleft0: 0, legleft1: -20, legright0: 0, legright1: -20 }, { armleft0: 15, armleft1: -5, armright0: -15, armright1: -35, legleft0: 15, legleft1: -5, legright0: -15, legright1: -35 }, { armleft0: 30, armleft1: 10, armright0: -30, armright1: -50, legleft0: 30, legleft1: 10, legright0: -30, legright1: -50 } ]; \/\/ var teststyle1 = [ { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 72, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 111, legright1: 108 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 135, legright1: 135 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -51, armleft1: -27, armright0: 51, armright1: 41, legleft0: -22, legleft1: -18, legright0: 22, legright1: 18 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 }, { armleft0: -93, armleft1: -81, armright0: 93, armright1: 123, legleft0: -56, legleft1: -54, legright0: 56, legright1: 54 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 } ]; \/\/var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20}; window.",
+    "description" : "介绍： 本站使用小人特效\n依赖 jquery.js\n源代码 \/** * 小人 *\/ function f2() { var S_width; var S_height; var isTouch = \u0026#39;ontouchstart\u0026#39; in window, START_EVENT = isTouch ? \u0026#39;touchstart\u0026#39; : \u0026#39;mousedown\u0026#39;, MOVE_EVENT = isTouch ? \u0026#39;touchmove\u0026#39; : \u0026#39;mousemove\u0026#39;, END_EVENT = isTouch ? \u0026#39;touchend\u0026#39; : \u0026#39;mouseup\u0026#39;; var powder = []; \/\/speed:7  var man = { x: 30, y: 110, step: 0, type: \u0026#39;teststyle\u0026#39;, speed: 7, armlength: 10, leglength: 15, head: 8, body: 25 }; var isspread = false; var ispowder = true; \/\/var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}]; \/\/不行  var teststyle = [ { armleft0: -45, armleft1: -65, armright0: 45, armright1: 25, legleft0: -45, legleft1: -65, legright0: 45, legright1: 25 }, { armleft0: -30, armleft1: -50, armright0: 30, armright1: 10, legleft0: -30, legleft1: -50, legright0: 30, legright1: 10 }, { armleft0: -15, armleft1: -35, armright0: 15, armright1: -5, legleft0: -15, legleft1: -35, legright0: 15, legright1: -5 }, { armleft0: 0, armleft1: -20, armright0: 0, armright1: -20, legleft0: 0, legleft1: -20, legright0: 0, legright1: -20 }, { armleft0: 15, armleft1: -5, armright0: -15, armright1: -35, legleft0: 15, legleft1: -5, legright0: -15, legright1: -35 }, { armleft0: 30, armleft1: 10, armright0: -30, armright1: -50, legleft0: 30, legleft1: 10, legright0: -30, legright1: -50 } ]; \/\/  var teststyle1 = [ { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 72, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 111, legright1: 108 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 135, legright1: 135 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -51, armleft1: -27, armright0: 51, armright1: 41, legleft0: -22, legleft1: -18, legright0: 22, legright1: 18 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 }, { armleft0: -93, armleft1: -81, armright0: 93, armright1: 123, legleft0: -56, legleft1: -54, legright0: 56, legright1: 54 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 } ]; \/\/var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};  window.",
     "inLanguage" : "zh-CN",
     "author" : "KangFang.Xiao",
     "creator" : "KangFang.Xiao",
@@ -57,7 +57,7 @@
     "datePublished": "2020-12-10 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-10 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/xiaofangkang.gitee.io\/2020\/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA\/",
-    "wordCount" : "1625",
+    "wordCount" : "1628",
     "keywords" : [ "前端","特效","canvas", "小小的交流博客"]
 }
 </script>
@@ -151,608 +151,608 @@
 <h1 id="依赖">依赖</h1>
 <p><code>jquery.js</code></p>
 <h1 id="源代码">源代码</h1>
-<pre><code>/**
- * 小人
- */
-function f2() {
-    var S_width;
-    var S_height;
-    var isTouch = 'ontouchstart' in window, START_EVENT = isTouch ? 'touchstart' : 'mousedown',
-        MOVE_EVENT = isTouch ? 'touchmove' : 'mousemove',
-        END_EVENT = isTouch ? 'touchend' : 'mouseup';
-    var powder = [];
-//speed:7
-    var man = {
-        x: 30,
-        y: 110,
-        step: 0,
-        type: 'teststyle',
-        speed: 7,
-        armlength: 10,
-        leglength: 15,
-        head: 8,
-        body: 25
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 小人
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">f2</span>() {
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">S_width</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">S_height</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isTouch</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ontouchstart&#39;</span> <span style="color:#66d9ef">in</span> window, <span style="color:#a6e22e">START_EVENT</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isTouch</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;touchstart&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mousedown&#39;</span>,
+        <span style="color:#a6e22e">MOVE_EVENT</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isTouch</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;touchmove&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mousemove&#39;</span>,
+        <span style="color:#a6e22e">END_EVENT</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">isTouch</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;touchend&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mouseup&#39;</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">powder</span> <span style="color:#f92672">=</span> [];
+<span style="color:#75715e">//speed:7
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+        <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">110</span>,
+        <span style="color:#a6e22e">step</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+        <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;teststyle&#39;</span>,
+        <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span>,
+        <span style="color:#a6e22e">armlength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+        <span style="color:#a6e22e">leglength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+        <span style="color:#a6e22e">head</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8</span>,
+        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>
     };
-    var isspread = false;
-    var ispowder = true;
-//var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}];
-//不行
-    var teststyle = [
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isspread</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ispowder</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#75715e">//var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}];
+</span><span style="color:#75715e">//不行
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">teststyle</span> <span style="color:#f92672">=</span> [
         {
-            armleft0: -45,
-            armleft1: -65,
-            armright0: 45,
-            armright1: 25,
-            legleft0: -45,
-            legleft1: -65,
-            legright0: 45,
-            legright1: 25
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">65</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">65</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>
         },
         {
-            armleft0: -30,
-            armleft1: -50,
-            armright0: 30,
-            armright1: 10,
-            legleft0: -30,
-            legleft1: -50,
-            legright0: 30,
-            legright1: 10
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>
         },
         {
-            armleft0: -15,
-            armleft1: -35,
-            armright0: 15,
-            armright1: -5,
-            legleft0: -15,
-            legleft1: -35,
-            legright0: 15,
-            legright1: -5
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>
         },
         {
-            armleft0: 0,
-            armleft1: -20,
-            armright0: 0,
-            armright1: -20,
-            legleft0: 0,
-            legleft1: -20,
-            legright0: 0,
-            legright1: -20
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">20</span>
         },
         {
-            armleft0: 15,
-            armleft1: -5,
-            armright0: -15,
-            armright1: -35,
-            legleft0: 15,
-            legleft1: -5,
-            legright0: -15,
-            legright1: -35
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>
         },
         {
-            armleft0: 30,
-            armleft1: 10,
-            armright0: -30,
-            armright1: -50,
-            legleft0: 30,
-            legleft1: 10,
-            legright0: -30,
-            legright1: -50
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">50</span>
         }
     ];
-//
-    var teststyle1 = [
+<span style="color:#75715e">//
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">teststyle1</span> <span style="color:#f92672">=</span> [
         {
-            armleft0: -30,
-            armleft1: 0,
-            armright0: 30,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 5,
-            legright1: 0
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
         },
         {
-            armleft0: -30,
-            armleft1: 0,
-            armright0: 15,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 45,
-            legright1: 0
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
         },
         {
-            armleft0: -35,
-            armleft1: 0,
-            armright0: 15,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 72,
-            legright1: 0
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
         },
         {
-            armleft0: -35,
-            armleft1: 0,
-            armright0: 0,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 97,
-            legright1: 81
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">97</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">81</span>
         },
         {
-            armleft0: -40,
-            armleft1: 0,
-            armright0: -15,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 111,
-            legright1: 108
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">40</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">111</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">108</span>
         },
         {
-            armleft0: -40,
-            armleft1: 0,
-            armright0: -15,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 135,
-            legright1: 135
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">40</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">135</span>
         },
         {
-            armleft0: -35,
-            armleft1: 0,
-            armright0: 0,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 97,
-            legright1: 81
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">35</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">97</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">81</span>
         },
         {
-            armleft0: -30,
-            armleft1: 0,
-            armright0: 15,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 45,
-            legright1: 0
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">45</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
         },
 
         {
-            armleft0: -30,
-            armleft1: 0,
-            armright0: 30,
-            armright1: 0,
-            legleft0: -5,
-            legleft1: 0,
-            legright0: 5,
-            legright1: 0
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
         },
         {
-            armleft0: -51,
-            armleft1: -27,
-            armright0: 51,
-            armright1: 41,
-            legleft0: -22,
-            legleft1: -18,
-            legright0: 22,
-            legright1: 18
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">51</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">27</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">51</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">41</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">22</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">18</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">22</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>
         },
         {
-            armleft0: -72,
-            armleft1: -54,
-            armright0: 72,
-            armright1: 82,
-            legleft0: -39,
-            legleft1: -36,
-            legright0: 39,
-            legright1: 36
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">54</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">82</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">36</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">36</span>
         },
         {
-            armleft0: -93,
-            armleft1: -81,
-            armright0: 93,
-            armright1: 123,
-            legleft0: -56,
-            legleft1: -54,
-            legright0: 56,
-            legright1: 54
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">93</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">81</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">93</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">123</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">56</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">54</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">56</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">54</span>
         },
         {
-            armleft0: -114,
-            armleft1: -108,
-            armright0: -114,
-            armright1: 164,
-            legleft0: -73,
-            legleft1: -72,
-            legright0: 73,
-            legright1: 72
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">114</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">108</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">114</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">164</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">73</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">73</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>
         },
         {
-            armleft0: -135,
-            armleft1: -135,
-            armright0: 135,
-            armright1: 164,
-            legleft0: -90,
-            legleft1: -90,
-            legright0: 90,
-            legright1: 90
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">164</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>
         },
         {
-            armleft0: -135,
-            armleft1: -135,
-            armright0: 135,
-            armright1: 164,
-            legleft0: -90,
-            legleft1: -90,
-            legright0: 90,
-            legright1: 90
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">164</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>
         },
         {
-            armleft0: -135,
-            armleft1: -135,
-            armright0: 135,
-            armright1: 164,
-            legleft0: -90,
-            legleft1: -90,
-            legright0: 90,
-            legright1: 90
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">135</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">164</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">90</span>
         },
         {
-            armleft0: -114,
-            armleft1: -108,
-            armright0: -114,
-            armright1: 164,
-            legleft0: -73,
-            legleft1: -72,
-            legright0: 73,
-            legright1: 72
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">114</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">108</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">114</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">164</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">73</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">73</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>
         },
         {
-            armleft0: -72,
-            armleft1: -54,
-            armright0: 72,
-            armright1: 82,
-            legleft0: -39,
-            legleft1: -36,
-            legright0: 39,
-            legright1: 36
+            <span style="color:#a6e22e">armleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">armleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">54</span>,
+            <span style="color:#a6e22e">armright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">72</span>,
+            <span style="color:#a6e22e">armright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">82</span>,
+            <span style="color:#a6e22e">legleft0</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">39</span>,
+            <span style="color:#a6e22e">legleft1</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">36</span>,
+            <span style="color:#a6e22e">legright0</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">39</span>,
+            <span style="color:#a6e22e">legright1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">36</span>
         }
     ];
-//var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};
-    window.onload = function () {
+<span style="color:#75715e">//var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};
+</span><span style="color:#75715e"></span>    window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
 
-        //new drawpowder('canvas').point(200,200,&quot;rgba(255,252,255,1)&quot;);
-        //new drawpowder('canvas').init();
-        // S_width=document.getElementById(&quot;screen&quot;).clientWidth;
-        // S_height=document.getElementById(&quot;screen&quot;).clientHeight;
-        // document.getElementById('canvas').height=S_height;
-        // document.getElementById('canvas').width=S_width;
-
-        var cvs = document.createElement(&quot;canvas&quot;);
-        S_width = window.innerWidth;
-        S_height = window.innerHeight;
-        cvs.width = window.innerWidth;
-        cvs.height = window.innerHeight;
-        cvs.id = &quot;canvas&quot;;
-        cvs.style.cssText = &quot;\
-        position:fixed;\
-        top:0px;\
-        left:0px;\
-        z-index:-1;\
-        opacity:1.0;\
-        &quot;;
-        document.body.appendChild(cvs);
+        <span style="color:#75715e">//new drawpowder(&#39;canvas&#39;).point(200,200,&#34;rgba(255,252,255,1)&#34;);
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//new drawpowder(&#39;canvas&#39;).init();
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// S_width=document.getElementById(&#34;screen&#34;).clientWidth;
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// S_height=document.getElementById(&#34;screen&#34;).clientHeight;
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// document.getElementById(&#39;canvas&#39;).height=S_height;
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// document.getElementById(&#39;canvas&#39;).width=S_width;
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cvs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;canvas&#34;</span>);
+        <span style="color:#a6e22e">S_width</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span>;
+        <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span>;
+        <span style="color:#a6e22e">cvs</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerWidth</span>;
+        <span style="color:#a6e22e">cvs</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">innerHeight</span>;
+        <span style="color:#a6e22e">cvs</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;canvas&#34;</span>;
+        <span style="color:#a6e22e">cvs</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">cssText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;\
+</span><span style="color:#e6db74">        position:fixed;\
+</span><span style="color:#e6db74">        top:0px;\
+</span><span style="color:#e6db74">        left:0px;\
+</span><span style="color:#e6db74">        z-index:-1;\
+</span><span style="color:#e6db74">        opacity:1.0;\
+</span><span style="color:#e6db74">        &#34;</span>;
+        document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">cvs</span>);
 
     }
 
-    function clearall() {
-        var element = document.getElementById('canvas');
-        context = element.getContext('2d');
-        context.clearRect(0, 0, S_width, S_height);
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">clearall</span>() {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>);
+        <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+        <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">S_width</span>, <span style="color:#a6e22e">S_height</span>);
     }
 
-    function unpowder() {
-        clearall();
-        ispowder = false;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">unpowder</span>() {
+        <span style="color:#a6e22e">clearall</span>();
+        <span style="color:#a6e22e">ispowder</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
     }
 
-    function dopowder() {
-        clearall();
-        ispowder = true;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">dopowder</span>() {
+        <span style="color:#a6e22e">clearall</span>();
+        <span style="color:#a6e22e">ispowder</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
     }
 
-    function drawpowder(id) {
-        var that = this;
-        that.element = document.getElementById(id);
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">drawpowder</span>(<span style="color:#a6e22e">id</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+        <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>);
     }
 
-    drawpowder.prototype = {
-        init: function (e) {
-            var that = this;
-            //that.element.addEventListener(START_EVENT, that, false);
-            //document.addEventListener(MOVE_EVENT, that, false);
-            //that.element.addEventListener(END_EVENT, that, false);
-        },
-        handleEvent: function (e) {
-            var that = this;
-            switch (e.type) {
-                case START_EVENT:
-                    that.touchStart(e);
-                    break;
-                case MOVE_EVENT:
-                    that.touchMove(e);
-                    break;
-                case END_EVENT:
-                    that.touchEnd(e);
-                    break;
+    <span style="color:#a6e22e">drawpowder</span>.<span style="color:#a6e22e">prototype</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">init</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#75715e">//that.element.addEventListener(START_EVENT, that, false);
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">//document.addEventListener(MOVE_EVENT, that, false);
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">//that.element.addEventListener(END_EVENT, that, false);
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">handleEvent</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">type</span>) {
+                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">START_EVENT</span><span style="color:#f92672">:</span>
+                    <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">touchStart</span>(<span style="color:#a6e22e">e</span>);
+                    <span style="color:#66d9ef">break</span>;
+                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">MOVE_EVENT</span><span style="color:#f92672">:</span>
+                    <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">touchMove</span>(<span style="color:#a6e22e">e</span>);
+                    <span style="color:#66d9ef">break</span>;
+                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">END_EVENT</span><span style="color:#f92672">:</span>
+                    <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">touchEnd</span>(<span style="color:#a6e22e">e</span>);
+                    <span style="color:#66d9ef">break</span>;
             }
         },
-        getPage: function (e, page) {
-            return isTouch ? e.targetTouches[0][page] : e[page];
+        <span style="color:#a6e22e">getPage</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">page</span>) {
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">isTouch</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">targetTouches</span>[<span style="color:#ae81ff">0</span>][<span style="color:#a6e22e">page</span>] <span style="color:#f92672">:</span> <span style="color:#a6e22e">e</span>[<span style="color:#a6e22e">page</span>];
         },
-        destroy: function (e) {
-            var that = this;
-            that.element.removeEventListener(START_EVENT, that, false);
-            document.removeEventListener(MOVE_EVENT, that, false);
-            that.element.removeEventListener(END_EVENT, that, false);
+        <span style="color:#a6e22e">destroy</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#a6e22e">START_EVENT</span>, <span style="color:#a6e22e">that</span>, <span style="color:#66d9ef">false</span>);
+            document.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#a6e22e">MOVE_EVENT</span>, <span style="color:#a6e22e">that</span>, <span style="color:#66d9ef">false</span>);
+            <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#a6e22e">END_EVENT</span>, <span style="color:#a6e22e">that</span>, <span style="color:#66d9ef">false</span>);
         },
-        touchStart: function (e) {
-            try {
-                if (e.touches.length &gt; 1) {
-                    // 仅处理一根手指
-                    e.stopPropagation();
-                    e.preventDefault();
-                    return;
+        <span style="color:#a6e22e">touchStart</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">try</span> {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">touches</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+                    <span style="color:#75715e">// 仅处理一根手指
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
+                    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+                    <span style="color:#66d9ef">return</span>;
                 }
-            } catch (e) {
+            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
             }
-            var that = this;
-            e.preventDefault();
-            e.stopPropagation();
-            if (isspread) {
-                return;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isspread</span>) {
+                <span style="color:#66d9ef">return</span>;
             }
-            isspread = true;
-            downplacex = that.getPage(e, 'clientX');
-            downplacey = that.getPage(e, 'clientY');
-            for (var i = 0; i &lt; 88; i++) {
-                var tempangle = Math.floor(Math.random() * 360);
-                var tempRadians = tempangle * Math.PI / 180;
-                var tempdistance = Math.floor(Math.random() * 60);
-                var tempcolor1 = Math.floor(Math.random() * 255);
-                var tempcolor2 = Math.floor(Math.random() * 255);
-                var tempcolor3 = Math.floor(Math.random() * 255);
-                powder[i] = {
-                    angle: tempangle,
-                    Radians: tempRadians,
-                    distance: tempdistance,
-                    color1: tempcolor1,
-                    color2: tempcolor2,
-                    color3: tempcolor3,
-                    hyaline: 1
+            <span style="color:#a6e22e">isspread</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+            <span style="color:#a6e22e">downplacex</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">getPage</span>(<span style="color:#a6e22e">e</span>, <span style="color:#e6db74">&#39;clientX&#39;</span>);
+            <span style="color:#a6e22e">downplacey</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">getPage</span>(<span style="color:#a6e22e">e</span>, <span style="color:#e6db74">&#39;clientY&#39;</span>);
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">88</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempangle</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">360</span>);
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempRadians</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tempangle</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>;
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempdistance</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span>);
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempcolor1</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>);
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempcolor2</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>);
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempcolor3</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>);
+                <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> {
+                    <span style="color:#a6e22e">angle</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempangle</span>,
+                    <span style="color:#a6e22e">Radians</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempRadians</span>,
+                    <span style="color:#a6e22e">distance</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempdistance</span>,
+                    <span style="color:#a6e22e">color1</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempcolor1</span>,
+                    <span style="color:#a6e22e">color2</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempcolor2</span>,
+                    <span style="color:#a6e22e">color3</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">tempcolor3</span>,
+                    <span style="color:#a6e22e">hyaline</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
                 };
             }
-            //alert(powder.length)
-            for (var j = 0; j &lt; powder.length; j++) {
-                //alert(j)
-                var Px = Math.cos(powder[j].Radians) * powder[j].distance + downplacex - 50;
-                var Py = Math.sin(powder[j].Radians) * powder[j].distance + downplacey - 50;
-                //alert(Py)
-                //alert(Px)
-                that.point(Px, Py, &quot;rgba(&quot; + powder[j].color1 + &quot;,&quot; + powder[j].color2 + &quot;,&quot; + powder[j].color3 + &quot;,&quot; + powder[j].hyaline + &quot;)&quot;);
+            <span style="color:#75715e">//alert(powder.length)
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">powder</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+                <span style="color:#75715e">//alert(j)
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Px</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">Radians</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">downplacex</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
+                <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Py</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">Radians</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">downplacey</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
+                <span style="color:#75715e">//alert(Py)
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//alert(Px)
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">point</span>(<span style="color:#a6e22e">Px</span>, <span style="color:#a6e22e">Py</span>, <span style="color:#e6db74">&#34;rgba(&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color3</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">hyaline</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>);
             }
-            that.spread();
+            <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">spread</span>();
         },
-        touchMove: function (e) {
-            try {
-                if (e.touches.length &gt; 1) {
-                    // 仅处理一根手指
-                    e.stopPropagation();
-                    e.preventDefault();
-                    return;
+        <span style="color:#a6e22e">touchMove</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">try</span> {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">touches</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+                    <span style="color:#75715e">// 仅处理一根手指
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
+                    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+                    <span style="color:#66d9ef">return</span>;
                 }
-            } catch (e) {
+            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
             }
-            var that = this;
-            e.preventDefault();
-            e.stopPropagation();
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
         },
-        touchEnd: function (e) {
-            try {
-                if (e.touches.length &gt; 1) {
-                    // 仅处理一根手指 e.stopPropagation();
-                    e.preventDefault();
-                    return;
+        <span style="color:#a6e22e">touchEnd</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#66d9ef">try</span> {
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">touches</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+                    <span style="color:#75715e">// 仅处理一根手指 e.stopPropagation();
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+                    <span style="color:#66d9ef">return</span>;
                 }
-            } catch (e) {
+            } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
             }
-            var that = this;
-            e.preventDefault();
-            e.stopPropagation();
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">preventDefault</span>();
+            <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">stopPropagation</span>();
         },
-        point: function (x, y, color) {
-            var that = this;
-            context = that.element.getContext('2d');
-            //context.clearRect(0,0,400,400);
-            context.save();
-            context.beginPath();
-            context.arc(x, y, 1, 0, Math.PI * 2, true);
-            context.fillStyle = color;
-            context.closePath();
-            context.fill();
-            context.restore();
+        <span style="color:#a6e22e">point</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">color</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+            <span style="color:#75715e">//context.clearRect(0,0,400,400);
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">save</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">beginPath</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">true</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">fillStyle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>;
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">closePath</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">fill</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">restore</span>();
         },
-        spread: function () {
-            var that = this;
-            var time = 0;
-            context = that.element.getContext('2d');
-            var spreadtimer = setInterval(function () {
-                time++
-                if (time &gt;= 100) {
-                    clearInterval(spreadtimer);
-                    powder = [];
-                    if (ispowder) {
-                        context.clearRect(0, 0, S_width, S_height);
+        <span style="color:#a6e22e">spread</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+            <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadtimer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span> () {
+                <span style="color:#a6e22e">time</span><span style="color:#f92672">++</span>
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span>) {
+                    <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">spreadtimer</span>);
+                    <span style="color:#a6e22e">powder</span> <span style="color:#f92672">=</span> [];
+                    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ispowder</span>) {
+                        <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">S_width</span>, <span style="color:#a6e22e">S_height</span>);
                     }
-                    isspread = false;
-                    return;
+                    <span style="color:#a6e22e">isspread</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+                    <span style="color:#66d9ef">return</span>;
                 }
-                if (ispowder) {
-                    context.clearRect(0, 0, S_width, S_height);
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ispowder</span>) {
+                    <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">S_width</span>, <span style="color:#a6e22e">S_height</span>);
                 }
-                for (var j = 0; j &lt; powder.length; j++) {
-                    powder[j].distance = powder[j].distance + 1;
-                    powder[j].hyaline = powder[j].hyaline - 1 / 100;
-                    var Px = Math.cos(powder[j].Radians) * powder[j].distance + downplacex - 50;
-                    var Py = Math.sin(powder[j].Radians) * powder[j].distance + downplacey - 50;
-                    that.point(Px, Py, &quot;rgba(&quot; + powder[j].color1 + &quot;,&quot; + powder[j].color2 + &quot;,&quot; + powder[j].color3 + &quot;,&quot; + powder[j].hyaline + &quot;)&quot;);
+                <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">j</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">j</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">powder</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">j</span><span style="color:#f92672">++</span>) {
+                    <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+                    <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">hyaline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">hyaline</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>;
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Px</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">Radians</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">downplacex</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Py</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">Radians</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">distance</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">downplacey</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">50</span>;
+                    <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">point</span>(<span style="color:#a6e22e">Px</span>, <span style="color:#a6e22e">Py</span>, <span style="color:#e6db74">&#34;rgba(&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color1</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color2</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">color3</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">powder</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">hyaline</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;)&#34;</span>);
                 }
-            }, 10)
+            }, <span style="color:#ae81ff">10</span>)
         },
-        man: function (x, y, step) {
-            var that = this;
-            var mantype = eval(man.type)[man.step];
-            var manx = x;
-            var many = y;
-            //tui start point
-            var legstart = man.body + man.head;
-            //tui
-            var legleft0X = RetX(mantype.legleft0, man.leglength);
-            var legleft0Y = RetY(mantype.legleft0, man.leglength);
-            var legleft1Y = legleft0Y + RetY(mantype.legleft1, man.leglength);
-            var legright0X = RetX(mantype.legright0, man.leglength);
-            var legright0Y = RetY(mantype.legright0, man.leglength);
-            var legright1Y = legright0Y + RetY(mantype.legright1, man.leglength);
-            //shoubi
-            var armleft0X = RetX(mantype.armleft0, man.leglength);
-            var armleft0Y = RetY(mantype.armleft0, man.leglength);
-            var armright0X = RetX(mantype.armright0, man.leglength);
-            var armright0Y = RetY(mantype.armright0, man.leglength);
-            //zhichengtui
-            var groundleg = legleft1Y &gt; legright1Y ? &quot;left&quot; : &quot;right&quot;;
-            if (groundleg == &quot;left&quot;) {
-                many = y - (man.leglength * 2 - legleft0Y - RetY(mantype.legleft1, man.leglength));
-            } else {
-                many = y - (man.leglength * 2 - legright0Y - RetY(mantype.legright1, man.leglength));
+        <span style="color:#a6e22e">man</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">step</span>) {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mantype</span> <span style="color:#f92672">=</span> eval(<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">type</span>)[<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span>];
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">manx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span>;
+            <span style="color:#75715e">//tui start point
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">body</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">head</span>;
+            <span style="color:#75715e">//tui
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legleft0X</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legleft0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legleft0Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legleft0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legleft1Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">legleft0Y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legleft1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legright0X</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legright0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legright0Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legright0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">legright1Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">legright0Y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legright1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#75715e">//shoubi
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">armleft0X</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armleft0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">armleft0Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armleft0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">armright0X</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armright0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">armright0Y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armright0</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>);
+            <span style="color:#75715e">//zhichengtui
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">groundleg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">legleft1Y</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">legright1Y</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;left&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;right&#34;</span>;
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">groundleg</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;left&#34;</span>) {
+                <span style="color:#a6e22e">many</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">legleft0Y</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legleft1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>));
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#a6e22e">many</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">legright0Y</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legright1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>));
             }
-            context = that.element.getContext('2d');
-            context.clearRect(0, 0, S_width, S_height);
-            context.save();
-            context.beginPath();
-            context.arc(manx, S_height - many, man.head, 0, Math.PI * 2, true);
-            context.lineWidth = 2;
-            context.strokeStyle = &quot;#000&quot;;
+            <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">element</span>.<span style="color:#a6e22e">getContext</span>(<span style="color:#e6db74">&#39;2d&#39;</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">clearRect</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">S_width</span>, <span style="color:#a6e22e">S_height</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">save</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">beginPath</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">head</span>, <span style="color:#ae81ff">0</span>, Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">true</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">strokeStyle</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#000&#34;</span>;
 
-            context.moveTo(manx, S_height - many + man.head);
-            context.lineTo(manx, S_height - many + legstart);
-            //腿
-            context.lineTo(manx + legleft0X, S_height - many + legstart + legleft0Y);
-            context.lineTo(manx + legleft0X + RetX(mantype.legleft1, man.leglength), S_height - many + legstart + legleft1Y);
-            context.moveTo(manx, S_height - many + legstart);
-            context.lineTo(manx + legright0X, S_height - many + legstart + legright0Y);
-            context.lineTo(manx + legright0X + RetX(mantype.legright1, man.leglength), S_height - many + legstart + legright1Y);
-            //手臂
-            context.moveTo(manx, S_height - many + legstart / 2);
-            context.lineTo(manx + armleft0X, S_height - many + legstart / 2 + armleft0Y);
-            context.lineTo(manx + armleft0X + RetX(mantype.armleft1, man.armlength), S_height - many + legstart / 2 + armleft0Y + RetY(mantype.armleft1, man.armlength));
-            context.moveTo(manx, S_height - many + legstart / 2);
-            context.lineTo(manx + armright0X, S_height - many + legstart / 2 + armright0Y);
-            context.lineTo(manx + armright0X + RetX(mantype.armright1, man.armlength), S_height - many + legstart / 2 + armright0Y + RetY(mantype.armright1, man.armlength));
-            context.stroke();
-            context.closePath();
-            context.restore();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">head</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span>);
+            <span style="color:#75715e">//腿
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legleft0X</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legleft0Y</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legleft0X</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legleft1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>), <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legleft1Y</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legright0X</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legright0Y</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legright0X</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">legright1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">leglength</span>), <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legright1Y</span>);
+            <span style="color:#75715e">//手臂
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armleft0X</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armleft0Y</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armleft0X</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armleft1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">armlength</span>), <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armleft0Y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armleft1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">armlength</span>));
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">moveTo</span>(<span style="color:#a6e22e">manx</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armright0X</span>, <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armright0Y</span>);
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">lineTo</span>(<span style="color:#a6e22e">manx</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armright0X</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armright1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">armlength</span>), <span style="color:#a6e22e">S_height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">many</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legstart</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armright0Y</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">mantype</span>.<span style="color:#a6e22e">armright1</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">armlength</span>));
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">stroke</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">closePath</span>();
+            <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">restore</span>();
         },
-        manwalk: function () {
-            var that = this;
-            var tw = setInterval(function () {
-                man.x = man.x + man.speed;
-                man.step = (man.step + 1) % (eval(man.type).length);
-                // 关闭跳舞
-                // if (man.x &gt; S_width / 2) {
-                //     man.speed = 0;
-                //     man.type = &quot;teststyle1&quot;;
-                // }
-                if (man.x + 20 &gt;= S_width) {
-                    man.speed = -10;
+        <span style="color:#a6e22e">manwalk</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">that</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tw</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span> () {
+                <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span>;
+                <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> (eval(<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">type</span>).<span style="color:#a6e22e">length</span>);
+                <span style="color:#75715e">// 关闭跳舞
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// if (man.x &gt; S_width / 2) {
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//     man.speed = 0;
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//     man.type = &#34;teststyle1&#34;;
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">S_width</span>) {
+                    <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>;
                 }
-                if (man.x - 20 &lt; 0) {
-                    man.speed = 10;
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+                    <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
                 }
-                that.man(man.x, man.y, man.step);
-            }, 100)
+                <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">man</span>(<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span>);
+            }, <span style="color:#ae81ff">100</span>)
 
-            setTimeout(function () {
-                man = {
-                    x: 30,
-                    y: 110,
-                    step: 0,
-                    type: 'teststyle',
-                    speed: 7,
-                    armlength: 10,
-                    leglength: 15,
-                    head: 8,
-                    body: 25
+            <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span> () {
+                <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> {
+                    <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,
+                    <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">110</span>,
+                    <span style="color:#a6e22e">step</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+                    <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;teststyle&#39;</span>,
+                    <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span>,
+                    <span style="color:#a6e22e">armlength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+                    <span style="color:#a6e22e">leglength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,
+                    <span style="color:#a6e22e">head</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8</span>,
+                    <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>
                 };
-            }, 30000);
+            }, <span style="color:#ae81ff">30000</span>);
         }
     }
-    setTimeout(function () {
-        new drawpowder('canvas').manwalk();
-    }, 100);
+    <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">drawpowder</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>).<span style="color:#a6e22e">manwalk</span>();
+    }, <span style="color:#ae81ff">100</span>);
 
-    function RetX(Angle, length) {
-        return Math.sin(Angle * Math.PI / 180) * length;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">RetX</span>(<span style="color:#a6e22e">Angle</span>, <span style="color:#a6e22e">length</span>) {
+        <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">sin</span>(<span style="color:#a6e22e">Angle</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">length</span>;
     }
 
-    function RetY(Angle, length) {
-        return Math.cos(Angle * Math.PI / 180) * length;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">RetY</span>(<span style="color:#a6e22e">Angle</span>, <span style="color:#a6e22e">length</span>) {
+        <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">cos</span>(<span style="color:#a6e22e">Angle</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>) <span style="color:#f92672">*</span> <span style="color:#a6e22e">length</span>;
     }
 }
 
-</code></pre><h1 id="使用方式">使用方式：</h1>
+</code></pre></div><h1 id="使用方式">使用方式：</h1>
 <p>将代码复制的站中的主<code>js</code>中。 类似于 <code>main.js</code></p>
 <h1 id="讲解">讲解：</h1>
-<pre><code>setTimeout(function () {
-  new drawpowder('canvas').manwalk();
-}, 100); 
-</code></pre><p>以上代码是用于启动整体动画。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span> () {
+  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">drawpowder</span>(<span style="color:#e6db74">&#39;canvas&#39;</span>).<span style="color:#a6e22e">manwalk</span>();
+}, <span style="color:#ae81ff">100</span>); 
+</code></pre></div><p>以上代码是用于启动整体动画。</p>
 <hr>
-<pre><code>var tw = setInterval(function () {
-                man.x = man.x + man.speed;
-                man.step = (man.step + 1) % (eval(man.type).length);
-                // 关闭跳舞
-                // if (man.x &gt; S_width / 2) {
-                //     man.speed = 0;
-                //     man.type = &quot;teststyle1&quot;;
-                // }
-                if (man.x + 20 &gt;= S_width) {
-                    man.speed = -10;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tw</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(<span style="color:#66d9ef">function</span> () {
+                <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span>;
+                <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> (eval(<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">type</span>).<span style="color:#a6e22e">length</span>);
+                <span style="color:#75715e">// 关闭跳舞
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// if (man.x &gt; S_width / 2) {
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//     man.speed = 0;
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//     man.type = &#34;teststyle1&#34;;
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">S_width</span>) {
+                    <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>;
                 }
-                if (man.x - 20 &lt; 0) {
-                    man.speed = 10;
+                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+                    <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">speed</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
                 }
-                that.man(man.x, man.y, man.step);
-            }, 100)
-</code></pre><p>以上代码是用于人物的动作。（其中有跳舞的动作，但是不用因为太丑了。）</p>
+                <span style="color:#a6e22e">that</span>.<span style="color:#a6e22e">man</span>(<span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">step</span>);
+            }, <span style="color:#ae81ff">100</span>)
+</code></pre></div><p>以上代码是用于人物的动作。（其中有跳舞的动作，但是不用因为太丑了。）</p>
 <hr>
 <h2 id="map-是人物的各项属性"><code>map</code> 是人物的各项属性。</h2>
-<pre><code>    {
-        x: 30,                       # 人物X向位置
-        y: 110,                      # 人物Y向位置
-        step: 0,                     # 人物初始化步
-        type: 'teststyle',           # 类型，teststyle 走路  teststyle1 跳舞
-        speed: 7,                    # 人物初始化移动速度
-        armlength: 10,               # 人物手臂长度
-        leglength: 15,               # 人物腿长
-        head: 8,                     # 人物头部大小
-        body: 25                     # 人物主体躯干
-    }
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">x</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">30</span>,                       <span style="color:#75715e">// 人物X向位置
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">y</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">110</span>,                      <span style="color:#75715e">// 人物Y向位置
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">step</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,                     <span style="color:#75715e">// 人物初始化步
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;teststyle&#34;</span>,           <span style="color:#75715e">// 类型，teststyle 走路  teststyle1 跳舞
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span>,                    <span style="color:#75715e">// 人物初始化移动速度
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">armlength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,               <span style="color:#75715e">// 人物手臂长度
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">leglength</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>,               <span style="color:#75715e">// 人物腿长
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">head</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8</span>,                     <span style="color:#75715e">// 人物头部大小
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>                     <span style="color:#75715e">// 人物主体躯干
+</span><span style="color:#75715e"></span>    }
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

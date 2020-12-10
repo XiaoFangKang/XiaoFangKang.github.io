@@ -12,11 +12,11 @@
   
   <link rel="next" href="https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" />
   <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>
@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "java 远程调试",
     "headline" : "java 远程调试",
-    "description" : "远程JVM启用调试模式 java\r-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857\r-jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y\/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y\/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：\nSET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 linux 在catalina.sh中的首行添加：\nCATALINA_OPTS=\u0026quot;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n\u0026quot;\ridea 本地调试配置 ",
+    "description" : "远程JVM启用调试模式 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857 -jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y\/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y\/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：\nSET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 linux 在catalina.sh中的首行添加：\nCATALINA_OPTS=\u0026#34;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n\u0026#34; idea 本地调试配置 ",
     "inLanguage" : "zh-CN",
     "author" : "KangFang.Xiao",
     "creator" : "KangFang.Xiao",
@@ -149,10 +149,10 @@
           
 
           <h1 id="远程jvm启用调试模式">远程JVM启用调试模式</h1>
-<pre><code>java
--agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java
+-agentlib:jdwp<span style="color:#f92672">=</span>transport<span style="color:#f92672">=</span>dt_socket,server<span style="color:#f92672">=</span>y,suspend<span style="color:#f92672">=</span>n,address<span style="color:#f92672">=</span><span style="color:#ae81ff">2857</span>
 -jar *.jar 
-</code></pre><h2 id="描述">描述</h2>
+</code></pre></div><h2 id="描述">描述</h2>
 <ul>
 <li><code>-XDebug</code> 表示虚拟机启用调试功能</li>
 <li><code>-Xrunjdwp</code> 加载<code>JDWP</code></li>
@@ -167,11 +167,11 @@
 <h2 id="windows">windows</h2>
 <p>进入目录下的<code>bin</code>目录，编辑打开 <strong>startup.bat</strong> 
 在前面添加：</p>
-<pre><code>SET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 
-</code></pre><h2 id="linux">linux</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">SET CATALINA_OPTS<span style="color:#f92672">=</span>-server -Xdebug -Xnoagent -Djava.compiler<span style="color:#f92672">=</span>NONE -Xrunjdwp:transport<span style="color:#f92672">=</span>dt_socket,server<span style="color:#f92672">=</span>y,suspend<span style="color:#f92672">=</span>n,address<span style="color:#f92672">=</span><span style="color:#ae81ff">8000</span> 
+</code></pre></div><h2 id="linux">linux</h2>
 <p>在<strong>catalina.sh</strong>中的首行添加：</p>
-<pre><code>CATALINA_OPTS=&quot;-Xdebug  -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&quot;
-</code></pre><h1 id="idea-本地调试配置">idea 本地调试配置</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">CATALINA_OPTS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-Xdebug  -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&#34;</span>
+</code></pre></div><h1 id="idea-本地调试配置">idea 本地调试配置</h1>
 <p><img src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-aliyun-aykdinw922ij4a081f/8c478950-38fa-11eb-880a-0db19f4f74bb.png" alt="图片"></p>
 
     </div>

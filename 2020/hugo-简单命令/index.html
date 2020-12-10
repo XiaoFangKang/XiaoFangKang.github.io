@@ -12,11 +12,11 @@
   <link rel="prev" href="https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/" />
   <link rel="next" href="https://xiaofangkang.gitee.io/2020/systemctl/" />
   <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <title>
@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "hugo 使用方法",
     "headline" : "hugo 使用方法",
-    "description" : "1. 创建文章 $ hugo new *.md 解释：about.md 自动生成到了 content\/about.md\n2. 部署服务 $ hugo 解释： 使用 hugo 生成 pages 修改的文件用于显示内容\n3.使用皮肤 $ git clone https:\/\/hub.fastgit.org\/liuzc\/leaveit.git\n皮肤的使用说明： https:\/\/liuzhichao.com\/2018\/hugo-theme-leaveit\/\n4. 皮肤使用的一些问题 配置文件中 menu 中的是页面中的标签栏。\n[[menu.main]] name = \u0026quot;类型\u0026quot; url = \u0026quot;\/categories\/\u0026quot; weight = 2 weight 代表标签头的位置 越小越靠前\n5. 文章编写时的抬头描述 --- title: \u0026quot;java 远程调试\u0026quot; date: \u0026quot;2020-12-07\u0026quot; tags: [\u0026quot;java\u0026quot;,\u0026quot;调试\u0026quot;] categories: [\u0026quot;java调试\u0026quot;] --- title ：文件头 date: 文件创建时间 tags: 标签 \u0026mdash;\u0026ndash;\u0026gt; 在配置文件中也会使用到 categories: 类型 \u0026mdash;\u0026gt; 在配置文件中也会使用到\n 配置文件设置 根目录下的 config.",
+    "description" : "1. 创建文章 $ hugo new *.md 解释：about.md 自动生成到了 content\/about.md\n2. 部署服务 $ hugo 解释： 使用 hugo 生成 pages 修改的文件用于显示内容\n3.使用皮肤 $ git clone https:\/\/hub.fastgit.org\/liuzc\/leaveit.git\n皮肤的使用说明： https:\/\/liuzhichao.com\/2018\/hugo-theme-leaveit\/\n4. 皮肤使用的一些问题 配置文件中 menu 中的是页面中的标签栏。\n[[menu.main]] name = \u0026#34;类型\u0026#34; url = \u0026#34;\/categories\/\u0026#34; weight = 2 weight 代表标签头的位置 越小越靠前\n5. 文章编写时的抬头描述 --- title: \u0026#34;java 远程调试\u0026#34; date: \u0026#34;2020-12-07\u0026#34; tags: [\u0026#34;java\u0026#34;,\u0026#34;调试\u0026#34;] categories: [\u0026#34;java调试\u0026#34;] --- title ：文件头 date: 文件创建时间 tags: 标签 \u0026mdash;\u0026ndash;\u0026gt; 在配置文件中也会使用到 categories: 类型 \u0026mdash;\u0026gt; 在配置文件中也会使用到\n 配置文件设置 根目录下的 config.",
     "inLanguage" : "zh-CN",
     "author" : "KangFang.Xiao",
     "creator" : "KangFang.Xiao",
@@ -157,30 +157,30 @@
 <p>皮肤的使用说明： <a href="https://liuzhichao.com/2018/hugo-theme-leaveit/">https://liuzhichao.com/2018/hugo-theme-leaveit/</a></p>
 <h2 id="4-皮肤使用的一些问题">4. 皮肤使用的一些问题</h2>
 <p>配置文件中 menu 中的是页面中的标签栏。</p>
-<pre><code>[[menu.main]]
-name = &quot;类型&quot;
-url = &quot;/categories/&quot;
-weight = 2
-</code></pre><p>weight 代表标签头的位置 越小越靠前</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;类型&#34;</span>
+<span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/categories/&#34;</span>
+<span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">2</span>
+</code></pre></div><p>weight 代表标签头的位置 越小越靠前</p>
 <h2 id="5-文章编写时的抬头描述">5. 文章编写时的抬头描述</h2>
-<pre><code>---
-title: &quot;java 远程调试&quot;
-date: &quot;2020-12-07&quot;
-tags: [&quot;java&quot;,&quot;调试&quot;]
-categories: [&quot;java调试&quot;]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;java 远程调试&#34;
+date: &#34;2020-12-07&#34;
+tags: [&#34;java&#34;,&#34;调试&#34;]
+categories: [&#34;java调试&#34;]
 ---
-</code></pre><p>title ：文件头
+</code></pre></div><p>title ：文件头
 date: 文件创建时间
 tags: 标签  &mdash;&ndash;&gt; 在配置文件中也会使用到
 categories: 类型 &mdash;&gt; 在配置文件中也会使用到</p>
 <hr>
 <h1 id="配置文件设置">配置文件设置</h1>
 <p>根目录下的 config.toml 文件是主要的配置文件。</p>
-<pre><code>baseURL = &quot;https://xiaofangkang.gitee.io/blog&quot;
-languageCode = &quot;en-us&quot;
-title = &quot;小小的交流博客&quot;
-theme = &quot;LeaveIt&quot;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://xiaofangkang.gitee.io/blog&#34;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;小小的交流博客&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;LeaveIt&#34;</span>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

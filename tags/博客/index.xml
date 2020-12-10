@@ -18,8 +18,8 @@
 3.使用皮肤 $ git clone https://hub.fastgit.org/liuzc/leaveit.git
 皮肤的使用说明： https://liuzhichao.com/2018/hugo-theme-leaveit/
 4. 皮肤使用的一些问题 配置文件中 menu 中的是页面中的标签栏。
-[[menu.main]] name = &amp;quot;类型&amp;quot; url = &amp;quot;/categories/&amp;quot; weight = 2 weight 代表标签头的位置 越小越靠前
-5. 文章编写时的抬头描述 --- title: &amp;quot;java 远程调试&amp;quot; date: &amp;quot;2020-12-07&amp;quot; tags: [&amp;quot;java&amp;quot;,&amp;quot;调试&amp;quot;] categories: [&amp;quot;java调试&amp;quot;] --- title ：文件头 date: 文件创建时间 tags: 标签 &amp;mdash;&amp;ndash;&amp;gt; 在配置文件中也会使用到 categories: 类型 &amp;mdash;&amp;gt; 在配置文件中也会使用到
+[[menu.main]] name = &amp;#34;类型&amp;#34; url = &amp;#34;/categories/&amp;#34; weight = 2 weight 代表标签头的位置 越小越靠前
+5. 文章编写时的抬头描述 --- title: &amp;#34;java 远程调试&amp;#34; date: &amp;#34;2020-12-07&amp;#34; tags: [&amp;#34;java&amp;#34;,&amp;#34;调试&amp;#34;] categories: [&amp;#34;java调试&amp;#34;] --- title ：文件头 date: 文件创建时间 tags: 标签 &amp;mdash;&amp;ndash;&amp;gt; 在配置文件中也会使用到 categories: 类型 &amp;mdash;&amp;gt; 在配置文件中也会使用到
  配置文件设置 根目录下的 config.</description>
     </item>
     
