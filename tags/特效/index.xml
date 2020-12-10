@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>前端 on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/</link>
-    <description>Recent content in 前端 on 小小的交流博客</description>
+    <title>特效 on 小小的交流博客</title>
+    <link>https://xiaofangkang.gitee.io/tags/%E7%89%B9%E6%95%88/</link>
+    <description>Recent content in 特效 on 小小的交流博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E7%89%B9%E6%95%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>canvas特效小人</title>
       <link>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
@@ -27,21 +27,6 @@
       <description>介绍： 本站使用鼠标特效
 依赖 jquery.js
 源代码 /** * 鼠标特效 */ function f1() { /* 鼠标特效 */ var a_idx = 0; jQuery(document).ready(function ($) { $(&amp;quot;body&amp;quot;).click(function (e) { var a = new Array(&amp;quot;❤富强❤&amp;quot;, &amp;quot;❤民主❤&amp;quot;, &amp;quot;❤文明❤&amp;quot;, &amp;quot;❤和谐❤&amp;quot;, &amp;quot;❤自由❤&amp;quot;, &amp;quot;❤平等❤&amp;quot;, &amp;quot;❤公正❤&amp;quot;, &amp;quot;❤法治❤&amp;quot;, &amp;quot;❤爱国❤&amp;quot;, &amp;quot;❤敬业❤&amp;quot;, &amp;quot;❤诚信❤&amp;quot;, &amp;quot;❤友善❤&amp;quot;); var $i = $(&amp;quot;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;quot;).text(a[a_idx]); a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ &amp;quot;z-index&amp;quot;: 999999999999999999999999999999999999999999999999999999999999999999999, &amp;quot;top&amp;quot;: y - 20, &amp;quot;left&amp;quot;: x, &amp;quot;position&amp;quot;: &amp;quot;absolute&amp;quot;, &amp;quot;font-weight&amp;quot;: &amp;quot;bold&amp;quot;, &amp;quot;color&amp;quot;: &amp;quot;rgb(&amp;quot; + ~~(255 * Math.</description>
-    </item>
-    
-    <item>
-      <title>前端的真正学习方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</guid>
-      <description>介绍： 总所周知，前端开发，主要是面向用户。也就是门面。它的核心（页面，导航，请求后台）
-知道了核心我们就知道该为何学习了。
-页面 页面其实就是显示页。比如 列表页，详情页。但是往往都是只需要显示一个页面（单页面）
-导航 每个页面都是一个个体。有时候需要一个导航栏，用于导航。
-请求后台 每个页面的动态内容，基本上都是后台服务端提供。前端只需要发送请求即可。
-总结 虽然我上面说的很简单，但是前端的核心也就是这3个组合。学习任何前端框架，快速的找到（如何编辑页面， 如何页面之间的导航，如何请求后台的方法）就可以使用这个框架。
-（ps以上只能是浅显的使用框架，如果想深入使用还需要进一步学习！）</description>
     </item>
     
   </channel>
