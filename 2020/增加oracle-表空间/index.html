@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache, must-revalidate">
+  <meta http-equiv="expires" content="0">
+
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="KangFang.Xiao">
+  
+  
+  
+  <link rel="prev" href="https://xiaofangkang.gitee.io/2020/expandimp/" />
+  <link rel="next" href="https://xiaofangkang.gitee.io/2020/ora-01033/" />
+  <link rel="canonical" href="https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           ORA-01033:oracle initialization or shutdown in progress 解决办法 | 小小的交流博客
+       
+  </title>
+  <meta name="title" content="ORA-01033:oracle initialization or shutdown in progress 解决办法 | 小小的交流博客">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/xiaofangkang.gitee.io"
+    },
+    "articleSection" : "posts",
+    "name" : "ORA-01033:oracle initialization or shutdown in progress 解决办法",
+    "headline" : "ORA-01033:oracle initialization or shutdown in progress 解决办法",
+    "description" : "增加数据库空间方法 \u0026quot;ORA-01654: 索引。。。无法通过8192（在表空间。。。中）扩展\u0026quot;\n查询方法 SELECT UPPER(F.TABLESPACE_NAME) \u0026#34;表空间名\u0026#34;, D.TOT_GROOTTE_MB \u0026#34;表空间大小(M)\u0026#34;, D.TOT_GROOTTE_MB - F.TOTAL_BYTES \u0026#34;已使用空间(M)\u0026#34;, TO_CHAR(ROUND((D.TOT_GROOTTE_MB - F.TOTAL_BYTES) \/ D.TOT_GROOTTE_MB * 100,2),\u0026#39;990.99\u0026#39;) \u0026#34;使用比\u0026#34;, F.TOTAL_BYTES \u0026#34;空闲空间(M)\u0026#34;, F.MAX_BYTES \u0026#34;最大块(M)\u0026#34; FROM ( SELECT TABLESPACE_NAME, ROUND(SUM(BYTES) \/ (1024 * 1024), 2) TOTAL_BYTES, ROUND(MAX(BYTES) \/ (1024 * 1024), 2) MAX_BYTES FROM SYS.DBA_FREE_SPACE GROUP BY TABLESPACE_NAME ) F, ( SELECT DD.TABLESPACE_NAME, ROUND(SUM(DD.BYTES) \/ (1024 * 1024), 2) TOT_GROOTTE_MB FROM SYS.DBA_DATA_FILES DD GROUP BY DD.TABLESPACE_NAME ) D WHERE D.TABLESPACE_NAME = F.",
+    "inLanguage" : "zh-CN",
+    "author" : "KangFang.Xiao",
+    "creator" : "KangFang.Xiao",
+    "publisher": "KangFang.Xiao",
+    "accountablePerson" : "KangFang.Xiao",
+    "copyrightHolder" : "KangFang.Xiao",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-12-11 00:00:00 \u002b0000 UTC",
+    "dateModified" : "2020-12-11 00:00:00 \u002b0000 UTC",
+    "url" : "https:\/\/xiaofangkang.gitee.io\/2020\/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4\/",
+    "wordCount" : "97",
+    "keywords" : [ "数据库","维护", "小小的交流博客"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://xiaofangkang.gitee.io">小小的交流博客</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="/categories/" title="">类型</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">个人简介</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://xiaofangkang.gitee.io">小小的交流博客</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">文章</a>
+                
+                <a class="menu-item" href="/categories/" title="">类型</a>
+                
+                <a class="menu-item" href="/tags/" title="">标签</a>
+                
+                <a class="menu-item" href="/about/" title="">个人简介</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">ORA-01033:oracle initialization or shutdown in progress 解决办法</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://xiaofangkang.gitee.io" rel="author">KangFang.Xiao</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-12-11 itemprop="datePublished">December 11, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://xiaofangkang.gitee.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"> 数据库 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h1 id="增加数据库空间方法">增加数据库空间方法</h1>
+<p><code>&quot;ORA-01654: 索引。。。无法通过8192（在表空间。。。中）扩展&quot;</code></p>
+<h2 id="查询方法">查询方法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">UPPER</span>(F.TABLESPACE_NAME) <span style="color:#e6db74">&#34;表空间名&#34;</span>,
+    D.TOT_GROOTTE_MB <span style="color:#e6db74">&#34;表空间大小(M)&#34;</span>,
+    D.TOT_GROOTTE_MB <span style="color:#f92672">-</span> F.TOTAL_BYTES <span style="color:#e6db74">&#34;已使用空间(M)&#34;</span>,
+    TO_CHAR(ROUND((D.TOT_GROOTTE_MB <span style="color:#f92672">-</span> F.TOTAL_BYTES) <span style="color:#f92672">/</span> D.TOT_GROOTTE_MB <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>,<span style="color:#ae81ff">2</span>),<span style="color:#e6db74">&#39;990.99&#39;</span>) <span style="color:#e6db74">&#34;使用比&#34;</span>,
+    F.TOTAL_BYTES <span style="color:#e6db74">&#34;空闲空间(M)&#34;</span>,
+    F.MAX_BYTES <span style="color:#e6db74">&#34;最大块(M)&#34;</span>
+<span style="color:#66d9ef">FROM</span> (
+    <span style="color:#66d9ef">SELECT</span> TABLESPACE_NAME,
+        ROUND(<span style="color:#66d9ef">SUM</span>(BYTES) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">1024</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1024</span>), <span style="color:#ae81ff">2</span>) TOTAL_BYTES,
+        ROUND(<span style="color:#66d9ef">MAX</span>(BYTES) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">1024</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1024</span>), <span style="color:#ae81ff">2</span>) MAX_BYTES
+    <span style="color:#66d9ef">FROM</span> SYS.DBA_FREE_SPACE
+    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> TABLESPACE_NAME
+    ) F,
+(
+    <span style="color:#66d9ef">SELECT</span> DD.TABLESPACE_NAME,
+        ROUND(<span style="color:#66d9ef">SUM</span>(DD.BYTES) <span style="color:#f92672">/</span> (<span style="color:#ae81ff">1024</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1024</span>), <span style="color:#ae81ff">2</span>) TOT_GROOTTE_MB
+    <span style="color:#66d9ef">FROM</span> SYS.DBA_DATA_FILES DD
+    <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> DD.TABLESPACE_NAME
+    ) D
+<span style="color:#66d9ef">WHERE</span> D.TABLESPACE_NAME <span style="color:#f92672">=</span> F.TABLESPACE_NAME
+    <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#ae81ff">4</span> <span style="color:#66d9ef">DESC</span>;
+<span style="color:#75715e">-- 查看表空间文件
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">select</span> file_name,tablespace_name,bytes <span style="color:#66d9ef">from</span> dba_data_files;
+</code></pre></div><h2 id="手动给该表空间添加数据文件">手动给该表空间添加数据文件：</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> TABLESPACE <span style="color:#e6db74">&#34;WORK&#34;</span> 
+    <span style="color:#66d9ef">ADD</span> DATAFILE <span style="color:#e6db74">&#39;*.DBF&#39;</span> 
+    <span style="color:#66d9ef">SIZE</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">G</span> AUTOEXTEND <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">NEXT</span> <span style="color:#ae81ff">50</span>M MAXSIZE UNLIMITED;
+</code></pre></div>
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>KangFang.Xiao </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/>https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://xiaofangkang.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                    #数据库</a></span>
+            
+            <span class="tag"><a href="https://xiaofangkang.gitee.io/tags/%E7%BB%B4%E6%8A%A4/">
+                    #维护</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://xiaofangkang.gitee.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://xiaofangkang.gitee.io/2020/expandimp/" class="prev" rel="prev" title="Oracle中用exp/imp命令参数详解【转】"><i class="iconfont icon-left"></i>&nbsp;Oracle中用exp/imp命令参数详解【转】</a>
+         
+        
+        <a href="https://xiaofangkang.gitee.io/2020/ora-01033/" class="next" rel="next" title="ORA-01033:oracle initialization or shutdown in progress 解决办法">ORA-01033:oracle initialization or shutdown in progress 解决办法&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2020 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://xiaofangkang.gitee.io">KangFang.Xiao</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

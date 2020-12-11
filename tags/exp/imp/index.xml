@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>exp/imp on 小小的交流博客</title>
+    <link>https://xiaofangkang.gitee.io/tags/exp/imp/</link>
+    <description>Recent content in exp/imp on 小小的交流博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language><atom:link href="https://xiaofangkang.gitee.io/tags/exp/imp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle中用exp/imp命令参数详解【转】</title>
+      <link>https://xiaofangkang.gitee.io/2020/expandimp/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/2020/expandimp/</guid>
+      <description>Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中 exp system/manager@TEST rows=y indexes=y compress=n buffer=65536 feedback=100000full=y file=d:\daochu.dmp log=d:\daochulog.txt owner=(ECC_BIZ,ECC_CUSTOMER)    关键字 说明 默认     USERID 用户名/口令 &amp;mdash;   FULL 导出整个文件 (N)   BUFFER 数据缓冲区的大小 &amp;mdash;   OWNER 导出指定的所有者用户名列表 &amp;mdash;   FILE 输出文件 (EXPDAT.DMP)   TABLES 导出指定的表名列表 &amp;mdash;   COMPRESS 是否压缩导出的文件 (Y)   RECORDLENGTH IO 记录的长度 &amp;mdash;   GRANTS 导出权限 (Y)   INCTYPE 增量导出类型 &amp;mdash;   INDEXES 导出索引 (Y)   RECORD 跟踪增量导出 (Y)   ROWS 导出数据行 (Y)   PARFILE 参数文件名 &amp;mdash;   CONSTRAINTS 导出限制 (Y)   CONSISTENT 交叉表一致性 &amp;mdash;   LOG 屏幕输出的日志文件 &amp;mdash;   STATISTICS 分析对象(ESTIMATE) &amp;mdash;   DIRECT 直接路径 &amp;mdash;   TRIGGERS 导出触发器 (Y)   FEEDBACK 显示每 x 行 (0) 的进度 &amp;mdash;   FILESIZE 各转储文件的最大尺寸 &amp;mdash;   QUERY 选定导出表子集的子句 &amp;mdash;   TRANSPORT_TABLESPACE 导出可传输的表空间元数据 &amp;mdash;   TABLESPACES 导出指定的表空间列表 &amp;mdash;    1.</description>
+    </item>
+    
+  </channel>
+</rss>
