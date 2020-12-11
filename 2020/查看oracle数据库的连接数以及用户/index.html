@@ -26,10 +26,10 @@
   <title>
        
        
-           查看oracle数据库的连接数以及用户 | 小小的交流博客
+           查看oracle数据库的连接数以及用户【转】 | 小小的交流博客
        
   </title>
-  <meta name="title" content="查看oracle数据库的连接数以及用户 | 小小的交流博客">
+  <meta name="title" content="查看oracle数据库的连接数以及用户【转】 | 小小的交流博客">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -48,9 +48,9 @@
          "@id": "https:\/\/xiaofangkang.gitee.io"
     },
     "articleSection" : "posts",
-    "name" : "查看oracle数据库的连接数以及用户",
-    "headline" : "查看oracle数据库的连接数以及用户",
-    "description" : "查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status=\u0027ACTIVE\u0027; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查看用户或角色系统权限(直接赋值给用户或角色的系统权限)： select * from dba_sys_privs; select * from user_sys_privs; 查看角色(只能查看登陆用户拥有的角色)所包含的权限 select * from role_sys_privs; 查看用户对象权限： select * from dba_tab_privs; select * from all_tab_privs; select * from user_tab_privs; 查看所有角色： select * from dba_roles; 查看用户或角色所拥有的角色： select * from dba_role_privs; select * from user_role_privs; 查看哪些用户有sysdba或sysoper系统权限(查询时需要相应权限) select * from V$PWFILE_USERS;  select count(*) from v$process \u0026ndash;当前的连接数",
+    "name" : "查看oracle数据库的连接数以及用户【转】",
+    "headline" : "查看oracle数据库的连接数以及用户【转】",
+    "description" : "查询 oracle的连接数  select count(*) from v$session;\n查询oracle的并发连接数  select count(*) from v$session where status=\u0027ACTIVE\u0027;\n查看不同用户的连接数  select username,count(username) from v$session where username is not null group by username;\n查看所有用户：  select * from all_users;\n查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：  select * from dba_sys_privs;\nselect * from user_sys_privs;\n查看角色(只能查看登陆用户拥有的角色)所包含的权限  select * from role_sys_privs;\n查看用户对象权限：  select * from dba_tab_privs;\nselect * from all_tab_privs;\nselect * from user_tab_privs;\n查看所有角色：  select * from dba_roles;",
     "inLanguage" : "zh-CN",
     "author" : "KangFang.Xiao",
     "creator" : "KangFang.Xiao",
@@ -120,7 +120,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">查看oracle数据库的连接数以及用户</h1>
+        <h1 class="post-title" itemprop="name headline">查看oracle数据库的连接数以及用户【转】</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://xiaofangkang.gitee.io" rel="author">KangFang.Xiao</a> with ♥ 
                 <span class="post-time">
@@ -151,37 +151,55 @@
           
 
           <ol>
-<li>查询 <code>oracle</code>的连接数
-<code>select count(*) from v$session;</code></li>
-<li>查询<code>oracle</code>的并发连接数
-<code>select count(*) from v$session where status='ACTIVE';</code></li>
-<li>查看不同用户的连接数
-<code>select username,count(username) from v$session where username is not null group by username;</code></li>
-<li>查看所有用户：
-<code>select * from all_users;</code></li>
-<li>查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：
-<code>select * from dba_sys_privs;</code>
-<code>select * from user_sys_privs;</code></li>
-<li>查看角色(只能查看登陆用户拥有的角色)所包含的权限
-<code>select * from role_sys_privs;</code></li>
-<li>查看用户对象权限：
-<code>select * from dba_tab_privs;</code>
-<code>select * from all_tab_privs;</code>
-<code>select * from user_tab_privs;</code></li>
-<li>查看所有角色：
-<code>select * from dba_roles;</code></li>
-<li>查看用户或角色所拥有的角色：
-<code>select * from dba_role_privs;</code>
-<code>select * from user_role_privs;</code></li>
-<li>查看哪些用户有<code>sysdba</code>或<code>sysoper</code>系统权限(查询时需要相应权限)
-<code>select * from V$PWFILE_USERS;</code></li>
+<li>查询 <code>oracle</code>的连接数</li>
 </ol>
+<p><code>select count(*) from v$session;</code></p>
+<ol start="2">
+<li>查询<code>oracle</code>的并发连接数</li>
+</ol>
+<p><code>select count(*) from v$session where status='ACTIVE';</code></p>
+<ol start="3">
+<li>查看不同用户的连接数</li>
+</ol>
+<p><code>select username,count(username) from v$session where username is not null group by username;</code></p>
+<ol start="4">
+<li>查看所有用户：</li>
+</ol>
+<p><code>select * from all_users;</code></p>
+<ol start="5">
+<li>查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：</li>
+</ol>
+<p><code>select * from dba_sys_privs;</code></p>
+<p><code>select * from user_sys_privs;</code></p>
+<ol start="6">
+<li>查看角色(只能查看登陆用户拥有的角色)所包含的权限</li>
+</ol>
+<p><code>select * from role_sys_privs;</code></p>
+<ol start="7">
+<li>查看用户对象权限：</li>
+</ol>
+<p><code>select * from dba_tab_privs;</code></p>
+<p><code>select * from all_tab_privs;</code></p>
+<p><code>select * from user_tab_privs;</code></p>
+<ol start="8">
+<li>查看所有角色：</li>
+</ol>
+<p><code>select * from dba_roles;</code></p>
+<ol start="9">
+<li>查看用户或角色所拥有的角色：</li>
+</ol>
+<p><code>select * from dba_role_privs;</code></p>
+<p><code>select * from user_role_privs;</code></p>
+<ol start="10">
+<li>查看哪些用户有<code>sysdba</code>或<code>sysoper</code>系统权限(查询时需要相应权限)</li>
+</ol>
+<p><code>select * from V$PWFILE_USERS;</code></p>
 <p><code>select count(*) from v$process</code> &ndash;当前的连接数</p>
 <p><code>select value from v$parameter where name = 'processes' </code>&ndash;数据库允许的最大连接数</p>
-<p><strong>修改最大连接数:</strong>
-<code>alter system set processes = 300 scope = spfile;</code></p>
-<p><strong>重启数据库:</strong>
-<code>shutdown immediate;</code>
+<p><strong>修改最大连接数:</strong></p>
+<p><code>alter system set processes = 300 scope = spfile;</code></p>
+<p><strong>重启数据库:</strong></p>
+<p><code>shutdown immediate;</code>
 <code>startup;</code></p>
 <p><strong>&ndash;查看当前有哪些用户正在使用数据</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> osuser, a.username,cpu_time<span style="color:#f92672">/</span>executions<span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span><span style="color:#f92672">||</span><span style="color:#e6db74">&#39;s&#39;</span>, sql_fulltext,machine
@@ -266,7 +284,7 @@ PUBLIC|||INACTIVE|0
 <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> informationlaw <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">TIMESTAMP</span> to_timestamp(<span style="color:#e6db74">&#39;20121126 103435&#39;</span>,<span style="color:#e6db74">&#39;yyyymmdd hh24miss&#39;</span>);
 </code></pre></div><p><strong>//按机器名分组查</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"> <span style="color:#66d9ef">select</span> username,machine,<span style="color:#66d9ef">count</span>(username) <span style="color:#66d9ef">from</span> v$session <span style="color:#66d9ef">where</span> username <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> username,machine;
-</code></pre></div><p>本文章转载于:<a href="https://blog.51cto.com/wangqh/1787260">PeterWang2018</a></p>
+</code></pre></div><p>本文章转载于:<!-- raw HTML omitted -->PeterWang2018<!-- raw HTML omitted --></p>
 
     </div>
 

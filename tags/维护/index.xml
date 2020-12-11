@@ -18,12 +18,22 @@
     </item>
     
     <item>
-      <title>查看oracle数据库的连接数以及用户</title>
+      <title>查看oracle数据库的连接数以及用户【转】</title>
       <link>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</guid>
-      <description>查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status=&#39;ACTIVE&#39;; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查看用户或角色系统权限(直接赋值给用户或角色的系统权限)： select * from dba_sys_privs; select * from user_sys_privs; 查看角色(只能查看登陆用户拥有的角色)所包含的权限 select * from role_sys_privs; 查看用户对象权限： select * from dba_tab_privs; select * from all_tab_privs; select * from user_tab_privs; 查看所有角色： select * from dba_roles; 查看用户或角色所拥有的角色： select * from dba_role_privs; select * from user_role_privs; 查看哪些用户有sysdba或sysoper系统权限(查询时需要相应权限) select * from V$PWFILE_USERS;  select count(*) from v$process &amp;ndash;当前的连接数</description>
+      <description>查询 oracle的连接数  select count(*) from v$session;
+查询oracle的并发连接数  select count(*) from v$session where status=&#39;ACTIVE&#39;;
+查看不同用户的连接数  select username,count(username) from v$session where username is not null group by username;
+查看所有用户：  select * from all_users;
+查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：  select * from dba_sys_privs;
+select * from user_sys_privs;
+查看角色(只能查看登陆用户拥有的角色)所包含的权限  select * from role_sys_privs;
+查看用户对象权限：  select * from dba_tab_privs;
+select * from all_tab_privs;
+select * from user_tab_privs;
+查看所有角色：  select * from dba_roles;</description>
     </item>
     
   </channel>
