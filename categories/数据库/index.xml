@@ -33,7 +33,16 @@
     </item>
     
     <item>
-      <title>ORA-01033:oracle initialization or shutdown in progress 解决办法</title>
+      <title>Oracle中用exp/imp命令参数详解【转】</title>
+      <link>https://xiaofangkang.gitee.io/2020/expandimp/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/2020/expandimp/</guid>
+      <description>Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中 exp system/manager@TEST rows=y indexes=y compress=n buffer=65536 feedback=100000full=y file=d:\daochu.dmp log=d:\daochulog.txt owner=(ECC_BIZ,ECC_CUSTOMER)    关键字 说明 默认     USERID 用户名/口令 &amp;mdash;   FULL 导出整个文件 (N)   BUFFER 数据缓冲区的大小 &amp;mdash;   OWNER 导出指定的所有者用户名列表 &amp;mdash;   FILE 输出文件 (EXPDAT.DMP)   TABLES 导出指定的表名列表 &amp;mdash;   COMPRESS 是否压缩导出的文件 (Y)   RECORDLENGTH IO 记录的长度 &amp;mdash;   GRANTS 导出权限 (Y)   INCTYPE 增量导出类型 &amp;mdash;   INDEXES 导出索引 (Y)   RECORD 跟踪增量导出 (Y)   ROWS 导出数据行 (Y)   PARFILE 参数文件名 &amp;mdash;   CONSTRAINTS 导出限制 (Y)   CONSISTENT 交叉表一致性 &amp;mdash;   LOG 屏幕输出的日志文件 &amp;mdash;   STATISTICS 分析对象(ESTIMATE) &amp;mdash;   DIRECT 直接路径 &amp;mdash;   TRIGGERS 导出触发器 (Y)   FEEDBACK 显示每 x 行 (0) 的进度 &amp;mdash;   FILESIZE 各转储文件的最大尺寸 &amp;mdash;   QUERY 选定导出表子集的子句 &amp;mdash;   TRANSPORT_TABLESPACE 导出可传输的表空间元数据 &amp;mdash;   TABLESPACES 导出指定的表空间列表 &amp;mdash;    1.</description>
+    </item>
+    
+    <item>
+      <title>增加 ORACLE 数据库空间</title>
       <link>https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
@@ -43,12 +52,12 @@
     </item>
     
     <item>
-      <title>Oracle中用exp/imp命令参数详解【转】</title>
-      <link>https://xiaofangkang.gitee.io/2020/expandimp/</link>
+      <title>查看oracle数据库的连接数以及用户</title>
+      <link>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xiaofangkang.gitee.io/2020/expandimp/</guid>
-      <description>Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中 exp system/manager@TEST rows=y indexes=y compress=n buffer=65536 feedback=100000full=y file=d:\daochu.dmp log=d:\daochulog.txt owner=(ECC_BIZ,ECC_CUSTOMER)    关键字 说明 默认     USERID 用户名/口令 &amp;mdash;   FULL 导出整个文件 (N)   BUFFER 数据缓冲区的大小 &amp;mdash;   OWNER 导出指定的所有者用户名列表 &amp;mdash;   FILE 输出文件 (EXPDAT.DMP)   TABLES 导出指定的表名列表 &amp;mdash;   COMPRESS 是否压缩导出的文件 (Y)   RECORDLENGTH IO 记录的长度 &amp;mdash;   GRANTS 导出权限 (Y)   INCTYPE 增量导出类型 &amp;mdash;   INDEXES 导出索引 (Y)   RECORD 跟踪增量导出 (Y)   ROWS 导出数据行 (Y)   PARFILE 参数文件名 &amp;mdash;   CONSTRAINTS 导出限制 (Y)   CONSISTENT 交叉表一致性 &amp;mdash;   LOG 屏幕输出的日志文件 &amp;mdash;   STATISTICS 分析对象(ESTIMATE) &amp;mdash;   DIRECT 直接路径 &amp;mdash;   TRIGGERS 导出触发器 (Y)   FEEDBACK 显示每 x 行 (0) 的进度 &amp;mdash;   FILESIZE 各转储文件的最大尺寸 &amp;mdash;   QUERY 选定导出表子集的子句 &amp;mdash;   TRANSPORT_TABLESPACE 导出可传输的表空间元数据 &amp;mdash;   TABLESPACES 导出指定的表空间列表 &amp;mdash;    1.</description>
+      <guid>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</guid>
+      <description>查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status=&#39;ACTIVE&#39;; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查看用户或角色系统权限(直接赋值给用户或角色的系统权限)： select * from dba_sys_privs; select * from user_sys_privs; 查看角色(只能查看登陆用户拥有的角色)所包含的权限 select * from role_sys_privs; 查看用户对象权限： select * from dba_tab_privs; select * from all_tab_privs; select * from user_tab_privs; 查看所有角色： select * from dba_roles; 查看用户或角色所拥有的角色： select * from dba_role_privs; select * from user_role_privs; 查看哪些用户有sysdba或sysoper系统权限(查询时需要相应权限) select * from V$PWFILE_USERS;  select count(*) from v$process &amp;ndash;当前的连接数</description>
     </item>
     
   </channel>
