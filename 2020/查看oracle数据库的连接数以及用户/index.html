@@ -284,7 +284,7 @@ PUBLIC|||INACTIVE|0
 <span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> informationlaw <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">of</span> <span style="color:#66d9ef">TIMESTAMP</span> to_timestamp(<span style="color:#e6db74">&#39;20121126 103435&#39;</span>,<span style="color:#e6db74">&#39;yyyymmdd hh24miss&#39;</span>);
 </code></pre></div><p><strong>//按机器名分组查</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"> <span style="color:#66d9ef">select</span> username,machine,<span style="color:#66d9ef">count</span>(username) <span style="color:#66d9ef">from</span> v$session <span style="color:#66d9ef">where</span> username <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span> <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> username,machine;
-</code></pre></div><p>本文章转载于:<!-- raw HTML omitted -->PeterWang2018<!-- raw HTML omitted --></p>
+</code></pre></div><p>本文章转载于:<a href="https://blog.51cto.com/wangqh/1787260">PeterWang2018</a></p>
 
     </div>
 
