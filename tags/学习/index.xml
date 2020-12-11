@@ -16,5 +16,14 @@
       <description>介绍  视频剪辑（ps,pr 学习）doyoudo  开发者 书栈网  学习外语 多邻国   </description>
     </item>
     
+    <item>
+      <title>markdown 学习</title>
+      <link>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</guid>
+      <description>代码 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  *** 分割线 ~~*斜体文字*~~ &amp;lt;u&amp;gt;_斜体文字_&amp;lt;/u&amp;gt; **粗体文字** __粗体文字__ ***斜粗体文字*** ___斜粗体文字___[^1]。 [^1]: 你好啊这是定义的值 *** * * * ***** * 第一列 * 第二列 * 第三列 + 第一列 + 第二列 + 第三列 1. 第一列啊 1.1 中级 2. 第二列 * 初级 3. 第三列 * 啊啊啊 &amp;gt; 区块引用 &amp;gt; &amp;gt; 菜鸟  # 区块使用列表 &amp;gt; 区块中使用列表 1. 你好 1.1 你在干什么 2. 啊啊啊 1.2 我在想你 3.</description>
+    </item>
+    
   </channel>
 </rss>
