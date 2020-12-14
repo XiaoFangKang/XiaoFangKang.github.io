@@ -298,7 +298,7 @@ log<span style="color:#f92672">=</span>d:<span style="color:#ae81ff">\d</span>ao
 <p><code>exp system/manager@TEST file=d:\daochu.dmp tables=(table1,table2)</code></p>
 <h3 id="14-将数据库中的表table1中的字段filed1以00打头的数据导出">1.4. 将数据库中的表table1中的字段filed1以”00″打头的数据导出</h3>
 <p><code>exp system/manager@TEST file=d:\daochu.dmp tables=(table1) query=\” where filed1like &amp;apos;00%&amp;apos;\”</code></p>
-<p><!-- raw HTML omitted -->上面是常用的导出，对于压缩我不太在意，用<code>winzip</code>把<code>dmp</code>文件可以很好的压缩。不过在上面命令后面 加上 <code>compress=y</code> 就可以了<!-- raw HTML omitted --></p>
+<p><b>上面是常用的导出，对于压缩我不太在意，用<code>winzip</code>把<code>dmp</code>文件可以很好的压缩。不过在上面命令后面 加上 <code>compress=y</code> 就可以了</b></p>
 <hr>
 <h2 id="2用-imp-数-据-导-入">2.【用 imp 数 据 导 入】：</h2>
 <h3 id="21-将ddaochudmp-中的数据导入-test数据库中">2.1 将<code>D:\daochu.dmp</code> 中的数据导入 <code>TEST</code>数据库中。</h3>

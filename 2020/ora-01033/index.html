@@ -50,7 +50,7 @@
     "articleSection" : "posts",
     "name" : "ORA-01033:oracle initialization or shutdown in progress 解决办法",
     "headline" : "ORA-01033:oracle initialization or shutdown in progress 解决办法",
-    "description" : "解决方法 用PL\/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress；\n第一步，运行cmd，输入sqlplus \/nolog，如图 第二步、SQL\u0026gt;connect \/ as sysdba\n第三步、SQL\u0026gt;shutdown normal\n第四步、SQL\u0026gt;startup mount\n第五步、SQL\u0026gt;alter database open; 提示:  第1 行出现错误:ORA-01157: 无法标识\/锁定数据文件12 - 请参阅 DBWR 跟踪文件 ORA-01110 数据文件12: \u0026lsquo;\u0027。。。\u0026rsquo;\u0027  ps: 这个提示文件部分（12）根据每个人不同情况有点差别。\n第六步、SQL\u0026gt;alter database datafile 12 offline drop;\n第七步、重复使用第五第六步（一直循环这个语句，直至不再提示错误），直到出现“数据库已更改”的提示，然 后如下图， 第八步、继续执行shutdown normal，startup就OK啦\n已经解决完成，现在可以关闭重新登录下PLSQL了。",
+    "description" : "解决方法 用PL\/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress ；\n第一步，运行cmd，输入sqlplus \/nolog，如图 第二步、SQL\u0026gt;connect \/ as sysdba\n第三步、SQL\u0026gt;shutdown normal\n第四步、SQL\u0026gt;startup mount\n第五步、SQL\u0026gt;alter database open; 提示:  第1 行出现错误:ORA-01157 : 无法标识\/锁定数据文件12 - 请参阅 DBWR 跟踪文件 ORA-01110 数据文件12: \u0026lsquo;\u0027。。。\u0026rsquo;\u0027  ps: 这个提示文件部分（12）根据每个人不同情况有点差别。\n第六步、SQL\u0026gt;alter database datafile 12 offline drop;\n第七步、重复使用第五第六步（一直循环这个语句，直至不再提示错误），直到出现“数据库已更改”的提示，然 后如下图， 第八步、继续执行shutdown normal，startup就OK啦\n已经解决完成，现在可以关闭重新登录下PLSQL了。",
     "inLanguage" : "zh-CN",
     "author" : "KangFang.Xiao",
     "creator" : "KangFang.Xiao",
@@ -61,7 +61,7 @@
     "datePublished": "2020-12-11 00:00:00 \u002b0000 UTC",
     "dateModified" : "2020-12-11 00:00:00 \u002b0000 UTC",
     "url" : "https:\/\/xiaofangkang.gitee.io\/2020\/ora-01033\/",
-    "wordCount" : "45",
+    "wordCount" : "47",
     "keywords" : [ "数据库","异常", "小小的交流博客"]
 }
 </script>
@@ -154,7 +154,7 @@
 
           <h1 id="解决方法">解决方法</h1>
 <p>用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误：
-<!-- raw HTML omitted -->ora-01033:oracle initialization or shutdown in progress<!-- raw HTML omitted --> ；</p>
+<span style="color:red">ora-01033:oracle initialization or shutdown in progress</span> ；</p>
 <p>第一步，运行cmd，输入<code>sqlplus /nolog</code>，如图
 <img src="/images/ORA-01033/ORA-01033-1607665707999.png" alt="">
 第二步、<code>SQL&gt;connect / as sysdba</code></p>
@@ -164,8 +164,8 @@
 <img src="/images/ORA-01033/ORA-01033-1607665830272.png" alt=""></p>
 <h2 id="提示">提示:</h2>
 <dl>
-<dt>第1 行出现错误:<!-- raw HTML omitted -->ORA-01157<!-- raw HTML omitted --> :</dt>
-<dt>无法标识/锁定数据文件12 - 请参阅 <code>DBWR</code> 跟踪文件 <!-- raw HTML omitted -->ORA-01110<!-- raw HTML omitted --></dt>
+<dt>第1 行出现错误:<span style="color:red">ORA-01157</span> :</dt>
+<dt>无法标识/锁定数据文件12 - 请参阅 <code>DBWR</code> 跟踪文件 <span style="color:red">ORA-01110</span></dt>
 <dd>数据文件12: &lsquo;'。。。&rsquo;'</dd>
 </dl>
 <p><strong>ps: 这个提示文件部分（12）根据每个人不同情况有点差别。</strong></p>

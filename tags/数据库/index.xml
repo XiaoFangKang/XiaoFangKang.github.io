@@ -22,11 +22,11 @@
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://xiaofangkang.gitee.io/2020/ora-01033/</guid>
-      <description>解决方法 用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress；
+      <description>解决方法 用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress ；
 第一步，运行cmd，输入sqlplus /nolog，如图 第二步、SQL&amp;gt;connect / as sysdba
 第三步、SQL&amp;gt;shutdown normal
 第四步、SQL&amp;gt;startup mount
-第五步、SQL&amp;gt;alter database open; 提示:  第1 行出现错误:ORA-01157: 无法标识/锁定数据文件12 - 请参阅 DBWR 跟踪文件 ORA-01110 数据文件12: &amp;lsquo;&#39;。。。&amp;rsquo;&#39;  ps: 这个提示文件部分（12）根据每个人不同情况有点差别。
+第五步、SQL&amp;gt;alter database open; 提示:  第1 行出现错误:ORA-01157 : 无法标识/锁定数据文件12 - 请参阅 DBWR 跟踪文件 ORA-01110 数据文件12: &amp;lsquo;&#39;。。。&amp;rsquo;&#39;  ps: 这个提示文件部分（12）根据每个人不同情况有点差别。
 第六步、SQL&amp;gt;alter database datafile 12 offline drop;
 第七步、重复使用第五第六步（一直循环这个语句，直至不再提示错误），直到出现“数据库已更改”的提示，然 后如下图， 第八步、继续执行shutdown normal，startup就OK啦
 已经解决完成，现在可以关闭重新登录下PLSQL了。</description>
