@@ -986,60 +986,70 @@
     <button onclick="tabOfcontentButton()" id="tab-of-content-button">关闭</button>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#状态管理模式-介绍">状态管理模式 介绍</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#简单状态管理起步使用">简单状态管理起步使用</a></li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#vuex-介绍">Vuex 介绍</a>
       <ul>
-        <li><a href="#单一状态树">单一状态树</a></li>
+        <li><a href="#状态管理模式-介绍">状态管理模式 介绍</a></li>
       </ul>
     </li>
-    <li><a href="#在-vue-组件中获得-vuex-状态">在 <code>Vue</code> 组件中获得 <code>Vuex</code> 状态</a>
+    <li><a href="#vuex-的使用场景">Vuex 的使用场景</a>
       <ul>
-        <li><a href="#mapstate-辅助函数"><code>mapState</code> 辅助函数</a></li>
+        <li><a href="#简单状态管理起步使用">简单状态管理起步使用</a></li>
       </ul>
     </li>
-    <li><a href="#对象展开运算符">对象展开运算符</a></li>
-    <li><a href="#组件仍然保有局部状态">组件仍然保有局部状态</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#通过属性访问">通过属性访问</a></li>
-    <li><a href="#通过方法访问">通过方法访问</a></li>
-    <li><a href="#mapgetters-辅助函数"><code>mapGetters</code> 辅助函数</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#提交载荷payload">提交载荷（<code>Payload</code>）</a></li>
-    <li><a href="#对象风格的提交方式">对象风格的提交方式</a></li>
-    <li><a href="#mutation-需遵守-vue-的响应规则"><code>Mutation</code> 需遵守 <code>Vue</code> 的响应规则</a></li>
-    <li><a href="#使用常量替代-mutation-事件类型">使用常量替代 <code>Mutation</code> 事件类型</a></li>
-    <li><a href="#mutation-必须是同步函数">Mutation 必须是同步函数</a></li>
-    <li><a href="#在组件中提交-mutation">在组件中提交 <code>Mutation</code></a></li>
-    <li><a href="#下一步action">下一步：Action</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#分发-action">分发 <code>Action</code></a></li>
-    <li><a href="#在组件中分发-action">在组件中分发 <code>Action</code></a></li>
-    <li><a href="#组合-action">组合 <code>Action</code></a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#模块的局部状态">模块的局部状态</a></li>
-    <li><a href="#命名空间">命名空间</a></li>
-    <li><a href="#在带命名空间的模块内访问全局内容global-assets">在带命名空间的模块内访问全局内容（<code>Global Assets</code>）</a></li>
-    <li><a href="#在带命名空间的模块注册全局-action">在带命名空间的模块注册全局 <code>action</code></a></li>
-    <li><a href="#带命名空间的绑定函数">带命名空间的绑定函数</a></li>
-    <li><a href="#给插件开发者的注意事项">给插件开发者的注意事项</a></li>
-    <li><a href="#模块动态注册">模块动态注册</a></li>
-    <li><a href="#保留-state">保留 <code>state</code></a></li>
-    <li><a href="#模块重用">模块重用</a></li>
+    <li><a href="#核心概念">核心概念</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#单一状态树">单一状态树</a></li>
+          </ul>
+        </li>
+        <li><a href="#在-vue-组件中获得-vuex-状态">在 <code>Vue</code> 组件中获得 <code>Vuex</code> 状态</a>
+          <ul>
+            <li><a href="#mapstate-辅助函数"><code>mapState</code> 辅助函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#对象展开运算符">对象展开运算符</a></li>
+        <li><a href="#组件仍然保有局部状态">组件仍然保有局部状态</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-idg1-hrefggettera"><a id="g1" href="#g">Getter</a></a>
+      <ul>
+        <li><a href="#通过属性访问">通过属性访问</a></li>
+        <li><a href="#通过方法访问">通过方法访问</a></li>
+        <li><a href="#mapgetters-辅助函数"><code>mapGetters</code> 辅助函数</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-idmu1-hrefmumutationa"><a id="mu1" href="#mu">Mutation</a></a>
+      <ul>
+        <li><a href="#提交载荷payload">提交载荷（<code>Payload</code>）</a></li>
+        <li><a href="#对象风格的提交方式">对象风格的提交方式</a></li>
+        <li><a href="#mutation-需遵守-vue-的响应规则"><code>Mutation</code> 需遵守 <code>Vue</code> 的响应规则</a></li>
+        <li><a href="#使用常量替代-mutation-事件类型">使用常量替代 <code>Mutation</code> 事件类型</a></li>
+        <li><a href="#mutation-必须是同步函数">Mutation 必须是同步函数</a></li>
+        <li><a href="#在组件中提交-mutation">在组件中提交 <code>Mutation</code></a></li>
+        <li><a href="#下一步action">下一步：Action</a></li>
+      </ul>
+    </li>
+    <li><a href="#a-ida1-hrefaactiona"><a id="a1" href="#a">Action</a></a>
+      <ul>
+        <li><a href="#分发-action">分发 <code>Action</code></a></li>
+        <li><a href="#在组件中分发-action">在组件中分发 <code>Action</code></a></li>
+        <li><a href="#组合-action">组合 <code>Action</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#a-idmo1-hrefmomodulea"><a id="mo1" href="#mo">Module</a></a>
+      <ul>
+        <li><a href="#模块的局部状态">模块的局部状态</a></li>
+        <li><a href="#命名空间">命名空间</a></li>
+        <li><a href="#在带命名空间的模块内访问全局内容global-assets">在带命名空间的模块内访问全局内容（<code>Global Assets</code>）</a></li>
+        <li><a href="#在带命名空间的模块注册全局-action">在带命名空间的模块注册全局 <code>action</code></a></li>
+        <li><a href="#带命名空间的绑定函数">带命名空间的绑定函数</a></li>
+        <li><a href="#给插件开发者的注意事项">给插件开发者的注意事项</a></li>
+        <li><a href="#模块动态注册">模块动态注册</a></li>
+        <li><a href="#保留-state">保留 <code>state</code></a></li>
+        <li><a href="#模块重用">模块重用</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
