@@ -2,9 +2,9 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://xiaofangkang.gitee.io/2020/%E9%9A%8F%E7%AC%94/</loc>
+      <loc>https://xiaofangkang.gitee.io/categories/</loc>
       
-      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
       
       
       
@@ -12,7 +12,97 @@
     </url>
   
     <url>
-      <loc>https://xiaofangkang.gitee.io/categories/</loc>
+      <loc>https://xiaofangkang.gitee.io/posts/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/tags/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/tags/vue/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/tags/vuex/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/2020/vue/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/</loc>
+      
+      <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</loc>
       
       <lastmod>2020-12-11T00:00:00+00:00</lastmod>
       
@@ -92,26 +182,6 @@
     </url>
   
     <url>
-      <loc>https://xiaofangkang.gitee.io/posts/</loc>
-      
-      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://xiaofangkang.gitee.io/tags/</loc>
-      
-      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://xiaofangkang.gitee.io/tags/%E5%91%BD%E4%BB%A4/</loc>
       
       <lastmod>2020-12-11T00:00:00+00:00</lastmod>
@@ -143,16 +213,6 @@
   
     <url>
       <loc>https://xiaofangkang.gitee.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
-      
-      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://xiaofangkang.gitee.io/</loc>
       
       <lastmod>2020-12-11T00:00:00+00:00</lastmod>
       
@@ -262,26 +322,6 @@
     </url>
   
     <url>
-      <loc>https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/</loc>
-      
-      <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://xiaofangkang.gitee.io/categories/%E5%89%8D%E7%AB%AF/</loc>
-      
-      <lastmod>2020-12-10T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
       <loc>https://xiaofangkang.gitee.io/tags/%E7%89%B9%E6%95%88/</loc>
       
       <lastmod>2020-12-10T00:00:00+00:00</lastmod>
@@ -303,16 +343,6 @@
   
     <url>
       <loc>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</loc>
-      
-      <lastmod>2020-12-09T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</loc>
       
       <lastmod>2020-12-09T00:00:00+00:00</lastmod>
       
