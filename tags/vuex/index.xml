@@ -1,27 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>vuex on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/vuex/</link>
-    <description>Recent content in vuex on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/vuex/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vuex教程</title>
-      <link>https://xiaofangkang.gitee.io/2020/vue/</link>
-      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/vue/</guid>
-      <description>Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生改变。
-状态管理模式 介绍 new Vue({ // state  data() { return { count: 0 } }, // view  template: ` &amp;lt;div&amp;gt;{{ count }}&amp;lt;/div&amp;gt; `, // actions  methods: { increment() { this.count++ } } }) 这个状态自管理应用包含以下几个部分：
- state，驱动应用的数据源； view，以声明方式将 state 映射到视图； actions，响应在 view 上的用户输入导致的状态变化。  以下是一个表示“单向数据流”理念的简单示意： 但是，当我们的应用遇到多个组件共享状态时，单向数据流的简洁性很容易被破坏：
- 多个视图依赖于同一状态。 来自不同视图的行为需要变更同一状态。  对于问题一，传参的方法对于多层嵌套的组件将会非常繁琐，并且对于兄弟组件间的状态传递无能为力。 对于问题二，我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式非常脆弱，通常会导致无法维护的代码。
-因此，我们为什么不把组件的共享状态抽取出来，以一个全局单例模式管理呢？在这种模式下，我们的组件树构成了一个巨大的“视图”，不管在树的哪个位置，任何组件都能获取状态或者触发行为！
-通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变得更结构化且易维护
-Vuex 的使用场景 Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。
-如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex。 一个简单的 store 模式 就足够您所需了。但是， 如果您需要构建一个中大型单页应用，您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。 引用 Redux 的作者 Dan Abramov 的话说就是：</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>vuex - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/vuex/</link>
+        <description>vuex - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/vuex/" rel="self" type="application/rss+xml" /><item>
+    <title>vuex教程</title>
+    <link>https://xiaofangkang.gitee.io/vue/</link>
+    <pubDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/vue/</guid>
+    <description><![CDATA[Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式]]></description>
+</item></channel>
 </rss>

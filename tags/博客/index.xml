@@ -1,27 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>博客 on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>hugo 使用方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</guid>
-      <description>1. 创建文章 $ hugo new *.md 解释：about.md 自动生成到了 content/about.md
-2. 部署服务 $ hugo 解释： 使用 hugo 生成 pages 修改的文件用于显示内容
-3.使用皮肤 $ git clone https://hub.fastgit.org/liuzc/leaveit.git
-皮肤的使用说明： https://liuzhichao.com/2018/hugo-theme-leaveit/
-4. 皮肤使用的一些问题 配置文件中 menu 中的是页面中的标签栏。
-[[menu.main]] name = &amp;#34;类型&amp;#34; url = &amp;#34;/categories/&amp;#34; weight = 2 weight 代表标签头的位置 越小越靠前
-5. 文章编写时的抬头描述 --- title: &amp;#34;java 远程调试&amp;#34; date: &amp;#34;2020-12-07&amp;#34; tags: [&amp;#34;java&amp;#34;,&amp;#34;调试&amp;#34;] categories: [&amp;#34;java调试&amp;#34;] --- title ：文件头 date: 文件创建时间 tags: 标签 &amp;mdash;&amp;ndash;&amp;gt; 在配置文件中也会使用到 categories: 类型 &amp;mdash;&amp;gt; 在配置文件中也会使用到
- 配置文件设置 根目录下的 config.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>博客 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+        <description>博客 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 07 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%8D%9A%E5%AE%A2/" rel="self" type="application/rss+xml" /><item>
+    <title>hugo 使用方法</title>
+    <link>https://xiaofangkang.gitee.io/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Mon, 07 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[1. 创建文章 $ hugo new *.md 解释：about.md 自动生成到了 content/about.md 2. 部署服务 $ hugo 解释： 使用 hugo 生成 pages 修改的文件用于显示内容 3.使用皮肤 $ git clone https://hub.fastgit.org/liuzc/leaveit.git 皮肤的使用说]]></description>
+</item></channel>
 </rss>

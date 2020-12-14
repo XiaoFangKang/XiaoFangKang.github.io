@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>MySQL on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/mysql/</link>
-    <description>Recent content in MySQL on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MySQL 导(入,出)数据</title>
-      <link>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
-      <description>导出数据 使用 SELECT &amp;hellip; INTO OUTFILE 语句导出数据  以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中:  SELECT * FROM runoob_tbl INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39;; 你可以通过命令选项来设置数据输出的指定格式，以下实例为导出 CSV 格式：  SELECT * FROM passwd INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\r\n&amp;#39;; 在下面的例子中，生成一个文件，各值用逗号隔开。这种格式可以被许多程序使用。  SELECT a,b,a+b INTO OUTFILE &amp;#39;/tmp/result.text&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; OPTIONALLY ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\n&amp;#39; FROM test_table; SELECT &amp;hellip; INTO OUTFILE 语句有以下属性:  LOAD DATA INFILE是SELECT .</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>MySQL - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/mysql/</link>
+        <description>MySQL - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>MySQL 导(入,出)数据</title>
+    <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
+    <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
+</item></channel>
 </rss>

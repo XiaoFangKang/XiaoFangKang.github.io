@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Oracle中用exp/imp命令参数详解【转】 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="Oracle中用exp/imp命令参数详解【转】" />
+<meta property="og:description" content="Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaofangkang.gitee.io/expandimp/" />
+<meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+<meta property="article:published_time" content="2020-12-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+
+<meta name="twitter:title" content="Oracle中用exp/imp命令参数详解【转】"/>
+<meta name="twitter:description" content="Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/expandimp/" /><link rel="prev" href="https://xiaofangkang.gitee.io/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/" /><link rel="next" href="https://xiaofangkang.gitee.io/ora-01033/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Oracle中用exp/imp命令参数详解【转】",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xiaofangkang.gitee.io\/expandimp\/"
+        },"genre": "posts","keywords": "数据库, Oracle, exp\/imp, 命令, 导（入\/出）","wordcount":  1114 ,
+        "url": "https:\/\/xiaofangkang.gitee.io\/expandimp\/","datePublished": "2020-12-11T00:00:00+00:00","dateModified": "2020-12-11T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "FangKang.Xiao"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 个人简介 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">个人简介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Oracle中用exp/imp命令参数详解【转】</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="far fa-folder fa-fw"></i>数据库</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-11">2020-12-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1114 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#oracle中用expimp命令参数详解">Oracle中用exp/imp命令参数详解</a>
+      <ul>
+        <li><a href="#1用-exp-数-据-导-出">1.【用 exp 数 据 导 出】：</a>
+          <ul>
+            <li><a href="#11-将数据库test完全导出用户名system-密码manager-导出到ddaochudmp中">1.1 将数据库<code>TEST</code>完全导出,用户名<code>system</code> 密码<code>manager</code> 导出到<code>D:\daochu.dmp</code>中</a></li>
+            <li><a href="#12-将数据库中system用户与sys用户的表导出">1.2. 将数据库中<code>system</code>用户与<code>sys</code>用户的表导出</a></li>
+            <li><a href="#13-将数据库中的表table1-table2导出">1.3. 将数据库中的表<code>table1</code> 、<code>table2</code>导出</a></li>
+            <li><a href="#14-将数据库中的表table1中的字段filed1以00打头的数据导出">1.4. 将数据库中的表table1中的字段filed1以”00″打头的数据导出</a></li>
+          </ul>
+        </li>
+        <li><a href="#2用-imp-数-据-导-入">2.【用 imp 数 据 导 入】：</a>
+          <ul>
+            <li><a href="#21-将ddaochudmp-中的数据导入-test数据库中">2.1 将<code>D:\daochu.dmp</code> 中的数据导入 <code>TEST</code>数据库中。</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-imp-演示">3. imp 演示</a>
+          <ul>
+            <li><a href="#31-获取帮助">3.1. 获取帮助</a></li>
+            <li><a href="#32-导入一个完整数据库">3.2. 导入一个完整数据库</a></li>
+            <li><a href="#33-导入一个或一组指定用户所属的全部表索引和其他对象">3.3. 导入一个或一组指定用户所属的全部表、索引和其他对象</a></li>
+            <li><a href="#34-将一个用户所属的数据导入另一个用户">3.4. 将一个用户所属的数据导入另一个用户</a></li>
+            <li><a href="#35-导入一个表">3.5. 导入一个表</a></li>
+            <li><a href="#36-从多个文件导入">3.6. 从多个文件导入</a></li>
+            <li><a href="#37-使用参数文件">3.7. 使用参数文件</a></li>
+            <li><a href="#38-增量导入9i中已经取消">3.8. 增量导入(9i中已经取消)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="oracle中用expimp命令参数详解">Oracle中用exp/imp命令参数详解</h1>
+<h2 id="1用-exp-数-据-导-出">1.【用 exp 数 据 导 出】：</h2>
+<h3 id="11-将数据库test完全导出用户名system-密码manager-导出到ddaochudmp中">1.1 将数据库<code>TEST</code>完全导出,用户名<code>system</code> 密码<code>manager</code> 导出到<code>D:\daochu.dmp</code>中</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">exp system/manager@TEST  <span class="nv">rows</span><span class="o">=</span>y  <span class="nv">indexes</span><span class="o">=</span>y <span class="nv">compress</span><span class="o">=</span>n <span class="nv">buffer</span><span class="o">=</span><span class="m">65536</span>  
+<span class="nv">feedback</span><span class="o">=</span><span class="nv">100000full</span><span class="o">=</span>y  <span class="nv">file</span><span class="o">=</span>d:<span class="se">\d</span>aochu.dmp  
+<span class="nv">log</span><span class="o">=</span>d:<span class="se">\d</span>aochulog.txt   <span class="nv">owner</span><span class="o">=(</span>ECC_BIZ,ECC_CUSTOMER<span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th style="text-align:left">关键字</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:right">默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">USERID</td>
+<td style="text-align:left">用户名/口令</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">FULL</td>
+<td style="text-align:left">导出整个文件</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">BUFFER</td>
+<td style="text-align:left">数据缓冲区的大小</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">OWNER</td>
+<td style="text-align:left">导出指定的所有者用户名列表</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">FILE</td>
+<td style="text-align:left">输出文件</td>
+<td style="text-align:right">(EXPDAT.DMP)</td>
+</tr>
+<tr>
+<td style="text-align:left">TABLES</td>
+<td style="text-align:left">导出指定的表名列表</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">COMPRESS</td>
+<td style="text-align:left">是否压缩导出的文件</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">RECORDLENGTH</td>
+<td style="text-align:left">IO 记录的长度</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">GRANTS</td>
+<td style="text-align:left">导出权限</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">INCTYPE</td>
+<td style="text-align:left">增量导出类型</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">INDEXES</td>
+<td style="text-align:left">导出索引</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">RECORD</td>
+<td style="text-align:left">跟踪增量导出</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">ROWS</td>
+<td style="text-align:left">导出数据行</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">PARFILE</td>
+<td style="text-align:left">参数文件名</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">CONSTRAINTS</td>
+<td style="text-align:left">导出限制</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">CONSISTENT</td>
+<td style="text-align:left">交叉表一致性</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">LOG</td>
+<td style="text-align:left">屏幕输出的日志文件</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">STATISTICS</td>
+<td style="text-align:left">分析对象(ESTIMATE)</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">DIRECT</td>
+<td style="text-align:left">直接路径</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">TRIGGERS</td>
+<td style="text-align:left">导出触发器</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">FEEDBACK</td>
+<td style="text-align:left">显示每 x 行 (0) 的进度</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">FILESIZE</td>
+<td style="text-align:left">各转储文件的最大尺寸</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">QUERY</td>
+<td style="text-align:left">选定导出表子集的子句</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">TRANSPORT_TABLESPACE</td>
+<td style="text-align:left">导出可传输的表空间元数据</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+<tr>
+<td style="text-align:left">TABLESPACES</td>
+<td style="text-align:left">导出指定的表空间列表</td>
+<td style="text-align:right">&mdash;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-将数据库中system用户与sys用户的表导出">1.2. 将数据库中<code>system</code>用户与<code>sys</code>用户的表导出</h3>
+<p><code>exp system/manager@TEST file=d:\daochu.dmp owner=(system,sys)</code></p>
+<h3 id="13-将数据库中的表table1-table2导出">1.3. 将数据库中的表<code>table1</code> 、<code>table2</code>导出</h3>
+<p><code>exp system/manager@TEST file=d:\daochu.dmp tables=(table1,table2)</code></p>
+<h3 id="14-将数据库中的表table1中的字段filed1以00打头的数据导出">1.4. 将数据库中的表table1中的字段filed1以”00″打头的数据导出</h3>
+<p><code>exp system/manager@TEST file=d:\daochu.dmp tables=(table1) query=\” where filed1like &amp;apos;00%&amp;apos;\”</code></p>
+<p><b>上面是常用的导出，对于压缩我不太在意，用<code>winzip</code>把<code>dmp</code>文件可以很好的压缩。不过在上面命令后面 加上 <code>compress=y</code> 就可以了</b></p>
+<hr>
+<h2 id="2用-imp-数-据-导-入">2.【用 imp 数 据 导 入】：</h2>
+<h3 id="21-将ddaochudmp-中的数据导入-test数据库中">2.1 将<code>D:\daochu.dmp</code> 中的数据导入 <code>TEST</code>数据库中。</h3>
+<p><code>imp system/manager@TEST   ignore=y  full=y   file=d:\daochu.dmp  log=d:\daoru.txt</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">关键字</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:right">默认</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">USERID</td>
+<td style="text-align:left">用户名/口令</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">FULL</td>
+<td style="text-align:left">导入整个文件</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">BUFFER</td>
+<td style="text-align:left">数据缓冲区大小</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">FROMUSER</td>
+<td style="text-align:left">所有人用户名列表</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">FILE</td>
+<td style="text-align:left">输入文件</td>
+<td style="text-align:right">(EXPDAT.DMP)</td>
+</tr>
+<tr>
+<td style="text-align:left">TOUSER</td>
+<td style="text-align:left">用户名列表</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">SHOW</td>
+<td style="text-align:left">只列出文件内容</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">TABLES</td>
+<td style="text-align:left">表名列表</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">IGNORE</td>
+<td style="text-align:left">忽略创建错误</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">RECORDLENGTH</td>
+<td style="text-align:left">IO记录的长度</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">GRANTS</td>
+<td style="text-align:left">导入权限</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">INCTYPE</td>
+<td style="text-align:left">增量导入类型</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">INDEXES</td>
+<td style="text-align:left">导入索引</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">COMMIT</td>
+<td style="text-align:left">提交数组插入</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">ROWS</td>
+<td style="text-align:left">导入数据行</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">PARFILE</td>
+<td style="text-align:left">参数文件名</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">LOG</td>
+<td style="text-align:left">屏幕输出的日志文件</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">CONSTRAINTS</td>
+<td style="text-align:left">导入限制</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">DESTROY</td>
+<td style="text-align:left">覆盖表空间数据文件</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">INDEXFILE</td>
+<td style="text-align:left">将表/索引信息写入指定的文件</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">SKIP_UNUSABLE_INDEXES</td>
+<td style="text-align:left">跳过不可用索引的维护</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">FEEDBACK</td>
+<td style="text-align:left">每 x 行显示进度</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">TOID_NOVALIDATE</td>
+<td style="text-align:left">跳过指定类型 ID 的验证</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">FILESIZE</td>
+<td style="text-align:left">每个转储文件的最大大小</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">STATISTICS</td>
+<td style="text-align:left">始终导入预计算的统计信息</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">RESUMABLE</td>
+<td style="text-align:left">在遇到有关空间的错误时挂起</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">RESUMABLE_NAME</td>
+<td style="text-align:left">用来标识可恢复语句的文本字符串</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">RESUMABLE_TIMEOUT</td>
+<td style="text-align:left">RESUMABLE 的等待时间</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">COMPILE</td>
+<td style="text-align:left">编译过程, 程序包和函数</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">STREAMS_CONFIGURATION</td>
+<td style="text-align:left">导入 Streams 的一般元数据</td>
+<td style="text-align:right">(Y)</td>
+</tr>
+<tr>
+<td style="text-align:left">STREAMS_INSTANITATION</td>
+<td style="text-align:left">导入 Streams 的实例化元数据</td>
+<td style="text-align:right">(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">TRANSPORT_TABLESPACE</td>
+<td style="text-align:left">导入可传输的表空间元数据</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">TABLESPACES</td>
+<td style="text-align:left">将要传输到数据库的表空间</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">DATAFILES</td>
+<td style="text-align:left">将要传输到数据库的数据文件</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">TTS_OWNERS</td>
+<td style="text-align:left">拥有可传输表空间集中数据的用户</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-imp-演示">3. imp 演示</h2>
+<h3 id="31-获取帮助">3.1. 获取帮助</h3>
+<p><code>imp help=y</code></p>
+<h3 id="32-导入一个完整数据库">3.2. 导入一个完整数据库</h3>
+<p><code>imp system/manager file=bible_db log=dible_db full=y ignore=y</code></p>
+<h3 id="33-导入一个或一组指定用户所属的全部表索引和其他对象">3.3. 导入一个或一组指定用户所属的全部表、索引和其他对象</h3>
+<p><code>imp system/manager file=seapark log=seapark fromuser=seapark</code></p>
+<p><code>imp system/manager file=seapark log=seapark fromuser=(seapark,amy,amyc,harold)</code></p>
+<h3 id="34-将一个用户所属的数据导入另一个用户">3.4. 将一个用户所属的数据导入另一个用户</h3>
+<p><code>imp system/manager file=tank log=tank fromuser=seapark touser=seapark_copy</code></p>
+<p><code>imp system/manager file=tank log=tank fromuser=(seapark,amy) touser=(seapark1, amy1)</code></p>
+<h3 id="35-导入一个表">3.5. 导入一个表</h3>
+<p><code>imp system/manager file=tank log=tank fromuser=seapark TABLES=(a,b)</code></p>
+<h3 id="36-从多个文件导入">3.6. 从多个文件导入</h3>
+<p><code>imp system/manager file=(paycheck_1,paycheck_2,paycheck_3,paycheck_4) log=paycheck,filesize=1G full=y</code></p>
+<h3 id="37-使用参数文件">3.7. 使用参数文件</h3>
+<p><code>imp system/manager parfile=bible_tables.par</code></p>
+<p><code>bible_tables.par</code>参数文件：</p>
+<p><code>#Import the sample tables used for the Oracle8i Database Administrator's</code></p>
+<p><code>#Bible.</code></p>
+<p><code>fromuser=seapark touser=seapark_copy file=seapark log=seapark_import</code></p>
+<h3 id="38-增量导入9i中已经取消">3.8. 增量导入(9i中已经取消)</h3>
+<p><code>imp system./manager inctype= RECTORE FULL=Y FILE=A</code></p>
+<p>本文章转载于:<a href="http://www.cnblogs.com/songdavid/articles/2435439.html" target="_blank" rel="noopener noreffer">大卫.宋博客</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/expandimp/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】" data-hashtags="数据库,Oracle,exp/imp,命令,导（入/出）"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/expandimp/" data-hashtag="数据库"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/expandimp/" data-title="Oracle中用exp/imp命令参数详解【转】"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/oracle/">Oracle</a>,&nbsp;<a href="/tags/exp/imp/">exp/imp</a>,&nbsp;<a href="/tags/%E5%91%BD%E4%BB%A4/">命令</a>,&nbsp;<a href="/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/">导（入/出）</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/" class="prev" rel="prev" title="增加 ORACLE 数据库空间"><i class="fas fa-angle-left fa-fw"></i>增加 ORACLE 数据库空间</a>
+            <a href="/ora-01033/" class="next" rel="next" title="ORA-01033:oracle initialization or shutdown in progress 解决办法">ORA-01033:oracle initialization or shutdown in progress 解决办法<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">FangKang.Xiao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"gitalk":{"admin":[""],"clientID":"504e438de9f9f13776a0","clientSecret":"32bc7092c611c61408fa1f1217c6d441bd0ecc9b","id":"2020-12-11T00:00:00Z","owner":"","repo":"","title":"Oracle中用exp/imp命令参数详解【转】"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

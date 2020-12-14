@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>canvas on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/canvas/</link>
-    <description>Recent content in canvas on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 10 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/canvas/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>canvas特效小人</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
-      <description>介绍： 本站使用小人特效
-依赖 jquery.js
-源代码 /** * 小人 */ function f2() { var S_width; var S_height; var isTouch = &amp;#39;ontouchstart&amp;#39; in window, START_EVENT = isTouch ? &amp;#39;touchstart&amp;#39; : &amp;#39;mousedown&amp;#39;, MOVE_EVENT = isTouch ? &amp;#39;touchmove&amp;#39; : &amp;#39;mousemove&amp;#39;, END_EVENT = isTouch ? &amp;#39;touchend&amp;#39; : &amp;#39;mouseup&amp;#39;; var powder = []; //speed:7  var man = { x: 30, y: 110, step: 0, type: &amp;#39;teststyle&amp;#39;, speed: 7, armlength: 10, leglength: 15, head: 8, body: 25 }; var isspread = false; var ispowder = true; //var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}]; //不行  var teststyle = [ { armleft0: -45, armleft1: -65, armright0: 45, armright1: 25, legleft0: -45, legleft1: -65, legright0: 45, legright1: 25 }, { armleft0: -30, armleft1: -50, armright0: 30, armright1: 10, legleft0: -30, legleft1: -50, legright0: 30, legright1: 10 }, { armleft0: -15, armleft1: -35, armright0: 15, armright1: -5, legleft0: -15, legleft1: -35, legright0: 15, legright1: -5 }, { armleft0: 0, armleft1: -20, armright0: 0, armright1: -20, legleft0: 0, legleft1: -20, legright0: 0, legright1: -20 }, { armleft0: 15, armleft1: -5, armright0: -15, armright1: -35, legleft0: 15, legleft1: -5, legright0: -15, legright1: -35 }, { armleft0: 30, armleft1: 10, armright0: -30, armright1: -50, legleft0: 30, legleft1: 10, legright0: -30, legright1: -50 } ]; //  var teststyle1 = [ { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 72, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 111, legright1: 108 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 135, legright1: 135 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -51, armleft1: -27, armright0: 51, armright1: 41, legleft0: -22, legleft1: -18, legright0: 22, legright1: 18 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 }, { armleft0: -93, armleft1: -81, armright0: 93, armright1: 123, legleft0: -56, legleft1: -54, legright0: 56, legright1: 54 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 } ]; //var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};  window.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>canvas - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/canvas/</link>
+        <description>canvas - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/canvas/" rel="self" type="application/rss+xml" /><item>
+    <title>canvas特效小人</title>
+    <link>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
+    <description><![CDATA[介绍： 本站使用小人特效 依赖 jquery.js 源代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53]]></description>
+</item></channel>
 </rss>

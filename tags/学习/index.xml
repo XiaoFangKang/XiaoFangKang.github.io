@@ -1,29 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>学习 on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 学习 on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>3个有用的网站</title>
-      <link>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
-      <description>介绍  视频剪辑（ps,pr 学习）doyoudo  开发者 书栈网  学习外语 多邻国   </description>
-    </item>
-    
-    <item>
-      <title>markdown 学习</title>
-      <link>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</guid>
-      <description>代码 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  *** 分割线 ~~*斜体文字*~~ &amp;lt;u&amp;gt;_斜体文字_&amp;lt;/u&amp;gt; **粗体文字** __粗体文字__ ***斜粗体文字*** ___斜粗体文字___[^1]。 [^1]: 你好啊这是定义的值 *** * * * ***** * 第一列 * 第二列 * 第三列 + 第一列 + 第二列 + 第三列 1. 第一列啊 1.1 中级 2. 第二列 * 初级 3. 第三列 * 啊啊啊 &amp;gt; 区块引用 &amp;gt; &amp;gt; 菜鸟  # 区块使用列表 &amp;gt; 区块中使用列表 1. 你好 1.1 你在干什么 2. 啊啊啊 1.2 我在想你 3.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>学习 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/</link>
+        <description>学习 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
+    <title>3个有用的网站</title>
+    <link>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+    <description><![CDATA[介绍 视频剪辑（ps,pr 学习）doyoudo 开发者 书栈网 学习外语 多邻国]]></description>
+</item><item>
+    <title>markdown 学习</title>
+    <link>https://xiaofangkang.gitee.io/markdown%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/markdown%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68]]></description>
+</item></channel>
 </rss>

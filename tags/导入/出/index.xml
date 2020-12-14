@@ -1,28 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>导（入/出） on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/</link>
-    <description>Recent content in 导（入/出） on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>MySQL 导(入,出)数据</title>
-      <link>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
-      <description>导出数据 使用 SELECT &amp;hellip; INTO OUTFILE 语句导出数据  以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中:  SELECT * FROM runoob_tbl INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39;; 你可以通过命令选项来设置数据输出的指定格式，以下实例为导出 CSV 格式：  SELECT * FROM passwd INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\r\n&amp;#39;; 在下面的例子中，生成一个文件，各值用逗号隔开。这种格式可以被许多程序使用。  SELECT a,b,a+b INTO OUTFILE &amp;#39;/tmp/result.text&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; OPTIONALLY ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\n&amp;#39; FROM test_table; SELECT &amp;hellip; INTO OUTFILE 语句有以下属性:  LOAD DATA INFILE是SELECT .</description>
-    </item>
-    
-    <item>
-      <title>Oracle中用exp/imp命令参数详解【转】</title>
-      <link>https://xiaofangkang.gitee.io/2020/expandimp/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/expandimp/</guid>
-      <description>Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中 exp system/manager@TEST rows=y indexes=y compress=n buffer=65536 feedback=100000full=y file=d:\daochu.dmp log=d:\daochulog.txt owner=(ECC_BIZ,ECC_CUSTOMER)    关键字 说明 默认     USERID 用户名/口令 &amp;mdash;   FULL 导出整个文件 (N)   BUFFER 数据缓冲区的大小 &amp;mdash;   OWNER 导出指定的所有者用户名列表 &amp;mdash;   FILE 输出文件 (EXPDAT.DMP)   TABLES 导出指定的表名列表 &amp;mdash;   COMPRESS 是否压缩导出的文件 (Y)   RECORDLENGTH IO 记录的长度 &amp;mdash;   GRANTS 导出权限 (Y)   INCTYPE 增量导出类型 &amp;mdash;   INDEXES 导出索引 (Y)   RECORD 跟踪增量导出 (Y)   ROWS 导出数据行 (Y)   PARFILE 参数文件名 &amp;mdash;   CONSTRAINTS 导出限制 (Y)   CONSISTENT 交叉表一致性 &amp;mdash;   LOG 屏幕输出的日志文件 &amp;mdash;   STATISTICS 分析对象(ESTIMATE) &amp;mdash;   DIRECT 直接路径 &amp;mdash;   TRIGGERS 导出触发器 (Y)   FEEDBACK 显示每 x 行 (0) 的进度 &amp;mdash;   FILESIZE 各转储文件的最大尺寸 &amp;mdash;   QUERY 选定导出表子集的子句 &amp;mdash;   TRANSPORT_TABLESPACE 导出可传输的表空间元数据 &amp;mdash;   TABLESPACES 导出指定的表空间列表 &amp;mdash;    1.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>导（入/出） - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/</link>
+        <description>导（入/出） - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/" rel="self" type="application/rss+xml" /><item>
+    <title>MySQL 导(入,出)数据</title>
+    <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
+    <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
+</item><item>
+    <title>Oracle中用exp/imp命令参数详解【转】</title>
+    <link>https://xiaofangkang.gitee.io/expandimp/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/expandimp/</guid>
+    <description><![CDATA[Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\]]></description>
+</item></channel>
 </rss>

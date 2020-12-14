@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>systemctl使用方法 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="systemctl使用方法" />
+<meta property="og:description" content="说明 每一个服务以.service结尾，一般会分为3部分：[Unit]、[Service]和[Install] vim /usr/lib/systemd/system/xxx.service 1 2 3 4 5 6 7 8 9 10 11 12 13 14" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaofangkang.gitee.io/systemctl/" />
+<meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+<meta property="article:published_time" content="2020-12-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-08T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+
+<meta name="twitter:title" content="systemctl使用方法"/>
+<meta name="twitter:description" content="说明 每一个服务以.service结尾，一般会分为3部分：[Unit]、[Service]和[Install] vim /usr/lib/systemd/system/xxx.service 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/systemctl/" /><link rel="prev" href="https://xiaofangkang.gitee.io/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" /><link rel="next" href="https://xiaofangkang.gitee.io/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "systemctl使用方法",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xiaofangkang.gitee.io\/systemctl\/"
+        },"genre": "posts","keywords": "linux, 命令, systemctl","wordcount":  1417 ,
+        "url": "https:\/\/xiaofangkang.gitee.io\/systemctl\/","datePublished": "2020-12-08T00:00:00+00:00","dateModified": "2020-12-08T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "FangKang.Xiao"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 个人简介 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">个人简介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">systemctl使用方法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/linux%E5%91%BD%E4%BB%A4/"><i class="far fa-folder fa-fw"></i>linux命令</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-08">2020-12-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1417 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#说明">说明</a>
+      <ul>
+        <li><a href="#字段说明">字段说明：</a>
+          <ul>
+            <li><a href="#type的类型有">Type的类型有：</a></li>
+            <li><a href="#environmentfile">EnvironmentFile:</a></li>
+            <li><a href="#environment">Environment:</a></li>
+            <li><a href="#killmode的类型">KillMode的类型：</a></li>
+            <li><a href="#restart的类型">Restart的类型：</a></li>
+          </ul>
+        </li>
+        <li><a href="#对于守护进程推荐用on-failure">对于守护进程，推荐用on-failure</a>
+          <ul>
+            <li><a href="#restartsec字段">RestartSec字段：</a></li>
+          </ul>
+        </li>
+        <li><a href="#各种exec字段">各种Exec*字段：</a>
+          <ul>
+            <li><a href="#wantedby字段">WantedBy字段：</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#systemctl-命令">systemctl 命令</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="说明">说明</h1>
+<p><strong>每一个服务以.service结尾，一般会分为3部分：<code>[Unit]、[Service]和[Install]</code></strong></p>
+<p><code>vim /usr/lib/systemd/system/xxx.service </code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-service" data-lang="service"><span class="err">[Unit]</span>   <span class="c"># 主要是服务说明</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">test   # 简单描述服务</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network.target    # 描述服务类别，表示本服务需要在network服务启动后在启动</span>
+<span class="na">Before</span><span class="o">=</span><span class="s">xxx.service      # 表示需要在某些服务启动之前启动，After和Before字段只涉及启动顺序，不涉及依赖关系。</span>
+
+<span class="err">[Service]</span>  <span class="c"># 核心区域</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">forking     # 表示后台运行模式。</span>
+<span class="na">User</span><span class="o">=</span><span class="s">user        # 设置服务运行的用户</span>
+<span class="na">Group</span><span class="o">=</span><span class="s">user       # 设置服务运行的用户组</span>
+<span class="na">KillMode</span><span class="o">=</span><span class="s">control-group   # 定义systemd如何停止服务</span>
+<span class="na">PIDFile</span><span class="o">=</span><span class="s">/usr/local/test/test.pid    # 存放PID的绝对路径</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">no        # 定义服务进程退出后，systemd的重启方式，默认是不重启</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/test/bin/startup.sh    # 服务启动命令，命令需要绝对路径</span>
+<span class="na">PrivateTmp</span><span class="o">=</span><span class="s">true                               # 表示给服务分配独立的临时空间</span>
+   
+<span class="err">[Install]</span>   
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target  # 多用户</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="字段说明">字段说明：</h2>
+<h3 id="type的类型有">Type的类型有：</h3>
+<ul>
+<li>simple(默认）：# 以ExecStart字段启动的进程为主进程</li>
+<li>forking:  # ExecStart字段以fork()方式启动，此时父进程将退出，子进程将成为主进程（后台运行）。一般都设置为forking</li>
+<li>oneshot:  # 类似于simple，但只执行一次，systemd会等它执行完，才启动其他服务</li>
+<li>dbus：    # 类似于simple, 但会等待D-Bus信号后启动</li>
+<li>notify:   # 类似于simple, 启动结束后会发出通知信号，然后systemd再启动其他服务</li>
+<li>idle：    # 类似于simple，但是要等到其他任务都执行完，才会启动该服务。</li>
+</ul>
+<h3 id="environmentfile">EnvironmentFile:</h3>
+<p>指定配置文件，和连词号组合使用，可以避免配置文件不存在的异常。</p>
+<h3 id="environment">Environment:</h3>
+<p>后面接多个不同的shell变量。
+例如：
+Environment=DATA_DIR=/data/elk
+Environment=LOG_DIR=/var/log/elasticsearch
+Environment=PID_DIR=/var/run/elasticsearch
+EnvironmentFile=-/etc/sysconfig/elasticsearch</p>
+<p>连词号（-）：在所有启动设置之前，添加的变量字段，都可以加上连词号
+表示抑制错误，即发生错误时，不影响其他命令的执行。
+比如<code>EnviromentFile=-/etc/sysconfig/xxx</code> 表示即使文件不存在，也不会抛异常</p>
+<h3 id="killmode的类型">KillMode的类型：</h3>
+<ul>
+<li>control-group(默认)：# 当前控制组里的所有子进程，都会被杀掉</li>
+<li>process: # 只杀主进程</li>
+<li>mixed:   # 主进程将收到SIGTERM信号，子进程收到SIGKILL信号</li>
+<li>none:    # 没有进程会被杀掉，只是执行服务的stop命令</li>
+</ul>
+<h3 id="restart的类型">Restart的类型：</h3>
+<ul>
+<li>no(默认值)： # 退出后无操作</li>
+<li>on-success:  # 只有正常退出时（退出状态码为0）,才会重启</li>
+<li>on-failure:  # 非正常退出时，重启，包括被信号终止和超时等</li>
+<li>on-abnormal: # 只有被信号终止或超时，才会重启</li>
+<li>on-abort:    # 只有在收到没有捕捉到的信号终止时，才会重启</li>
+<li>on-watchdog: # 超时退出时，才会重启</li>
+<li>always:      # 不管什么退出原因，都会重启</li>
+</ul>
+<h2 id="对于守护进程推荐用on-failure">对于守护进程，推荐用on-failure</h2>
+<h3 id="restartsec字段">RestartSec字段：</h3>
+<p>表示systemd重启服务之前，需要等待的秒数：RestartSec: 30</p>
+<h2 id="各种exec字段">各种Exec*字段：</h2>
+<p>Exec* 后面接的命令，仅接受“指令 参数 参数..”格式，不能接受&lt;&gt;|&amp;等特殊字符，很多bash语法也不支持。如果想支持bash语法，
+**需要设置Tyep=oneshot**</p>
+<ul>
+<li>ExecStart：    # 启动服务时执行的命令</li>
+<li>ExecReload：   # 重启服务时执行的命令</li>
+<li>ExecStop：     # 停止服务时执行的命令</li>
+<li>ExecStartPre： # 启动服务前执行的命令</li>
+<li>ExecStartPost：# 启动服务后执行的命令</li>
+<li>ExecStopPost： # 停止服务后执行的命令</li>
+</ul>
+<h3 id="wantedby字段">WantedBy字段：</h3>
+<ul>
+<li>multi-user.target: # 表示多用户命令行状态，这个设置很重要</li>
+<li>graphical.target:  # 表示图形用户状体，它依赖于multi-user.target</li>
+</ul>
+<h1 id="systemctl-命令">systemctl 命令</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">systemctl daemon-reload  # 重载系统服务
+systemctl enable *.service # 设置某个服务开机启动
+systemctl start *.service # 启动某个服务
+systemctl stop *.service # 停止某个服务
+systemctl reload *.service # 重启某个服务
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-08</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/systemctl/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法" data-hashtags="linux,命令,systemctl"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/systemctl/" data-hashtag="linux"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/systemctl/" data-title="systemctl使用方法"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">linux</a>,&nbsp;<a href="/tags/%E5%91%BD%E4%BB%A4/">命令</a>,&nbsp;<a href="/tags/systemctl/">systemctl</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/" class="prev" rel="prev" title="hugo 使用方法"><i class="fas fa-angle-left fa-fw"></i>hugo 使用方法</a>
+            <a href="/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/" class="next" rel="next" title="JVM 内存溢出">JVM 内存溢出<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">FangKang.Xiao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"gitalk":{"admin":[""],"clientID":"504e438de9f9f13776a0","clientSecret":"32bc7092c611c61408fa1f1217c6d441bd0ecc9b","id":"2020-12-08T00:00:00Z","owner":"","repo":"","title":"systemctl使用方法"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

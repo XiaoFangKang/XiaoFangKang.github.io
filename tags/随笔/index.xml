@@ -1,20 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>随笔 on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E9%9A%8F%E7%AC%94/</link>
-    <description>Recent content in 随笔 on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>3个有用的网站</title>
-      <link>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
-      <description>介绍  视频剪辑（ps,pr 学习）doyoudo  开发者 书栈网  学习外语 多邻国   </description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>随笔 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E9%9A%8F%E7%AC%94/</link>
+        <description>随笔 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E9%9A%8F%E7%AC%94/" rel="self" type="application/rss+xml" /><item>
+    <title>3个有用的网站</title>
+    <link>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+    <description><![CDATA[介绍 视频剪辑（ps,pr 学习）doyoudo 开发者 书栈网 学习外语 多邻国]]></description>
+</item></channel>
 </rss>

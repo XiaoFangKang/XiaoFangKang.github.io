@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>查看oracle数据库的连接数以及用户【转】 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="查看oracle数据库的连接数以及用户【转】" />
+<meta property="og:description" content="查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status=&#39;ACTIVE&#39;; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" />
+<meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+<meta property="article:published_time" content="2020-12-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-11T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+
+<meta name="twitter:title" content="查看oracle数据库的连接数以及用户【转】"/>
+<meta name="twitter:description" content="查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status=&#39;ACTIVE&#39;; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" /><link rel="prev" href="https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/" /><link rel="next" href="https://xiaofangkang.gitee.io/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "查看oracle数据库的连接数以及用户【转】",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xiaofangkang.gitee.io\/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7\/"
+        },"genre": "posts","keywords": "数据库, 维护, ORACLE","wordcount":  1070 ,
+        "url": "https:\/\/xiaofangkang.gitee.io\/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7\/","datePublished": "2020-12-11T00:00:00+00:00","dateModified": "2020-12-11T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "FangKang.Xiao"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 个人简介 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" />FangKang.Xiao 博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">个人简介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">查看oracle数据库的连接数以及用户【转】</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="far fa-folder fa-fw"></i>数据库</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-11">2020-12-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1070 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><ol>
+<li>查询 <code>oracle</code>的连接数</li>
+</ol>
+<p><code>select count(*) from v$session;</code></p>
+<ol start="2">
+<li>查询<code>oracle</code>的并发连接数</li>
+</ol>
+<p><code>select count(*) from v$session where status='ACTIVE';</code></p>
+<ol start="3">
+<li>查看不同用户的连接数</li>
+</ol>
+<p><code>select username,count(username) from v$session where username is not null group by username;</code></p>
+<ol start="4">
+<li>查看所有用户：</li>
+</ol>
+<p><code>select * from all_users;</code></p>
+<ol start="5">
+<li>查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：</li>
+</ol>
+<p><code>select * from dba_sys_privs;</code></p>
+<p><code>select * from user_sys_privs;</code></p>
+<ol start="6">
+<li>查看角色(只能查看登陆用户拥有的角色)所包含的权限</li>
+</ol>
+<p><code>select * from role_sys_privs;</code></p>
+<ol start="7">
+<li>查看用户对象权限：</li>
+</ol>
+<p><code>select * from dba_tab_privs;</code></p>
+<p><code>select * from all_tab_privs;</code></p>
+<p><code>select * from user_tab_privs;</code></p>
+<ol start="8">
+<li>查看所有角色：</li>
+</ol>
+<p><code>select * from dba_roles;</code></p>
+<ol start="9">
+<li>查看用户或角色所拥有的角色：</li>
+</ol>
+<p><code>select * from dba_role_privs;</code></p>
+<p><code>select * from user_role_privs;</code></p>
+<ol start="10">
+<li>查看哪些用户有<code>sysdba</code>或<code>sysoper</code>系统权限(查询时需要相应权限)</li>
+</ol>
+<p><code>select * from V$PWFILE_USERS;</code></p>
+<p><code>select count(*) from v$process</code> &ndash;当前的连接数</p>
+<p><code>select value from v$parameter where name = 'processes' </code>&ndash;数据库允许的最大连接数</p>
+<p><strong>修改最大连接数:</strong></p>
+<p><code>alter system set processes = 300 scope = spfile;</code></p>
+<p><strong>重启数据库:</strong></p>
+<p><code>shutdown immediate;</code>
+<code>startup;</code></p>
+<p><strong>&ndash;查看当前有哪些用户正在使用数据</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">osuser</span><span class="p">,</span> <span class="n">a</span><span class="p">.</span><span class="n">username</span><span class="p">,</span><span class="n">cpu_time</span><span class="o">/</span><span class="n">executions</span><span class="o">/</span><span class="mi">1000000</span><span class="o">||</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">sql_fulltext</span><span class="p">,</span><span class="n">machine</span>
+<span class="k">from</span> <span class="n">v$session</span> <span class="n">a</span><span class="p">,</span> <span class="n">v$sqlarea</span> <span class="n">b</span>
+<span class="k">where</span> <span class="n">a</span><span class="p">.</span><span class="n">sql_address</span> <span class="o">=</span><span class="n">b</span><span class="p">.</span><span class="n">address</span> <span class="k">order</span> <span class="k">by</span> <span class="n">cpu_time</span><span class="o">/</span><span class="n">executions</span> <span class="k">desc</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>select count(*) from v$session</code> #连接数</p>
+<p><code>select count(*) from v$session where status='ACTIVE'</code>　#并发连接数</p>
+<p><code>show parameter processes</code> #最大连接</p>
+<p><code>alter system set processes = value scope = spfile;</code>重启数据库 #修改连接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">SQL&gt; Select count<span class="o">(</span>*<span class="o">)</span> from v<span class="nv">$session</span> where <span class="nv">status</span><span class="o">=</span><span class="s1">&#39;ACTIVE&#39;</span> <span class="p">;</span>
+
+COUNT<span class="o">(</span>*<span class="o">)</span>
+----------
+<span class="m">20</span>
+
+SQL&gt; Select count<span class="o">(</span>*<span class="o">)</span> from v<span class="nv">$session</span><span class="p">;</span>
+
+COUNT<span class="o">(</span>*<span class="o">)</span>
+----------
+<span class="m">187</span>
+
+SQL&gt; show parameter processes<span class="p">;</span>
+
+NAME TYPE VALUE
+------------------------------------ ----------- ----------
+aq_tm_processes integer <span class="m">0</span>
+db_writer_processes integer <span class="m">1</span>
+gcs_server_processes integer <span class="m">0</span>
+job_queue_processes integer <span class="m">10</span>
+log_archive_max_processes integer <span class="m">2</span>
+processes integer <span class="m">450</span>
+SQL&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>并发指<code>active,I SEE</code></strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">SQL&gt; <span class="k">select</span> count<span class="o">(</span>*<span class="o">)</span> from v<span class="nv">$session</span> <span class="c1">#连接数</span>
+SQL&gt; Select count<span class="o">(</span>*<span class="o">)</span> from v<span class="nv">$session</span> where <span class="nv">status</span><span class="o">=</span><span class="s1">&#39;ACTIVE&#39;</span>　<span class="c1">#并发连接数</span>
+SQL&gt; show parameter processes <span class="c1">#最大连接</span>
+SQL&gt; alter system <span class="nb">set</span> <span class="nv">processes</span> <span class="o">=</span> value <span class="nv">scope</span> <span class="o">=</span> spfile<span class="p">;</span>重启数据库 <span class="c1">#修改连接</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>unix</code> 1个用户<code>session</code> 对应一个操作系统 <code>process</code>
+而 <code>windows</code>体现在线程</p>
+<p><code>DBA</code>要定时对数据库的连接情况进行检查，看与数据库建立的会话数目是不是正常，如果建立了过多的连接，会消耗数据库的资源。同时，对一些“挂死”的连接，可能会需要
+<code>DBA</code>手工进行清理。</p>
+<p>以下的<code>SQL</code>语句列出当前数据库建立的会话情况:</p>
+<p><code>select sid,serial#,username,program,machine,status from v$session;</code></p>
+<p><strong>输出结果为:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">SID SERIAL# USERNAME PROGRAM MACHINE STATUS
+---- ------- ---------- ----------- --------------- --------
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 3 ORACLE.EXE WORK3 ACTIVE
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 1 ORACLE.EXE WORK3 ACTIVE
+ 27 SYS SQLPLUS.EXE WORKGROUP\\WORK3 ACTIVE
+ 5 DBSNMP dbsnmp.exe WORKGROUP\\WORK3 INACTIVE
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>其中，</strong>
+<code>SID </code>会话(<code>session</code>)的<code>ID</code>号;</p>
+<p><code>SERIAL</code># 会话的序列号，和<code>SID</code>一起用来唯一标识一个会话;</p>
+<p><code>USERNAME</code> 建立该会话的用户名;</p>
+<p><code>PROGRAM</code> 这个会话是用什么工具连接到数据库的;</p>
+<p><code>STATUS</code> 当前这个会话的状态，<code>ACTIVE</code>表示会话正在执行某些任务，<code>INACTIVE</code>
+表示当前会话没有执行任何操作;
+如果<code>DBA</code>要手工断开某个会话，则执行:</p>
+<p><code>alter system kill session \'SID,SERIAL#\'</code></p>
+<p><code>sql</code>语句</p>
+<p><strong><code>SQL</code>语句如下：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">SELECT</span> <span class="n">username</span><span class="p">,</span> <span class="n">machine</span><span class="p">,</span> <span class="n">program</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="k">COUNT</span> <span class="p">(</span><span class="n">machine</span><span class="p">)</span> <span class="k">AS</span>
+<span class="err">连接数量</span>
+<span class="k">FROM</span> <span class="n">v$session</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">username</span><span class="p">,</span> <span class="n">machine</span><span class="p">,</span> <span class="n">program</span><span class="p">,</span> <span class="n">status</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">machine</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>显示结果（每个人的机器上会不同）</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">SCHNEIDER|WORKGROUD\WANGZHENG|TOAD.exe|ACTIVE|1
+SCHNEIDER|WORKGROUP\597728AA514F49D|sqlplusw.exe|INACTIVE|1
+|WWW-Q6ZMR2OIU9V|ORACLE.EXE|ACTIVE|8
+PUBLIC|||INACTIVE|0
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>按主机名查询</strong></p>
+<p><code>SELECT COUNT(*) FROM V$SESSION WHERE MACHINE = 'DXMH';</code> &lsquo;<code>DXMH</code>&lsquo;为主机名</p>
+<p><strong>数据恢复语句</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">informationlaw_bak</span>
+<span class="k">as</span>
+<span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">informationlaw</span> <span class="k">as</span> <span class="k">of</span> <span class="k">TIMESTAMP</span> <span class="n">to_timestamp</span><span class="p">(</span><span class="s1">&#39;20121126 103435&#39;</span><span class="p">,</span><span class="s1">&#39;yyyymmdd hh24miss&#39;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>//按机器名分组查</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"> <span class="k">select</span> <span class="n">username</span><span class="p">,</span><span class="n">machine</span><span class="p">,</span><span class="k">count</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="k">from</span> <span class="n">v$session</span> <span class="k">where</span> <span class="n">username</span> <span class="k">is</span> <span class="k">not</span> <span class="k">null</span> <span class="k">group</span> <span class="k">by</span> <span class="n">username</span><span class="p">,</span><span class="n">machine</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>本文章转载于:<a href="https://blog.51cto.com/wangqh/1787260" target="_blank" rel="noopener noreffer">PeterWang2018</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】" data-hashtags="数据库,维护,ORACLE"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-hashtag="数据库"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/" data-title="查看oracle数据库的连接数以及用户【转】"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>,&nbsp;<a href="/tags/%E7%BB%B4%E6%8A%A4/">维护</a>,&nbsp;<a href="/tags/oracle/">Oracle</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/" class="prev" rel="prev" title="canvas特效小人"><i class="fas fa-angle-left fa-fw"></i>canvas特效小人</a>
+            <a href="/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/" class="next" rel="next" title="增加 ORACLE 数据库空间">增加 ORACLE 数据库空间<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">FangKang.Xiao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"gitalk":{"admin":[""],"clientID":"504e438de9f9f13776a0","clientSecret":"32bc7092c611c61408fa1f1217c6d441bd0ecc9b","id":"2020-12-11T00:00:00Z","owner":"","repo":"","title":"查看oracle数据库的连接数以及用户【转】"}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

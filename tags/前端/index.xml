@@ -1,64 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>前端 on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/</link>
-    <description>Recent content in 前端 on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vuex教程</title>
-      <link>https://xiaofangkang.gitee.io/2020/vue/</link>
-      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/vue/</guid>
-      <description>Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生改变。
-状态管理模式 介绍 new Vue({ // state  data() { return { count: 0 } }, // view  template: ` &amp;lt;div&amp;gt;{{ count }}&amp;lt;/div&amp;gt; `, // actions  methods: { increment() { this.count++ } } }) 这个状态自管理应用包含以下几个部分：
- state，驱动应用的数据源； view，以声明方式将 state 映射到视图； actions，响应在 view 上的用户输入导致的状态变化。  以下是一个表示“单向数据流”理念的简单示意： 但是，当我们的应用遇到多个组件共享状态时，单向数据流的简洁性很容易被破坏：
- 多个视图依赖于同一状态。 来自不同视图的行为需要变更同一状态。  对于问题一，传参的方法对于多层嵌套的组件将会非常繁琐，并且对于兄弟组件间的状态传递无能为力。 对于问题二，我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式非常脆弱，通常会导致无法维护的代码。
-因此，我们为什么不把组件的共享状态抽取出来，以一个全局单例模式管理呢？在这种模式下，我们的组件树构成了一个巨大的“视图”，不管在树的哪个位置，任何组件都能获取状态或者触发行为！
-通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变得更结构化且易维护
-Vuex 的使用场景 Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。
-如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex。 一个简单的 store 模式 就足够您所需了。但是， 如果您需要构建一个中大型单页应用，您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。 引用 Redux 的作者 Dan Abramov 的话说就是：</description>
-    </item>
-    
-    <item>
-      <title>canvas特效小人</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
-      <description>介绍： 本站使用小人特效
-依赖 jquery.js
-源代码 /** * 小人 */ function f2() { var S_width; var S_height; var isTouch = &amp;#39;ontouchstart&amp;#39; in window, START_EVENT = isTouch ? &amp;#39;touchstart&amp;#39; : &amp;#39;mousedown&amp;#39;, MOVE_EVENT = isTouch ? &amp;#39;touchmove&amp;#39; : &amp;#39;mousemove&amp;#39;, END_EVENT = isTouch ? &amp;#39;touchend&amp;#39; : &amp;#39;mouseup&amp;#39;; var powder = []; //speed:7  var man = { x: 30, y: 110, step: 0, type: &amp;#39;teststyle&amp;#39;, speed: 7, armlength: 10, leglength: 15, head: 8, body: 25 }; var isspread = false; var ispowder = true; //var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}]; //不行  var teststyle = [ { armleft0: -45, armleft1: -65, armright0: 45, armright1: 25, legleft0: -45, legleft1: -65, legright0: 45, legright1: 25 }, { armleft0: -30, armleft1: -50, armright0: 30, armright1: 10, legleft0: -30, legleft1: -50, legright0: 30, legright1: 10 }, { armleft0: -15, armleft1: -35, armright0: 15, armright1: -5, legleft0: -15, legleft1: -35, legright0: 15, legright1: -5 }, { armleft0: 0, armleft1: -20, armright0: 0, armright1: -20, legleft0: 0, legleft1: -20, legright0: 0, legright1: -20 }, { armleft0: 15, armleft1: -5, armright0: -15, armright1: -35, legleft0: 15, legleft1: -5, legright0: -15, legright1: -35 }, { armleft0: 30, armleft1: 10, armright0: -30, armright1: -50, legleft0: 30, legleft1: 10, legright0: -30, legright1: -50 } ]; //  var teststyle1 = [ { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 72, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 111, legright1: 108 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 135, legright1: 135 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -51, armleft1: -27, armright0: 51, armright1: 41, legleft0: -22, legleft1: -18, legright0: 22, legright1: 18 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 }, { armleft0: -93, armleft1: -81, armright0: 93, armright1: 123, legleft0: -56, legleft1: -54, legright0: 56, legright1: 54 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 } ]; //var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};  window.</description>
-    </item>
-    
-    <item>
-      <title>鼠标点击特效</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</guid>
-      <description>介绍： 本站使用鼠标特效
-依赖 jquery.js
-源代码 /** * 鼠标特效 a */ function f1() { /* 鼠标特效 */ var a_idx = 0; jQuery(document).ready(function ($) { $(&amp;#34;body&amp;#34;).click(function (e) { var a = new Array(&amp;#34;❤富强❤&amp;#34;, &amp;#34;❤民主❤&amp;#34;, &amp;#34;❤文明❤&amp;#34;, &amp;#34;❤和谐❤&amp;#34;, &amp;#34;❤自由❤&amp;#34;, &amp;#34;❤平等❤&amp;#34;, &amp;#34;❤公正❤&amp;#34;, &amp;#34;❤法治❤&amp;#34;, &amp;#34;❤爱国❤&amp;#34;, &amp;#34;❤敬业❤&amp;#34;, &amp;#34;❤诚信❤&amp;#34;, &amp;#34;❤友善❤&amp;#34;); var $i = $(&amp;#34;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;#34;).text(a[a_idx]); a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ &amp;#34;z-index&amp;#34;: 999999999999999999999999999999999999999999999999999999999999999999999, &amp;#34;top&amp;#34;: y - 20, &amp;#34;left&amp;#34;: x, &amp;#34;position&amp;#34;: &amp;#34;absolute&amp;#34;, &amp;#34;font-weight&amp;#34;: &amp;#34;bold&amp;#34;, &amp;#34;color&amp;#34;: &amp;#34;rgb(&amp;#34; + ~~(255 * Math.</description>
-    </item>
-    
-    <item>
-      <title>前端的真正学习方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</guid>
-      <description>介绍： 总所周知，前端开发，主要是面向用户。也就是门面。它的核心（页面，路由，请求后台）
-知道了核心我们就知道该为何学习了。
-页面 页面其实就是显示页。比如 列表页，详情页。但是往往都是只需要显示一个页面（单页面）
-路由 每个页面都是一个个体。有时候需要一个导航栏，用于路由。
-请求后台 每个页面的动态内容，基本上都是后台服务端提供。前端只需要发送请求即可。
-总结 虽然我上面说的很简单，但是前端的核心也就是这3个组合。学习任何前端框架，快速的找到（如何编辑页面， 如何页面之间的路由，如何请求后台的方法）就可以使用这个框架。
-（ps以上只能是浅显的使用框架，如果想深入使用还需要进一步学习！）</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>前端 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/</link>
+        <description>前端 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%89%8D%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>vuex教程</title>
+    <link>https://xiaofangkang.gitee.io/vue/</link>
+    <pubDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/vue/</guid>
+    <description><![CDATA[Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式]]></description>
+</item><item>
+    <title>canvas特效小人</title>
+    <link>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
+    <description><![CDATA[介绍： 本站使用小人特效 依赖 jquery.js 源代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53]]></description>
+</item><item>
+    <title>鼠标点击特效</title>
+    <link>https://xiaofangkang.gitee.io/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</link>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</guid>
+    <description><![CDATA[介绍： 本站使用鼠标特效 依赖 jquery.js 源代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 /** * 鼠标特效 a */ function f1() { /* 鼠标特效 */ var a_idx]]></description>
+</item><item>
+    <title>前端的真正学习方法</title>
+    <link>https://xiaofangkang.gitee.io/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</link>
+    <pubDate>Wed, 09 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</guid>
+    <description><![CDATA[介绍： 总所周知，前端开发，主要是面向用户。也就是门面。它的核心（页面，路由，请求后台） 知道了核心我们就知道该为何学习了。 页面 页面其实就是显示]]></description>
+</item></channel>
 </rss>

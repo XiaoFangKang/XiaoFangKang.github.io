@@ -1,193 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on 小小的交流博客</title>
-    <link>https://xiaofangkang.gitee.io/posts/</link>
-    <description>Recent content in Posts on 小小的交流博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Mon, 14 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>vuex教程</title>
-      <link>https://xiaofangkang.gitee.io/2020/vue/</link>
-      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/vue/</guid>
-      <description>Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生改变。
-状态管理模式 介绍 new Vue({ // state  data() { return { count: 0 } }, // view  template: ` &amp;lt;div&amp;gt;{{ count }}&amp;lt;/div&amp;gt; `, // actions  methods: { increment() { this.count++ } } }) 这个状态自管理应用包含以下几个部分：
- state，驱动应用的数据源； view，以声明方式将 state 映射到视图； actions，响应在 view 上的用户输入导致的状态变化。  以下是一个表示“单向数据流”理念的简单示意： 但是，当我们的应用遇到多个组件共享状态时，单向数据流的简洁性很容易被破坏：
- 多个视图依赖于同一状态。 来自不同视图的行为需要变更同一状态。  对于问题一，传参的方法对于多层嵌套的组件将会非常繁琐，并且对于兄弟组件间的状态传递无能为力。 对于问题二，我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式非常脆弱，通常会导致无法维护的代码。
-因此，我们为什么不把组件的共享状态抽取出来，以一个全局单例模式管理呢？在这种模式下，我们的组件树构成了一个巨大的“视图”，不管在树的哪个位置，任何组件都能获取状态或者触发行为！
-通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变得更结构化且易维护
-Vuex 的使用场景 Vuex 可以帮助我们管理共享状态，并附带了更多的概念和框架。这需要对短期和长期效益进行权衡。
-如果您不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果您的应用够简单，您最好不要使用 Vuex。 一个简单的 store 模式 就足够您所需了。但是， 如果您需要构建一个中大型单页应用，您很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。 引用 Redux 的作者 Dan Abramov 的话说就是：</description>
-    </item>
-    
-    <item>
-      <title>3个有用的网站</title>
-      <link>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
-      <description>介绍  视频剪辑（ps,pr 学习）doyoudo  开发者 书栈网  学习外语 多邻国   </description>
-    </item>
-    
-    <item>
-      <title>markdown 学习</title>
-      <link>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/markdown%E5%AD%A6%E4%B9%A0/</guid>
-      <description>代码 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题  *** 分割线 ~~*斜体文字*~~ &amp;lt;u&amp;gt;_斜体文字_&amp;lt;/u&amp;gt; **粗体文字** __粗体文字__ ***斜粗体文字*** ___斜粗体文字___[^1]。 [^1]: 你好啊这是定义的值 *** * * * ***** * 第一列 * 第二列 * 第三列 + 第一列 + 第二列 + 第三列 1. 第一列啊 1.1 中级 2. 第二列 * 初级 3. 第三列 * 啊啊啊 &amp;gt; 区块引用 &amp;gt; &amp;gt; 菜鸟  # 区块使用列表 &amp;gt; 区块中使用列表 1. 你好 1.1 你在干什么 2. 啊啊啊 1.2 我在想你 3.</description>
-    </item>
-    
-    <item>
-      <title>MySQL 导(入,出)数据</title>
-      <link>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
-      <description>导出数据 使用 SELECT &amp;hellip; INTO OUTFILE 语句导出数据  以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中:  SELECT * FROM runoob_tbl INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39;; 你可以通过命令选项来设置数据输出的指定格式，以下实例为导出 CSV 格式：  SELECT * FROM passwd INTO OUTFILE &amp;#39;/tmp/runoob.txt&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\r\n&amp;#39;; 在下面的例子中，生成一个文件，各值用逗号隔开。这种格式可以被许多程序使用。  SELECT a,b,a+b INTO OUTFILE &amp;#39;/tmp/result.text&amp;#39; FIELDS TERMINATED BY &amp;#39;,&amp;#39; OPTIONALLY ENCLOSED BY &amp;#39;&amp;#34;&amp;#39; LINES TERMINATED BY &amp;#39;\n&amp;#39; FROM test_table; SELECT &amp;hellip; INTO OUTFILE 语句有以下属性:  LOAD DATA INFILE是SELECT .</description>
-    </item>
-    
-    <item>
-      <title>ORA-01033:oracle initialization or shutdown in progress 解决办法</title>
-      <link>https://xiaofangkang.gitee.io/2020/ora-01033/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/ora-01033/</guid>
-      <description>解决方法 用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress ；
-第一步，运行cmd，输入sqlplus /nolog，如图 第二步、SQL&amp;gt;connect / as sysdba
-第三步、SQL&amp;gt;shutdown normal
-第四步、SQL&amp;gt;startup mount
-第五步、SQL&amp;gt;alter database open; 提示:  第1 行出现错误:ORA-01157 : 无法标识/锁定数据文件12 - 请参阅 DBWR 跟踪文件 ORA-01110 数据文件12: &amp;lsquo;&#39;。。。&amp;rsquo;&#39;  ps: 这个提示文件部分（12）根据每个人不同情况有点差别。
-第六步、SQL&amp;gt;alter database datafile 12 offline drop;
-第七步、重复使用第五第六步（一直循环这个语句，直至不再提示错误），直到出现“数据库已更改”的提示，然 后如下图， 第八步、继续执行shutdown normal，startup就OK啦
-已经解决完成，现在可以关闭重新登录下PLSQL了。</description>
-    </item>
-    
-    <item>
-      <title>Oracle中用exp/imp命令参数详解【转】</title>
-      <link>https://xiaofangkang.gitee.io/2020/expandimp/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/expandimp/</guid>
-      <description>Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\daochu.dmp中 exp system/manager@TEST rows=y indexes=y compress=n buffer=65536 feedback=100000full=y file=d:\daochu.dmp log=d:\daochulog.txt owner=(ECC_BIZ,ECC_CUSTOMER)    关键字 说明 默认     USERID 用户名/口令 &amp;mdash;   FULL 导出整个文件 (N)   BUFFER 数据缓冲区的大小 &amp;mdash;   OWNER 导出指定的所有者用户名列表 &amp;mdash;   FILE 输出文件 (EXPDAT.DMP)   TABLES 导出指定的表名列表 &amp;mdash;   COMPRESS 是否压缩导出的文件 (Y)   RECORDLENGTH IO 记录的长度 &amp;mdash;   GRANTS 导出权限 (Y)   INCTYPE 增量导出类型 &amp;mdash;   INDEXES 导出索引 (Y)   RECORD 跟踪增量导出 (Y)   ROWS 导出数据行 (Y)   PARFILE 参数文件名 &amp;mdash;   CONSTRAINTS 导出限制 (Y)   CONSISTENT 交叉表一致性 &amp;mdash;   LOG 屏幕输出的日志文件 &amp;mdash;   STATISTICS 分析对象(ESTIMATE) &amp;mdash;   DIRECT 直接路径 &amp;mdash;   TRIGGERS 导出触发器 (Y)   FEEDBACK 显示每 x 行 (0) 的进度 &amp;mdash;   FILESIZE 各转储文件的最大尺寸 &amp;mdash;   QUERY 选定导出表子集的子句 &amp;mdash;   TRANSPORT_TABLESPACE 导出可传输的表空间元数据 &amp;mdash;   TABLESPACES 导出指定的表空间列表 &amp;mdash;    1.</description>
-    </item>
-    
-    <item>
-      <title>增加 ORACLE 数据库空间</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</guid>
-      <description>增加数据库空间方法 &amp;quot;ORA-01654: 索引。。。无法通过8192（在表空间。。。中）扩展&amp;quot;
-查询方法 SELECT UPPER(F.TABLESPACE_NAME) &amp;#34;表空间名&amp;#34;, D.TOT_GROOTTE_MB &amp;#34;表空间大小(M)&amp;#34;, D.TOT_GROOTTE_MB - F.TOTAL_BYTES &amp;#34;已使用空间(M)&amp;#34;, TO_CHAR(ROUND((D.TOT_GROOTTE_MB - F.TOTAL_BYTES) / D.TOT_GROOTTE_MB * 100,2),&amp;#39;990.99&amp;#39;) &amp;#34;使用比&amp;#34;, F.TOTAL_BYTES &amp;#34;空闲空间(M)&amp;#34;, F.MAX_BYTES &amp;#34;最大块(M)&amp;#34; FROM ( SELECT TABLESPACE_NAME, ROUND(SUM(BYTES) / (1024 * 1024), 2) TOTAL_BYTES, ROUND(MAX(BYTES) / (1024 * 1024), 2) MAX_BYTES FROM SYS.DBA_FREE_SPACE GROUP BY TABLESPACE_NAME ) F, ( SELECT DD.TABLESPACE_NAME, ROUND(SUM(DD.BYTES) / (1024 * 1024), 2) TOT_GROOTTE_MB FROM SYS.DBA_DATA_FILES DD GROUP BY DD.TABLESPACE_NAME ) D WHERE D.TABLESPACE_NAME = F.</description>
-    </item>
-    
-    <item>
-      <title>查看oracle数据库的连接数以及用户【转】</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</link>
-      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</guid>
-      <description>查询 oracle的连接数  select count(*) from v$session;
-查询oracle的并发连接数  select count(*) from v$session where status=&#39;ACTIVE&#39;;
-查看不同用户的连接数  select username,count(username) from v$session where username is not null group by username;
-查看所有用户：  select * from all_users;
-查看用户或角色系统权限(直接赋值给用户或角色的系统权限)：  select * from dba_sys_privs;
-select * from user_sys_privs;
-查看角色(只能查看登陆用户拥有的角色)所包含的权限  select * from role_sys_privs;
-查看用户对象权限：  select * from dba_tab_privs;
-select * from all_tab_privs;
-select * from user_tab_privs;
-查看所有角色：  select * from dba_roles;</description>
-    </item>
-    
-    <item>
-      <title>canvas特效小人</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
-      <description>介绍： 本站使用小人特效
-依赖 jquery.js
-源代码 /** * 小人 */ function f2() { var S_width; var S_height; var isTouch = &amp;#39;ontouchstart&amp;#39; in window, START_EVENT = isTouch ? &amp;#39;touchstart&amp;#39; : &amp;#39;mousedown&amp;#39;, MOVE_EVENT = isTouch ? &amp;#39;touchmove&amp;#39; : &amp;#39;mousemove&amp;#39;, END_EVENT = isTouch ? &amp;#39;touchend&amp;#39; : &amp;#39;mouseup&amp;#39;; var powder = []; //speed:7  var man = { x: 30, y: 110, step: 0, type: &amp;#39;teststyle&amp;#39;, speed: 7, armlength: 10, leglength: 15, head: 8, body: 25 }; var isspread = false; var ispowder = true; //var teststyle=[{armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20},{armleft0:-60,armleft1:-30,armright0:30,armright1:5,legleft0:-60,legleft1:-30,legright0:30,legright1:5},{armleft0:-70,armleft1:-50,armright0:60,armright1:70,legleft0:-30,legleft1:-50,legright0:70,legright1:20},{armleft0:-10,armleft1:-80,armright0:90,armright1:40,legleft0:-20,legleft1:-60,legright0:90,legright1:10},{armleft0:-80,armleft1:-60,armright0:80,armright1:50,legleft0:-30,legleft1:-40,legright0:90,legright1:80},{armleft0:-60,armleft1:-70,armright0:90,armright1:10,legleft0:-90,legleft1:-60,legright0:40,legright1:70}]; //不行  var teststyle = [ { armleft0: -45, armleft1: -65, armright0: 45, armright1: 25, legleft0: -45, legleft1: -65, legright0: 45, legright1: 25 }, { armleft0: -30, armleft1: -50, armright0: 30, armright1: 10, legleft0: -30, legleft1: -50, legright0: 30, legright1: 10 }, { armleft0: -15, armleft1: -35, armright0: 15, armright1: -5, legleft0: -15, legleft1: -35, legright0: 15, legright1: -5 }, { armleft0: 0, armleft1: -20, armright0: 0, armright1: -20, legleft0: 0, legleft1: -20, legright0: 0, legright1: -20 }, { armleft0: 15, armleft1: -5, armright0: -15, armright1: -35, legleft0: 15, legleft1: -5, legright0: -15, legright1: -35 }, { armleft0: 30, armleft1: 10, armright0: -30, armright1: -50, legleft0: 30, legleft1: 10, legright0: -30, legright1: -50 } ]; //  var teststyle1 = [ { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 72, legright1: 0 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 111, legright1: 108 }, { armleft0: -40, armleft1: 0, armright0: -15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 135, legright1: 135 }, { armleft0: -35, armleft1: 0, armright0: 0, armright1: 0, legleft0: -5, legleft1: 0, legright0: 97, legright1: 81 }, { armleft0: -30, armleft1: 0, armright0: 15, armright1: 0, legleft0: -5, legleft1: 0, legright0: 45, legright1: 0 }, { armleft0: -30, armleft1: 0, armright0: 30, armright1: 0, legleft0: -5, legleft1: 0, legright0: 5, legright1: 0 }, { armleft0: -51, armleft1: -27, armright0: 51, armright1: 41, legleft0: -22, legleft1: -18, legright0: 22, legright1: 18 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 }, { armleft0: -93, armleft1: -81, armright0: 93, armright1: 123, legleft0: -56, legleft1: -54, legright0: 56, legright1: 54 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -135, armleft1: -135, armright0: 135, armright1: 164, legleft0: -90, legleft1: -90, legright0: 90, legright1: 90 }, { armleft0: -114, armleft1: -108, armright0: -114, armright1: 164, legleft0: -73, legleft1: -72, legright0: 73, legright1: 72 }, { armleft0: -72, armleft1: -54, armright0: 72, armright1: 82, legleft0: -39, legleft1: -36, legright0: 39, legright1: 36 } ]; //var type={armleft0:-45,armleft1:-20,armright0:45,armright1:20,legleft0:-45,legleft1:-20,legright0:45,legright1:20};  window.</description>
-    </item>
-    
-    <item>
-      <title>鼠标点击特效</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</link>
-      <pubDate>Thu, 10 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</guid>
-      <description>介绍： 本站使用鼠标特效
-依赖 jquery.js
-源代码 /** * 鼠标特效 a */ function f1() { /* 鼠标特效 */ var a_idx = 0; jQuery(document).ready(function ($) { $(&amp;#34;body&amp;#34;).click(function (e) { var a = new Array(&amp;#34;❤富强❤&amp;#34;, &amp;#34;❤民主❤&amp;#34;, &amp;#34;❤文明❤&amp;#34;, &amp;#34;❤和谐❤&amp;#34;, &amp;#34;❤自由❤&amp;#34;, &amp;#34;❤平等❤&amp;#34;, &amp;#34;❤公正❤&amp;#34;, &amp;#34;❤法治❤&amp;#34;, &amp;#34;❤爱国❤&amp;#34;, &amp;#34;❤敬业❤&amp;#34;, &amp;#34;❤诚信❤&amp;#34;, &amp;#34;❤友善❤&amp;#34;); var $i = $(&amp;#34;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;#34;).text(a[a_idx]); a_idx = (a_idx + 1) % a.length; var x = e.pageX, y = e.pageY; $i.css({ &amp;#34;z-index&amp;#34;: 999999999999999999999999999999999999999999999999999999999999999999999, &amp;#34;top&amp;#34;: y - 20, &amp;#34;left&amp;#34;: x, &amp;#34;position&amp;#34;: &amp;#34;absolute&amp;#34;, &amp;#34;font-weight&amp;#34;: &amp;#34;bold&amp;#34;, &amp;#34;color&amp;#34;: &amp;#34;rgb(&amp;#34; + ~~(255 * Math.</description>
-    </item>
-    
-    <item>
-      <title>前端的真正学习方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/%E5%AD%A6%E4%B9%A0%E5%89%8D%E7%AB%AF/</guid>
-      <description>介绍： 总所周知，前端开发，主要是面向用户。也就是门面。它的核心（页面，路由，请求后台）
-知道了核心我们就知道该为何学习了。
-页面 页面其实就是显示页。比如 列表页，详情页。但是往往都是只需要显示一个页面（单页面）
-路由 每个页面都是一个个体。有时候需要一个导航栏，用于路由。
-请求后台 每个页面的动态内容，基本上都是后台服务端提供。前端只需要发送请求即可。
-总结 虽然我上面说的很简单，但是前端的核心也就是这3个组合。学习任何前端框架，快速的找到（如何编辑页面， 如何页面之间的路由，如何请求后台的方法）就可以使用这个框架。
-（ps以上只能是浅显的使用框架，如果想深入使用还需要进一步学习！）</description>
-    </item>
-    
-    <item>
-      <title>JVM 内存溢出</title>
-      <link>https://xiaofangkang.gitee.io/2020/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/</guid>
-      <description>使用代码：
--Xms256m -Xmx1024m -XX:MaxNewSize=256m -XX:PermSize=64M -XX:MaxPermSize=128M </description>
-    </item>
-    
-    <item>
-      <title>systemctl使用方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/systemctl/</link>
-      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/systemctl/</guid>
-      <description>说明 每一个服务以.service结尾，一般会分为3部分：[Unit]、[Service]和[Install]
-vim /usr/lib/systemd/system/xxx.service 
-[Unit] # 主要是服务说明 Description=test # 简单描述服务 After=network.target # 描述服务类别，表示本服务需要在network服务启动后在启动 Before=xxx.service # 表示需要在某些服务启动之前启动，After和Before字段只涉及启动顺序，不涉及依赖关系。 [Service] # 核心区域 Type=forking # 表示后台运行模式。 User=user # 设置服务运行的用户 Group=user # 设置服务运行的用户组 KillMode=control-group # 定义systemd如何停止服务 PIDFile=/usr/local/test/test.pid # 存放PID的绝对路径 Restart=no # 定义服务进程退出后，systemd的重启方式，默认是不重启 ExecStart=/usr/local/test/bin/startup.sh # 服务启动命令，命令需要绝对路径 PrivateTmp=true # 表示给服务分配独立的临时空间 [Install] WantedBy=multi-user.target # 多用户 字段说明： Type的类型有：  simple(默认）：# 以ExecStart字段启动的进程为主进程 forking: # ExecStart字段以fork()方式启动，此时父进程将退出，子进程将成为主进程（后台运行）。一般都设置为forking oneshot: # 类似于simple，但只执行一次，systemd会等它执行完，才启动其他服务 dbus： # 类似于simple, 但会等待D-Bus信号后启动 notify: # 类似于simple, 启动结束后会发出通知信号，然后systemd再启动其他服务 idle： # 类似于simple，但是要等到其他任务都执行完，才会启动该服务。  EnvironmentFile: 指定配置文件，和连词号组合使用，可以避免配置文件不存在的异常。</description>
-    </item>
-    
-    <item>
-      <title>hugo 使用方法</title>
-      <link>https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/hugo-%E7%AE%80%E5%8D%95%E5%91%BD%E4%BB%A4/</guid>
-      <description>1. 创建文章 $ hugo new *.md 解释：about.md 自动生成到了 content/about.md
-2. 部署服务 $ hugo 解释： 使用 hugo 生成 pages 修改的文件用于显示内容
-3.使用皮肤 $ git clone https://hub.fastgit.org/liuzc/leaveit.git
-皮肤的使用说明： https://liuzhichao.com/2018/hugo-theme-leaveit/
-4. 皮肤使用的一些问题 配置文件中 menu 中的是页面中的标签栏。
-[[menu.main]] name = &amp;#34;类型&amp;#34; url = &amp;#34;/categories/&amp;#34; weight = 2 weight 代表标签头的位置 越小越靠前
-5. 文章编写时的抬头描述 --- title: &amp;#34;java 远程调试&amp;#34; date: &amp;#34;2020-12-07&amp;#34; tags: [&amp;#34;java&amp;#34;,&amp;#34;调试&amp;#34;] categories: [&amp;#34;java调试&amp;#34;] --- title ：文件头 date: 文件创建时间 tags: 标签 &amp;mdash;&amp;ndash;&amp;gt; 在配置文件中也会使用到 categories: 类型 &amp;mdash;&amp;gt; 在配置文件中也会使用到
- 配置文件设置 根目录下的 config.</description>
-    </item>
-    
-    <item>
-      <title>java 远程调试</title>
-      <link>https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/</link>
-      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://xiaofangkang.gitee.io/2020/java-%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95/</guid>
-      <description>远程JVM启用调试模式 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=2857 -jar *.jar 描述  -XDebug 表示虚拟机启用调试功能 -Xrunjdwp 加载JDWP transport 调试程序JVM使用的进程之间通讯方式 dt_socket socket通讯 server=y/n JVM是否需要作为调试服务器执行 address 调试服务器监听的端口号 suspend=y/n 调试客户端建立连接之后启动虚拟机 JVM启动之后用验证监听的端口号是否生效了 netstat -anp | grep 1506  tomcat 远程调试 windows 进入目录下的bin目录，编辑打开 startup.bat 在前面添加：
-SET CATALINA_OPTS=-server -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 linux 在catalina.sh中的首行添加：
-CATALINA_OPTS=&amp;#34;-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n&amp;#34; idea 本地调试配置 </description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/posts/</link>
+        <description>所有文章 | FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>vuex教程</title>
+    <link>https://xiaofangkang.gitee.io/vue/</link>
+    <pubDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/vue/</guid>
+    <description><![CDATA[Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式]]></description>
+</item><item>
+    <title>3个有用的网站</title>
+    <link>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+    <description><![CDATA[介绍 视频剪辑（ps,pr 学习）doyoudo 开发者 书栈网 学习外语 多邻国]]></description>
+</item><item>
+    <title>markdown 学习</title>
+    <link>https://xiaofangkang.gitee.io/markdown%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/markdown%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68]]></description>
+</item><item>
+    <title>MySQL 导(入,出)数据</title>
+    <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
+    <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
+</item><item>
+    <title>ORA-01033:oracle initialization or shutdown in progress 解决办法</title>
+    <link>https://xiaofangkang.gitee.io/ora-01033/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/ora-01033/</guid>
+    <description><![CDATA[解决方法 用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress ； 第一步，运行cmd，输入sqlplus /nol]]></description>
+</item><item>
+    <title>Oracle中用exp/imp命令参数详解【转】</title>
+    <link>https://xiaofangkang.gitee.io/expandimp/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/expandimp/</guid>
+    <description><![CDATA[Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\]]></description>
+</item><item>
+    <title>增加 ORACLE 数据库空间</title>
+    <link>https://xiaofangkang.gitee.io/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E5%A2%9E%E5%8A%A0oracle-%E8%A1%A8%E7%A9%BA%E9%97%B4/</guid>
+    <description><![CDATA[增加数据库空间方法 &quot;ORA-01654: 索引。。。无法通过8192（在表空间。。。中）扩展&quot; 查询方法 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 SELECT UPPER(F.TABLESPACE_NAME)]]></description>
+</item><item>
+    <title>查看oracle数据库的连接数以及用户【转】</title>
+    <link>https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E6%9F%A5%E7%9C%8Boracle%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5%E6%95%B0%E4%BB%A5%E5%8F%8A%E7%94%A8%E6%88%B7/</guid>
+    <description><![CDATA[查询 oracle的连接数 select count(*) from v$session; 查询oracle的并发连接数 select count(*) from v$session where status='ACTIVE'; 查看不同用户的连接数 select username,count(username) from v$session where username is not null group by username; 查看所有用户： select * from all_users; 查]]></description>
+</item><item>
+    <title>canvas特效小人</title>
+    <link>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</link>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E7%89%B9%E6%95%88%E5%B0%8F%E4%BA%BA/</guid>
+    <description><![CDATA[介绍： 本站使用小人特效 依赖 jquery.js 源代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53]]></description>
+</item><item>
+    <title>鼠标点击特效</title>
+    <link>https://xiaofangkang.gitee.io/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</link>
+    <pubDate>Thu, 10 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</guid>
+    <description><![CDATA[介绍： 本站使用鼠标特效 依赖 jquery.js 源代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 /** * 鼠标特效 a */ function f1() { /* 鼠标特效 */ var a_idx]]></description>
+</item></channel>
 </rss>
