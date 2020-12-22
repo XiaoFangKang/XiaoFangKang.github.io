@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>2020年最新-IDEA最详细配置（配图文收藏版配置) 转载 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载" />
+<meta property="og:description" content="IDEA使用设置 继续idea最新安装的步骤后，对IDEA工作开发进行配置，让开发的时候更加便利顺手。 点击欢迎页右下角&quot;Config" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaofangkang.gitee.io/idea/" />
+<meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+<meta property="article:published_time" content="2020-12-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
+
+<meta name="twitter:title" content="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载"/>
+<meta name="twitter:description" content="IDEA使用设置 继续idea最新安装的步骤后，对IDEA工作开发进行配置，让开发的时候更加便利顺手。 点击欢迎页右下角&quot;Config"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/idea/" /><link rel="prev" href="https://xiaofangkang.gitee.io/vue/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "2020年最新-IDEA最详细配置（配图文收藏版配置) 转载",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xiaofangkang.gitee.io\/idea\/"
+        },"genre": "posts","keywords": "java, IDEA","wordcount":  1173 ,
+        "url": "https:\/\/xiaofangkang.gitee.io\/idea\/","datePublished": "2020-12-22T00:00:00+00:00","dateModified": "2020-12-22T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "FangKang.Xiao"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" /><span id="id-1" class="typeit"></span><span class="header-title-post"><spen style="color:red">博客</spen><svg t="1607994438386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5634" width="200" height="200"><path d="M510.4 849.6l211.2-211.2-22.4-22.4-188.8 188.8-288-288c-6.4-4.8-11.2-11.2-16-17.6h137.6l46.4-144 83.2 324.8 60.8-225.6 33.6 116.8 35.2-73.6h64l24-88L732.8 608 784 443.2l19.2 56h120v-16h-108.8l-32-91.2-46.4 150.4-40-201.6-38.4 142.4h-62.4L572.8 528l-38.4-131.2-59.2 220.8-81.6-320-60.8 185.6h-137.6c-24-38.4-32-83.2-20.8-129.6 14.4-62.4 67.2-112 129.6-124.8 83.2-16 163.2 30.4 192 108.8 3.2 6.4 9.6 11.2 16 11.2h12.8l3.2-11.2c28.8-78.4 108.8-124.8 192-108.8 64 12.8 115.2 62.4 129.6 124.8 6.4 25.6 6.4 52.8 0 76.8l30.4 6.4c6.4-30.4 6.4-60.8 0-91.2-17.6-75.2-80-134.4-155.2-148.8-86.4-17.6-172.8 24-214.4 97.6-41.6-75.2-126.4-115.2-214.4-97.6-75.2 14.4-137.6 75.2-155.2 148.8-16 72 4.8 144 57.6 193.6l312 310.4z" fill="#707070" p-id="5635"></path></svg></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 个人简介 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="FangKang.Xiao 博客"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/me/avatar.jpeg"
+        data-srcset="/images/me/avatar.jpeg, /images/me/avatar.jpeg 1.5x, /images/me/avatar.jpeg 2x"
+        data-sizes="auto"
+        alt="/images/me/avatar.jpeg"
+        title="/images/me/avatar.jpeg" /><span id="id-2" class="typeit"></span><span class="header-title-post"><spen style="color:red">博客</spen><svg t="1607994438386" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5634" width="200" height="200"><path d="M510.4 849.6l211.2-211.2-22.4-22.4-188.8 188.8-288-288c-6.4-4.8-11.2-11.2-16-17.6h137.6l46.4-144 83.2 324.8 60.8-225.6 33.6 116.8 35.2-73.6h64l24-88L732.8 608 784 443.2l19.2 56h120v-16h-108.8l-32-91.2-46.4 150.4-40-201.6-38.4 142.4h-62.4L572.8 528l-38.4-131.2-59.2 220.8-81.6-320-60.8 185.6h-137.6c-24-38.4-32-83.2-20.8-129.6 14.4-62.4 67.2-112 129.6-124.8 83.2-16 163.2 30.4 192 108.8 3.2 6.4 9.6 11.2 16 11.2h12.8l3.2-11.2c28.8-78.4 108.8-124.8 192-108.8 64 12.8 115.2 62.4 129.6 124.8 6.4 25.6 6.4 52.8 0 76.8l30.4 6.4c6.4-30.4 6.4-60.8 0-91.2-17.6-75.2-80-134.4-155.2-148.8-86.4-17.6-172.8 24-214.4 97.6-41.6-75.2-126.4-115.2-214.4-97.6-75.2 14.4-137.6 75.2-155.2 148.8-16 72 4.8 144 57.6 193.6l312 310.4z" fill="#707070" p-id="5635"></path></svg></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">个人简介</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">2020年最新-IDEA最详细配置（配图文收藏版配置) 转载</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java%E5%B7%A5%E5%85%B7/"><i class="far fa-folder fa-fw"></i>java工具</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-12-22">2020-12-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1173 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/idea/" class="leancloud_visitors" data-flag-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#idea使用设置">IDEA使用设置</a>
+      <ul>
+        <li><a href="#一-全局jdk设置默认配置">一、 全局JDK设置（默认配置）</a></li>
+        <li><a href="#二主题设置">二、主题设置</a>
+          <ul>
+            <li><a href="#进入全局配置">进入全局配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#三字体大小设置">三、字体大小设置</a></li>
+        <li><a href="#四字符集和配置文件编码格式设置">四、字符集和配置文件编码格式设置</a></li>
+        <li><a href="#五自动导入设置">五、自动导入设置</a></li>
+        <li><a href="#六自动忽视大小写设置">六、自动忽视大小写设置</a></li>
+        <li><a href="#七关闭自动更新设置以及每次打开项目为最后关闭项目">七、关闭自动更新设置以及每次打开项目为最后关闭项目</a></li>
+        <li><a href="#八tab页多行显示设置">八、Tab页多行显示设置</a></li>
+        <li><a href="#九滚轴修改字体大小设置以及代码悬浮提示">九、滚轴修改字体大小设置以及代码悬浮提示</a></li>
+        <li><a href="#十显示方法之间的分割线">十、显示方法之间的分割线</a></li>
+        <li><a href="#十一注释格式">十一、注释格式</a></li>
+        <li><a href="#十二开启代码自动编译">十二、开启代码自动编译</a></li>
+        <li><a href="#十三22-快捷键配置filesettingskeymap">十三、2.2. 快捷键配置(<code>File/Settings/Keymap</code>)</a></li>
+        <li><a href="#十四去除idea自带的iml文件以及idea文件夹">“十四、去除<code>idea</code>自带的<code>.iml</code>文件，以及<code>.idea</code>文件夹”</a></li>
+        <li><a href="#十五idea中maven配置">十五、<code>IDEA</code>中<code>Maven</code>配置</a></li>
+        <li><a href="#十六idea中代码检测警告提示等级设置">十六、IDEA中代码检测警告提示等级设置</a></li>
+        <li><a href="#十七包展开设置">十七、包展开设置</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="idea使用设置">IDEA使用设置</h1>
+<p>继续<code>idea</code>最新安装的步骤后，对<code>IDEA</code>工作开发进行配置，让开发的时候更加便利顺手。</p>
+<p>点击欢迎页右下角&quot;<code>Configure</code>&quot;，选择&quot;<code>Settings</code>&quot;，进入全局设置界面。</p>
+<p>注意：<code>IDEA</code>有全局配置和项目配置两种设置，在欢迎页进行的<code>Settings</code>是对全局配置进行设置。而在项目中<code>setting</code>有可能为当前项目</p>
+<h2 id="一-全局jdk设置默认配置">一、 全局JDK设置（默认配置）</h2>
+<ol>
+<li>
+<p>设置在：“<code>Configure</code>“下的“<code>Structure</code> <code>for New Projects</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616494121.png"
+        data-srcset="./idea/idea-1608616494121.png, ./idea/idea-1608616494121.png 1.5x, ./idea/idea-1608616494121.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616494121.png"
+        title="第一步" /></p>
+</li>
+<li>
+<p>选择安装路径进行配置
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616568688.png"
+        data-srcset="./idea/idea-1608616568688.png, ./idea/idea-1608616568688.png 1.5x, ./idea/idea-1608616568688.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616568688.png"
+        title="第二步" /></p>
+</li>
+</ol>
+<h2 id="二主题设置">二、主题设置</h2>
+<blockquote>
+<p>步骤前先点击setting:进入全局配置：</p>
+</blockquote>
+<h3 id="进入全局配置">进入全局配置</h3>
+<p>设置在：“<code>File | Settings | Appearance &amp; Behavior | Appearance</code>“”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616647125.png"
+        data-srcset="./idea/idea-1608616647125.png, ./idea/idea-1608616647125.png 1.5x, ./idea/idea-1608616647125.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616647125.png"
+        title="主题设置" /></p>
+<h2 id="三字体大小设置">三、字体大小设置</h2>
+<ol>
+<li>非代码窗口设置<code>UI</code>样式和字体</li>
+</ol>
+<p>设置在：“<code>File | Settings | Appearance &amp; Behavior | Appearance</code>”中
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616678269.png"
+        data-srcset="./idea/idea-1608616678269.png, ./idea/idea-1608616678269.png 1.5x, ./idea/idea-1608616678269.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616678269.png"
+        title="窗口字体" /></p>
+<ol start="2">
+<li>代码窗口字体</li>
+</ol>
+<p>设置在：&quot;<code>Editor</code>&ldquo;的&rdquo;<code>Font</code>&ldquo;中，分别设置编辑器字体、字号、行间距
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616702277.png"
+        data-srcset="./idea/idea-1608616702277.png, ./idea/idea-1608616702277.png 1.5x, ./idea/idea-1608616702277.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616702277.png"
+        title="代码字体" /></p>
+<ol start="3">
+<li>设置控制台字体</li>
+</ol>
+<p>控制台字体和编辑器字体设置一个逻辑，设置在：&quot;<code>Editor</code>&ldquo;下&rdquo;<code>Color Scheme</code>&ldquo;的&rdquo;<code>Console Font</code>&ldquo;里。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616738597.png"
+        data-srcset="./idea/idea-1608616738597.png, ./idea/idea-1608616738597.png 1.5x, ./idea/idea-1608616738597.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616738597.png"
+        title="设置控制台字体" /></p>
+<h2 id="四字符集和配置文件编码格式设置">四、字符集和配置文件编码格式设置</h2>
+<p>设置在：“<code>File | Settings | Editor | File Encodings</code>“
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616758970.png"
+        data-srcset="./idea/idea-1608616758970.png, ./idea/idea-1608616758970.png 1.5x, ./idea/idea-1608616758970.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616758970.png"
+        title="字符集和配置文件编码格式设置" /></p>
+<h2 id="五自动导入设置">五、自动导入设置</h2>
+<p>设置在：“<code>File | Settings | Editor | General | Auto Import</code>”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616782298.png"
+        data-srcset="./idea/idea-1608616782298.png, ./idea/idea-1608616782298.png 1.5x, ./idea/idea-1608616782298.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616782298.png"
+        title="自动导入设置" /></p>
+<h2 id="六自动忽视大小写设置">六、自动忽视大小写设置</h2>
+<p>设置在：“<code>File | Settings | Editor | General | Code Completion</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616814428.png"
+        data-srcset="./idea/idea-1608616814428.png, ./idea/idea-1608616814428.png 1.5x, ./idea/idea-1608616814428.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616814428.png"
+        title="忽视大小写设置" /></p>
+<h2 id="七关闭自动更新设置以及每次打开项目为最后关闭项目">七、关闭自动更新设置以及每次打开项目为最后关闭项目</h2>
+<ol>
+<li>关闭自动更新</li>
+</ol>
+<p>设置在：</p>
+<p>“<code>File | Settings | Appearance &amp; Behavior | System Settings | Updates</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616832724.png"
+        data-srcset="./idea/idea-1608616832724.png, ./idea/idea-1608616832724.png 1.5x, ./idea/idea-1608616832724.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616832724.png"
+        title="关闭自动更新" /></p>
+<p>2.关闭打开项目为最后关闭项目</p>
+<p>设置在：</p>
+<p>“<code>File | Settings | Appearance &amp; Behavior | System Settings</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616848994.png"
+        data-srcset="./idea/idea-1608616848994.png, ./idea/idea-1608616848994.png 1.5x, ./idea/idea-1608616848994.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616848994.png"
+        title="关闭打开项目为最后关闭项目" /></p>
+<h2 id="八tab页多行显示设置">八、Tab页多行显示设置</h2>
+<p>设置在：“<code>File | Settings | Editor | General | Editor Tabs</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616885599.png"
+        data-srcset="./idea/idea-1608616885599.png, ./idea/idea-1608616885599.png 1.5x, ./idea/idea-1608616885599.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616885599.png"
+        title="Tab页多行显示设置" /></p>
+<h2 id="九滚轴修改字体大小设置以及代码悬浮提示">九、滚轴修改字体大小设置以及代码悬浮提示</h2>
+<p>设置在：“<code>File | Settings | Editor | General</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616900142.png"
+        data-srcset="./idea/idea-1608616900142.png, ./idea/idea-1608616900142.png 1.5x, ./idea/idea-1608616900142.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616900142.png"
+        title="滚轴修改字体大小设置以及代码悬浮提示" /></p>
+<h2 id="十显示方法之间的分割线">十、显示方法之间的分割线</h2>
+<p>设置在：</p>
+<p>“<code>File | Settings | Editor | General | Appearance</code>”</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616920627.png"
+        data-srcset="./idea/idea-1608616920627.png, ./idea/idea-1608616920627.png 1.5x, ./idea/idea-1608616920627.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616920627.png"
+        title="显示方法之间的分割线" /></p>
+<h2 id="十一注释格式">十一、注释格式</h2>
+<ol>
+<li><code>Java</code>注释优化代码注释前空格格式</li>
+</ol>
+<p>设置在：</p>
+<p>“<code>File | Settings | Editor | Code Style | Java</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616935562.png"
+        data-srcset="./idea/idea-1608616935562.png, ./idea/idea-1608616935562.png 1.5x, ./idea/idea-1608616935562.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616935562.png"
+        title="Java注释优化代码注释前空格格式 " /></p>
+<ol start="2">
+<li><code>html\xml</code> 注释优化代码注释前空格格式</li>
+</ol>
+<p>设置在：</p>
+<p>“<code>File | Settings | Editor | Code Style | html/xml</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616972147.png"
+        data-srcset="./idea/idea-1608616972147.png, ./idea/idea-1608616972147.png 1.5x, ./idea/idea-1608616972147.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616972147.png"
+        title="html\xml 注释优化代码注释前空格格式" /></p>
+<h2 id="十二开启代码自动编译">十二、开启代码自动编译</h2>
+<p>设置在：</p>
+<p>”<code>File/Settings/Build,Execution,Deployment/Compiler</code>“
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608616990093.png"
+        data-srcset="./idea/idea-1608616990093.png, ./idea/idea-1608616990093.png 1.5x, ./idea/idea-1608616990093.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608616990093.png"
+        title="开启代码自动编译" /></p>
+<h2 id="十三22-快捷键配置filesettingskeymap">十三、2.2. 快捷键配置(<code>File/Settings/Keymap</code>)</h2>
+<p>设置在：”<code>File | Settings | Keymap</code>“
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608617009734.png"
+        data-srcset="./idea/idea-1608617009734.png, ./idea/idea-1608617009734.png 1.5x, ./idea/idea-1608617009734.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608617009734.png"
+        title="快捷键配置" /></p>
+<h2 id="十四去除idea自带的iml文件以及idea文件夹">“十四、去除<code>idea</code>自带的<code>.iml</code>文件，以及<code>.idea</code>文件夹”</h2>
+<p>设置在：</p>
+<p>”<code>File | Settings | Editor | File Types</code>“
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608617031528.png"
+        data-srcset="./idea/idea-1608617031528.png, ./idea/idea-1608617031528.png 1.5x, ./idea/idea-1608617031528.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608617031528.png"
+        title="去除idea自带的.iml文件，以及.idea文件夹" /></p>
+<h2 id="十五idea中maven配置">十五、<code>IDEA</code>中<code>Maven</code>配置</h2>
+<p>设置在：</p>
+<p>“<code>File | Settings | Build, Execution, Deployment | Build Tools | Maven</code>”
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608617058125.png"
+        data-srcset="./idea/idea-1608617058125.png, ./idea/idea-1608617058125.png 1.5x, ./idea/idea-1608617058125.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608617058125.png"
+        title="maven配置" /></p>
+<h2 id="十六idea中代码检测警告提示等级设置">十六、IDEA中代码检测警告提示等级设置</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608617070346.png"
+        data-srcset="./idea/idea-1608617070346.png, ./idea/idea-1608617070346.png 1.5x, ./idea/idea-1608617070346.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608617070346.png"
+        title="警告" /></p>
+<h2 id="十七包展开设置">十七、包展开设置</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./idea/idea-1608617079931.png"
+        data-srcset="./idea/idea-1608617079931.png, ./idea/idea-1608617079931.png 1.5x, ./idea/idea-1608617079931.png 2x"
+        data-sizes="auto"
+        alt="./idea/idea-1608617079931.png"
+        title="包展开设置" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-12-22</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/idea/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载" data-hashtags="java,IDEA"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/idea/" data-hashtag="java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/idea/" data-title="2020年最新-IDEA最详细配置（配图文收藏版配置) 转载"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/idea/">IDEA</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/vue/" class="prev" rel="prev" title="vuex教程"><i class="fas fa-angle-left fa-fw"></i>vuex教程</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.79.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/about/" target="_blank">FangKang.Xiao</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"valine":{"appId":"tu1GFSGkYyXorm9rtOVtW2nb-gzGzoHsz","appKey":"wdlT5jHK5w2QrnSiII9HIH8E","avatar":"/images/me/avatar.jpeg","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://tu1gfsgk.lc-cn-n1-shared.com","visitor":true}},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"data":{"id-1":"FangKang.Xiao ","id-2":"FangKang.Xiao "},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

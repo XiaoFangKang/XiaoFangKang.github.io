@@ -4,7 +4,14 @@
         <link>https://xiaofangkang.gitee.io/tags/java/</link>
         <description>java - 标签 - FangKang.Xiao 博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
-            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Tue, 08 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Tue, 22 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>2020年最新-IDEA最详细配置（配图文收藏版配置) 转载</title>
+    <link>https://xiaofangkang.gitee.io/idea/</link>
+    <pubDate>Tue, 22 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/idea/</guid>
+    <description><![CDATA[IDEA使用设置 继续idea最新安装的步骤后，对IDEA工作开发进行配置，让开发的时候更加便利顺手。 点击欢迎页右下角&quot;Config]]></description>
+</item><item>
     <title>JVM 内存溢出</title>
     <link>https://xiaofangkang.gitee.io/jvm-%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/</link>
     <pubDate>Tue, 08 Dec 2020 00:00:00 &#43;0000</pubDate>
