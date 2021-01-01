@@ -11,5 +11,12 @@
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/idea/</guid>
     <description><![CDATA[IDEA使用设置 继续idea最新安装的步骤后，对IDEA工作开发进行配置，让开发的时候更加便利顺手。 点击欢迎页右下角&quot;Config]]></description>
+</item><item>
+    <title>IDEA 卡成球了 ！咋优化 ?</title>
+    <link>https://xiaofangkang.gitee.io/idea/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/idea/</guid>
+    <description><![CDATA[默认设置 1 2 3 4 5 -Xms128m -Xmx750m -XX:MaxPermSize=350m -XX:ReservedCodeCacheSize=240m -XX:+UseCompressedOops 设置为大内存 Big 1 2 3 4 -Xms1024m -Xmx4096m -XX:ReservedCodeCacheSize=1024m -XX:+UseCompressedOops 平衡模式 Balanced 1 2 3 4 -Xms2g -Xmx2g -XX:ReservedCodeCacheSize=1024m -XX:+UseCompressedOops 复杂配置 Sophisticated 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 -server -Xms2g -Xmx2g -XX:NewRatio=3 -Xss16m -XX:+UseConcMarkSweepGC]]></description>
 </item></channel>
 </rss>
