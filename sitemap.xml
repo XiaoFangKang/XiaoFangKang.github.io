@@ -2,14 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://xiaofangkang.gitee.io/categories/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/tags/idea/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/categories/idea/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/idea/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/posts/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/tags/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/tags/%E4%BC%98%E5%8C%96/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/bugstack/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/tags/%E9%9D%A2%E8%AF%95/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://xiaofangkang.gitee.io/categories/%E9%9D%A2%E8%AF%95/</loc><lastmod>2021-01-01T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/idea/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/categories/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/tags/idea/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/tags/java/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/categories/java%E5%B7%A5%E5%85%B7/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/posts/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/tags/</loc><lastmod>2020-12-22T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/tags/vue/</loc><lastmod>2020-12-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/tags/vuex/</loc><lastmod>2020-12-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/vue/</loc><lastmod>2020-12-14T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
@@ -55,10 +61,4 @@
             <loc>https://xiaofangkang.gitee.io/about/</loc><lastmod>2020-12-07T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/tags/%E5%8D%9A%E5%AE%A2/</loc><lastmod>2020-12-07T00:00:00&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://xiaofangkang.gitee.io/tags/exp/imp/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/categories/idea/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/idea/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/tags/%E4%BC%98%E5%8C%96/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/bugstack/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/tags/%E9%9D%A2%E8%AF%95/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://xiaofangkang.gitee.io/categories/%E9%9D%A2%E8%AF%95/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://xiaofangkang.gitee.io/tags/%E5%AF%BC%E5%85%A5/%E5%87%BA/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
