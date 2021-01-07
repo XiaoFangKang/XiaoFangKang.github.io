@@ -4,7 +4,14 @@
         <link>https://xiaofangkang.gitee.io/tags/java/</link>
         <description>java - 标签 - FangKang.Xiao 博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
-            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Tue, 22 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Thu, 07 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Gradle 学习</title>
+    <link>https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[Gradle 入门 1. Gradle 的 ZIP 解压后目录 docs：API、 DSL、指南等文档 init.d：gradle初始化脚本目录 lib：相关库 media：一些icon资]]></description>
+</item><item>
     <title>2020年最新-IDEA最详细配置（配图文收藏版配置) 转载</title>
     <link>https://xiaofangkang.gitee.io/idea/</link>
     <pubDate>Tue, 22 Dec 2020 00:00:00 &#43;0000</pubDate>

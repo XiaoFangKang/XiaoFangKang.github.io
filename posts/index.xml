@@ -4,7 +4,14 @@
         <link>https://xiaofangkang.gitee.io/posts/</link>
         <description>所有文章 | FangKang.Xiao 博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
-            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 04 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Thu, 07 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Gradle 学习</title>
+    <link>https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[Gradle 入门 1. Gradle 的 ZIP 解压后目录 docs：API、 DSL、指南等文档 init.d：gradle初始化脚本目录 lib：相关库 media：一些icon资]]></description>
+</item><item>
     <title>贷款利息算法</title>
     <link>https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/</link>
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0000</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
     <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
-</item><item>
-    <title>ORA-01033:oracle initialization or shutdown in progress 解决办法</title>
-    <link>https://xiaofangkang.gitee.io/ora-01033/</link>
-    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xiaofangkang.gitee.io/ora-01033/</guid>
-    <description><![CDATA[解决方法 用PL/SQL连接Oracle数据库，输入登录名和密码后，提示如下错误： ora-01033:oracle initialization or shutdown in progress ； 第一步，运行cmd，输入sqlplus /nol]]></description>
 </item></channel>
 </rss>
