@@ -5,30 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>贷款利息算法 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="贷款利息算法" />
-<meta property="og:description" content="等额本息 等额本息特点 每月本金与利息相等，直至还款结束均不变 适合资金短期使用 时间越久支出利息越高 等额本息计算方式 月还款金额 = （贷款金额 * 月利率" />
+        <title>SpringBoot 之手动控制事务 - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="SpringBoot 之手动控制事务" />
+<meta property="og:description" content="Spring 的 7 中事务传播方式 事务 解释 Propagation.REQUIRED 代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚（如果当前方法是被其他方法调用的时候，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" />
+<meta property="og:url" content="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" />
 <meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
-<meta property="article:published_time" content="2021-01-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
 
-<meta name="twitter:title" content="贷款利息算法"/>
-<meta name="twitter:description" content="等额本息 等额本息特点 每月本金与利息相等，直至还款结束均不变 适合资金短期使用 时间越久支出利息越高 等额本息计算方式 月还款金额 = （贷款金额 * 月利率"/>
+<meta name="twitter:title" content="SpringBoot 之手动控制事务"/>
+<meta name="twitter:description" content="Spring 的 7 中事务传播方式 事务 解释 Propagation.REQUIRED 代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚（如果当前方法是被其他方法调用的时候，"/>
 <meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" /><link rel="prev" href="https://xiaofangkang.gitee.io/idea/" /><link rel="next" href="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" /><link rel="prev" href="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" /><link rel="next" href="https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "贷款利息算法",
+        "headline": "SpringBoot 之手动控制事务",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/xiaofangkang.gitee.io\/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95\/"
-        },"genre": "posts","keywords": "算法, 贷款利息","wordcount":  717 ,
-        "url": "https:\/\/xiaofangkang.gitee.io\/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95\/","datePublished": "2021-01-04T00:00:00+00:00","dateModified": "2021-01-04T00:00:00+00:00","publisher": {
+            "@id": "https:\/\/xiaofangkang.gitee.io\/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6\/"
+        },"genre": "posts","keywords": "java, SpringBoot, 事务","wordcount":  1630 ,
+        "url": "https:\/\/xiaofangkang.gitee.io\/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6\/","datePublished": "2021-01-07T00:00:00+00:00","dateModified": "2021-01-07T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -116,10 +116,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">贷款利息算法</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%BC%9A%E8%AE%A1/"><i class="far fa-folder fa-fw"></i>会计</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-04">2021-01-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 717 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" class="leancloud_visitors" data-flag-title="贷款利息算法">
+        </div><article class="page single"><h1 class="single-title animated flipInX">SpringBoot 之手动控制事务</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/springboot/"><i class="far fa-folder fa-fw"></i>SpringBoot</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-07">2021-01-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1630 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" class="leancloud_visitors" data-flag-title="SpringBoot 之手动控制事务">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -129,167 +129,251 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#等额本息">等额本息</a>
+    <li><a href="#spring-的-7-中事务传播方式">Spring 的 7 中事务传播方式</a></li>
+    <li><a href="#数据库四大特性和mysql事务的隔离级别">数据库四大特性和MySql事务的隔离级别</a>
       <ul>
-        <li><a href="#等额本息特点">等额本息特点</a>
-          <ul>
-            <li><a href="#等额本息计算方式">等额本息计算方式</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#等额本金">等额本金</a>
-      <ul>
-        <li><a href="#等额本金特点">等额本金特点</a>
-          <ul>
-            <li><a href="#等额本金计算方式">等额本金计算方式</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#每月还息">每月还息</a>
-      <ul>
-        <li><a href="#每月还息特点">每月还息特点</a>
-          <ul>
-            <li><a href="#每月还息计算方式">每月还息计算方式</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#随借随还">随借随还</a>
-      <ul>
-        <li><a href="#随借随还特点">随借随还特点</a>
-          <ul>
-            <li><a href="#随借随还计算方式">随借随还计算方式</a></li>
-          </ul>
-        </li>
+        <li><a href="#四大特征">四大特征</a></li>
+        <li><a href="#隔离机制">隔离机制</a></li>
+        <li><a href="#数据库事务级别默认使用repeatable-read级别列表级别从下往上级别越低查看级别">数据库事务级别，默认使用Repeatable read级别，列表级别从下往上级别越低。查看级别</a></li>
+        <li><a href="#如果在没有办法使用注解的时候比如多线程等就要使用手动的方式来做事务管理了这也就是编程式的事务管理">如果在没有办法使用注解的时候（比如多线程等），就要使用手动的方式来做事务管理了，这也就是编程式的事务管理。</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p><img
+            </div><div class="content" id="content"><h1 id="spring-的-7-中事务传播方式">Spring 的 7 中事务传播方式</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">事务</th>
+<th style="text-align:left">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Propagation.REQUIRED</code></td>
+<td style="text-align:left"><code>代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚</code>（如果当前方法是被其他方法调用的时候，且调用者本身即有事务），如果没有事务，则自己新建事务，</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.SUPPORTS</code></td>
+<td style="text-align:left"><code>代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚</code>（如果当前方法是被其他方法调用的时候，且调用者本身即有事务），如果没有事务，则该方法在非事务的上下文中执行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.MANDATORY</code></td>
+<td style="text-align:left"><code>代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚</code>（如果当前方法是被其他方法调用的时候，且调用者本身即有事务）,如果没有事务，则抛出异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.REQUIRES_NEW</code></td>
+<td style="text-align:left">创建一个新的事务上下文，如果当前方法的调用者已经有了事务，则挂起调用者的事务，这两个事务不处于同一上下文，<code>如果各自发生异常，各自回滚</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.NOT_SUPPORTED</code></td>
+<td style="text-align:left">该方法以非事务的状态执行，如果调用该方法的调用者有事务则先挂起调用者的事务</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.NEVER</code></td>
+<td style="text-align:left">该方法以非事务的状态执行，如果调用者存在事务，则抛出异常</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Propagation.NESTED</code></td>
+<td style="text-align:left">如果当前上下文中存在事务，则以嵌套事务执行该方法，也就说，<code>这部分方法是外部方法的一部分，调用者回滚，则该方法回滚，但如果该方法自己发生异常，则自己回滚，不会影响外部事务，如果不存在事务，则与PROPAGATION_REQUIRED一样</code></td>
+</tr>
+<tr>
+<td style="text-align:left">`</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="数据库四大特性和mysql事务的隔离级别">数据库四大特性和MySql事务的隔离级别</h1>
+<h2 id="四大特征">四大特征</h2>
+<ol>
+<li>原则性（<code>Atomicity</code>）</li>
+</ol>
+<p>原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。</p>
+<ol start="2">
+<li>一致性（<code>Consistency</code>）</li>
+</ol>
+<p>一致性是指事务必须使数据库从一个一致性状态变换到另一个一致性状态，也就是说一个事务执行之前和执行之后都必须处于一致性状态。</p>
+<ol start="3">
+<li>隔离性（<code>Isolation</code>）</li>
+</ol>
+<p>隔离性是当多个用户并发访问数据库时，比如操作同一张表时，数据库为每一个用户开启的事务，不能被其他事务的操作所干扰，多个并发事务之间要相互隔离。</p>
+<ol start="4">
+<li>持久性（<code>Durability</code>）</li>
+</ol>
+<p>持久性是指一个事务一旦被提交了，那么对数据库中的数据的改变就是永久性的，即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。</p>
+<h2 id="隔离机制">隔离机制</h2>
+<table>
+<thead>
+<tr>
+<th>事务隔离级别</th>
+<th>脏读</th>
+<th>不可重复读</th>
+<th>幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读未提交</td>
+<td>是</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>不可重复读</td>
+<td>否</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>可重复读</td>
+<td>否</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>串行化</td>
+<td>否</td>
+<td>否</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p>脏读是指在一个事务处理过程里读取了另一个未提交的事务中的数据。（读取未提交的数据）</p>
+<p>b、不可重复读是指在对于数据库中的某个数据，一个事务范围内多次查询却返回了不同的数据值，这是由于在查询间隔，被另一个事务修改并提交了。（边读边写）</p>
+<p>c、幻读指两个事务同时发生，两个事务修改数据，读到的数据不是自己开始修改的数据。幻读和不可重复读都是读取了另一条已经提交的事务（这点就脏读不同），所不同的是不可重复读查询的都是同一个数据项，而幻读针对的是一批数据整体。（同时写，同时读）</p>
+<h2 id="数据库事务级别默认使用repeatable-read级别列表级别从下往上级别越低查看级别">数据库事务级别，默认使用Repeatable read级别，列表级别从下往上级别越低。查看级别</h2>
+<p><code>select @@tx_isolation;</code></p>
+<h2 id="如果在没有办法使用注解的时候比如多线程等就要使用手动的方式来做事务管理了这也就是编程式的事务管理">如果在没有办法使用注解的时候（比如多线程等），就要使用手动的方式来做事务管理了，这也就是编程式的事务管理。</h2>
+<p>1）首先加入注解，这就是spring的jdbc框架中提供的事务管理方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">    @Autowired
+    private PlatformTransactionManager platformTransactionManager;
+
+    @Autowired
+    private TransactionDefinition transactionDefinition;
+</code></pre></td></tr></table>
+</div>
+</div><p>2）看一下源码（DataSourceTransactionManagerAutoConfiguration.class、TransactionTemplate.class）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@Bean
+@ConditionalOnMissingBean({PlatformTransactionManager.class})
+public DataSourceTransactionManager transactionManager(DataSourceProperties properties) {
+DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(this.dataSource);
+if (this.transactionManagerCustomizers != null) {
+this.transactionManagerCustomizers.customize(transactionManager);
+}
+
+            return transactionManager;
+        }
+
+</code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/77a1f6c02b856496e38645a1ac482d02.png"
-        data-srcset="/images/77a1f6c02b856496e38645a1ac482d02.png, /images/77a1f6c02b856496e38645a1ac482d02.png 1.5x, /images/77a1f6c02b856496e38645a1ac482d02.png 2x"
+        data-src="/static/images/img_2.png"
+        data-srcset="/static/images/img_2.png, /static/images/img_2.png 1.5x, /static/images/img_2.png 2x"
         data-sizes="auto"
-        alt="/images/77a1f6c02b856496e38645a1ac482d02.png"
-        title="截图" /></p>
-<br/>
-<h1 id="等额本息">等额本息</h1>
-<h2 id="等额本息特点">等额本息特点</h2>
-<p>每月本金与利息相等，直至还款结束均不变</p>
-<p>适合资金短期使用</p>
-<p>时间越久支出利息越高</p>
-<br/>
-<h3 id="等额本息计算方式">等额本息计算方式</h3>
-<br/>
-<p><code>月还款金额 = （贷款金额  *  月利率） + （贷款金额 + 借款期限）</code></p>
-<p>例如：</p>
-<blockquote>
-<p>借款 10万，3年期（36个月） ， 月利息5厘 ， 每月还款金额 如下：
-月还款金额 = （10万 * 0.5%） + （10万 / 36）
-=  500 + 2777
-=  3277 元</p>
-</blockquote>
-<h1 id="等额本金">等额本金</h1>
-<h2 id="等额本金特点">等额本金特点</h2>
-<p>每月本金与利息不等， （前期利息高本金少，后期利息少本金高）</p>
-<p>适合资金长期使用，如按揭，房贷等</p>
-<p>时间越久支出利息越少</p>
-<h3 id="等额本金计算方式">等额本金计算方式</h3>
-<p><code>首月还款金额 = （贷款金额 * 月利率）+（贷款金额 / 接口期限）</code></p>
-<p><code>下月还款金额 = （贷款金额 - 上月本金）* 月利率 + （贷款金额 / 借款期限）</code></p>
-<br/>
-<blockquote>
-<p>例如：</p>
-<p>借款 10 万 ， 3 年期（36 个月） ， 月利息 5 厘 ， 每月还款金额如下：</p>
-<p>首月还款金额 = （10万 * 0.5 %） + （10万 / 36 个月）</p>
-<pre><code>                 = 500 + 2777 
-
-                 = 3277 元
-</code></pre>
-<p>次月还款金额 = （10万 - 2777）* 0.5% +10万 / 36 个月</p>
-<pre><code>                 = 97223 * 0.5 % + 2777
-
-                  = 486.1 + 2777
-
-                    = 3263 元
-</code></pre>
-</blockquote>
+        alt="/static/images/img_2.png"
+        title="img_2.png" />
+备注：有兴趣可以了解一下DataSourceTransactionManager的写法和原理。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">        @Bean
+        @ConditionalOnMissingBean
+        public TransactionTemplate transactionTemplate() {
+            return new TransactionTemplate(this.transactionManager);
+        }
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/static/images/img_1.png"
+        data-srcset="/static/images/img_1.png, /static/images/img_1.png 1.5x, /static/images/img_1.png 2x"
+        data-sizes="auto"
+        alt="/static/images/img_1.png"
+        title="img_1.png" /></p>
+<p>注意，这里的所有事务传播方式包括处理，都需要自己手动去处理。</p>
+<p>3）编写方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">TransactionStatus transactionStatus = platformTransactionManager.getTransaction(transactionDefinition);
+platformTransactionManager.commit(transactionStatus);
+platformTransactionManager.rollback(transactionStatus);
+</code></pre></td></tr></table>
+</div>
+</div><p>说明：这里开发事务过后，返回一个事务状态，这个状态记录了东西，用来控制事务的管理，当然，多个事务之间的控制需要人为控制。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="/images/b7ae224e31d44c90f743a723aeb9da9d.png"
-        data-srcset="/images/b7ae224e31d44c90f743a723aeb9da9d.png, /images/b7ae224e31d44c90f743a723aeb9da9d.png 1.5x, /images/b7ae224e31d44c90f743a723aeb9da9d.png 2x"
+        data-src="/static/images/img.png"
+        data-srcset="/static/images/img.png, /static/images/img.png 1.5x, /static/images/img.png 2x"
         data-sizes="auto"
-        alt="/images/b7ae224e31d44c90f743a723aeb9da9d.png"
-        title="截图" /></p>
-<br/>
-<h1 id="每月还息">每月还息</h1>
-<h2 id="每月还息特点">每月还息特点</h2>
-<p>每月仅需支付利息，规定时偿还本金即可</p>
-<p>适合生意进货，资金周转使用</p>
-<p>资金使用率高</p>
-<h3 id="每月还息计算方式">每月还息计算方式</h3>
-<p><code>月还款金额 = 贷款金额   *   月利率</code></p>
-<p><code>最后一月还款金额 = 贷款金额 * 月利率 + 贷款金额</code></p>
-<blockquote>
-<p>例如：</p>
-<p>借款 10 万 ， 3 年期（36个月），月利息 5 厘 ， 每月还款金额如下：</p>
-<p>月还款金额 = 10 万 * 0.5%</p>
-<pre><code>               = 500
-</code></pre>
-<p>最后一月还款金额  = 10万 * 0.5 % +10 万</p>
-<pre><code>                         = 500 + 10万
-
-                         = 10万5百
-</code></pre>
-</blockquote>
-<h1 id="随借随还">随借随还</h1>
-<h2 id="随借随还特点">随借随还特点</h2>
-<p>按天计算利息，随借偿还本金。借用多少算多少利息通常为每天万分之 X</p>
-<p>适合短期进货，备用资金使用</p>
-<p>资金使用非常灵活，但利率会比其他方式高</p>
-<h3 id="随借随还计算方式">随借随还计算方式</h3>
-<p><code>日还款金额 = 贷款金额 * 日利率</code></p>
-<blockquote>
-<p>例如：</p>
-<p>借款10万 ， 日利息万分之4，每日还款金额如下：</p>
-<p>日还款金额 = 10万 * 0.04%</p>
-<pre><code>              = 10万 * 0.0004
-
-              = 40 元/天
-</code></pre>
-<p>假设使用了3天，那么利息为120元</p>
-</blockquote>
+        alt="/static/images/img.png"
+        title="img.png" /></p>
+<p>4）编程式的事务控制经量少用，因为控制程度上面来说spring的方式还是来的更加不错，编程式的方式，更多用于在需要事务的时候，没有办法加入事务，才采取手动控制事务的方式。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-01-04</span>
+                <span>更新于 2021-01-07</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法" data-hashtags="算法,贷款利息"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-hashtag="算法"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" data-title="贷款利息算法"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务" data-hashtags="java,SpringBoot,事务"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-hashtag="java"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" data-title="SpringBoot 之手动控制事务"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>,&nbsp;<a href="/tags/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF/">贷款利息</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/springboot/">SpringBoot</a>,&nbsp;<a href="/tags/%E4%BA%8B%E5%8A%A1/">事务</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/idea/" class="prev" rel="prev" title="IDEA 卡成球了 ！咋优化 ?"><i class="fas fa-angle-left fa-fw"></i>IDEA 卡成球了 ！咋优化 ?</a>
-            <a href="/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/" class="next" rel="next" title="SpringBoot 之手动控制事务">SpringBoot 之手动控制事务<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/" class="prev" rel="prev" title="贷款利息算法"><i class="fas fa-angle-left fa-fw"></i>贷款利息算法</a>
+            <a href="/gradle-%E5%AD%A6%E4%B9%A0/" class="next" rel="next" title="Gradle 学习">Gradle 学习<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

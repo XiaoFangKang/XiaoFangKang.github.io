@@ -12,6 +12,13 @@
     <guid>https://xiaofangkang.gitee.io/gradle-%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[Gradle 入门 1. Gradle 的 ZIP 解压后目录 docs：API、 DSL、指南等文档 init.d：gradle初始化脚本目录 lib：相关库 media：一些icon资]]></description>
 </item><item>
+    <title>SpringBoot 之手动控制事务</title>
+    <link>https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/</link>
+    <pubDate>Thu, 07 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/springboot%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/</guid>
+    <description><![CDATA[Spring 的 7 中事务传播方式 事务 解释 Propagation.REQUIRED 代表当前方法支持当前的事务，且与调用者处于同一事务上下文中，回滚统一回滚（如果当前方法是被其他方法调用的时候，]]></description>
+</item><item>
     <title>贷款利息算法</title>
     <link>https://xiaofangkang.gitee.io/%E8%B4%B7%E6%AC%BE%E5%88%A9%E6%81%AF%E7%AE%97%E6%B3%95/</link>
     <pubDate>Mon, 04 Jan 2021 00:00:00 &#43;0000</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/markdown%E5%AD%A6%E4%B9%A0/</guid>
     <description><![CDATA[代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68]]></description>
-</item><item>
-    <title>MySQL 导(入,出)数据</title>
-    <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
-    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
-    <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
 </item></channel>
 </rss>
