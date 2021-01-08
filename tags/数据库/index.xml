@@ -4,7 +4,14 @@
         <link>https://xiaofangkang.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
         <description>数据库 - 标签 - FangKang.Xiao 博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
-            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+    <title>数据的批量导入和批量修改</title>
+    <link>https://xiaofangkang.gitee.io/batch/</link>
+    <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/batch/</guid>
+    <description><![CDATA[批量insert insert into和 insert all into 和 insert into select 区别 insert into 是 mysql 中使用的批量导入方法 1 INSERT INTO t1(field1,field2) VALUES (v101,v102),(v201,v202),(v301,v302),(v401,v402); insert all into 是oracle 中经常使用的方法 1 2 3 4 5 insert all into t1(field1,field2)]]></description>
+</item><item>
     <title>MySQL 导(入,出)数据</title>
     <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
     <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>

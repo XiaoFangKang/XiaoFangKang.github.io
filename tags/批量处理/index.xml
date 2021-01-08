@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>批量处理 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/</link>
+        <description>批量处理 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>数据的批量导入和批量修改</title>
+    <link>https://xiaofangkang.gitee.io/batch/</link>
+    <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/batch/</guid>
+    <description><![CDATA[批量insert insert into和 insert all into 和 insert into select 区别 insert into 是 mysql 中使用的批量导入方法 1 INSERT INTO t1(field1,field2) VALUES (v101,v102),(v201,v202),(v301,v302),(v401,v402); insert all into 是oracle 中经常使用的方法 1 2 3 4 5 insert all into t1(field1,field2)]]></description>
+</item></channel>
+</rss>
