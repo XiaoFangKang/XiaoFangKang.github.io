@@ -1,4 +1,4 @@
-# 数据的批量导入和批量修改
+# 批量insert和批量update
 
 # 批量`insert`
 ## `insert into`和 `insert all into` 和  `insert into select` 区别
