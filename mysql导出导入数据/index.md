@@ -70,7 +70,7 @@
 
 # 导入数据
 1. mysql -h主机地址 -u用户名 -p用户密码，文件形式。(shell命令行)
-
+                   
 `mysql -u root -p dbname < filename.sql`
 
 2. 直接放在命令行(shell命令行)执行一个sql

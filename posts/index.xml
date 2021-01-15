@@ -4,7 +4,28 @@
         <link>https://xiaofangkang.gitee.io/posts/</link>
         <description>所有文章 | FangKang.Xiao 博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
-            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Mybatis拦截器 [转]</title>
+    <link>https://xiaofangkang.gitee.io/mybatis/</link>
+    <pubDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/mybatis/</guid>
+    <description><![CDATA[一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过M]]></description>
+</item><item>
+    <title>B站学习</title>
+    <link>https://xiaofangkang.gitee.io/bilibili/</link>
+    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/bilibili/</guid>
+    <description><![CDATA[图片 计算机网络 计算机网络微课堂 《计算机网络微课堂》这个视频是湖南科技大学老师制作的，PPT 的动图是我见过做的最用心的了，一看就懂的佳作，而且]]></description>
+</item><item>
+    <title>面经pdf文档</title>
+    <link>https://xiaofangkang.gitee.io/%E9%9D%A2%E8%AF%95pdf%E6%96%87%E6%A1%A3/</link>
+    <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E9%9D%A2%E8%AF%95pdf%E6%96%87%E6%A1%A3/</guid>
+    <description><![CDATA[pdf文档 最新资料 JAVA热门技术PDF 面试pdf 面试文档 Java基础知识篇.pdf Java集合框架常见面试题.pdf Java集合框架常见面]]></description>
+</item><item>
     <title>批量insert和批量update</title>
     <link>https://xiaofangkang.gitee.io/batch/</link>
     <pubDate>Fri, 08 Jan 2021 00:00:00 &#43;0000</pubDate>
@@ -53,26 +74,5 @@
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/bugstack/</guid>
     <description><![CDATA[转 &ndash; bugstack虫洞栈 2020-12-30 面经手册 · 第24篇《为了搞清楚类加载，竟然手撸JVM！》 2020-12-23 面经手册 · 第23篇《JDK、JRE、JVM，是什么关系]]></description>
-</item><item>
-    <title>2020年最新-IDEA最详细配置（配图文收藏版配置) 转载</title>
-    <link>https://xiaofangkang.gitee.io/idea/</link>
-    <pubDate>Tue, 22 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xiaofangkang.gitee.io/idea/</guid>
-    <description><![CDATA[IDEA使用设置 继续idea最新安装的步骤后，对IDEA工作开发进行配置，让开发的时候更加便利顺手。 点击欢迎页右下角&quot;Config]]></description>
-</item><item>
-    <title>vuex教程</title>
-    <link>https://xiaofangkang.gitee.io/vue/</link>
-    <pubDate>Mon, 14 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xiaofangkang.gitee.io/vue/</guid>
-    <description><![CDATA[Vuex 介绍 Vuex 是一个专为Vue.js应用程序开发的状态管理模式。 它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式]]></description>
-</item><item>
-    <title>3个有用的网站</title>
-    <link>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
-    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://xiaofangkang.gitee.io/3%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
-    <description><![CDATA[介绍 视频剪辑（ps,pr 学习）doyoudo 开发者 书栈网 学习外语 多邻国]]></description>
 </item></channel>
 </rss>
