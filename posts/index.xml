@@ -10,7 +10,7 @@
     <pubDate>Fri, 15 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/mybatis/</guid>
-    <description><![CDATA[一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过M]]></description>
+    <description><![CDATA[一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。 通过M]]></description>
 </item><item>
     <title>B站学习</title>
     <link>https://xiaofangkang.gitee.io/bilibili/</link>
@@ -24,7 +24,7 @@
     <pubDate>Wed, 13 Jan 2021 00:00:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>https://xiaofangkang.gitee.io/%E9%9D%A2%E8%AF%95pdf%E6%96%87%E6%A1%A3/</guid>
-    <description><![CDATA[pdf文档 最新资料 JAVA热门技术PDF 面试pdf 面试文档 Java基础知识篇.pdf Java集合框架常见面试题.pdf Java集合框架常见面]]></description>
+    <description><![CDATA[面试文档 Java基础知识篇.pdf Java集合框架常见面试题.pdf Java集合框架常见面试题夜间阅读版.pdf v4.0-JavaGuide]]></description>
 </item><item>
     <title>批量insert和批量update</title>
     <link>https://xiaofangkang.gitee.io/batch/</link>

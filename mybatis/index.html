@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>Mybatis拦截器 [转] - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content="Mybatis拦截器 [转]" />
-<meta property="og:description" content="一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过M" />
+<meta property="og:description" content="一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。 通过M" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xiaofangkang.gitee.io/mybatis/" />
 <meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
 
 <meta name="twitter:title" content="Mybatis拦截器 [转]"/>
-<meta name="twitter:description" content="一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过M"/>
+<meta name="twitter:description" content="一 Mybatis拦截器介绍 Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。 通过M"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/mybatis/" /><link rel="prev" href="https://xiaofangkang.gitee.io/bilibili/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xiaofangkang.gitee.io\/mybatis\/"
-        },"genre": "posts","keywords": "数据库, Mybatis","wordcount":  3865 ,
+        },"genre": "posts","keywords": "数据库, Mybatis","wordcount":  3866 ,
         "url": "https:\/\/xiaofangkang.gitee.io\/mybatis\/","datePublished": "2021-01-15T00:00:00+00:00","dateModified": "2021-01-15T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,7 +118,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Mybatis拦截器 [转]</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="far fa-folder fa-fw"></i>数据库</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-15">2021-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3865 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-15">2021-01-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3866 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/mybatis/" class="leancloud_visitors" data-flag-title="Mybatis拦截器 [转]">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -152,7 +152,9 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="一-mybatis拦截器介绍">一 Mybatis拦截器介绍</h1>
-<p>Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过Mybatis拦截器我们可以拦截某些方法的调用，我们可以选择在这些被拦截的方法执行前后加上某些逻辑，也可以在执行这些被拦截的方法时执行自己的逻辑而不再执行被拦截的方法。所以Mybatis拦截器的使用范围是非常广泛的。</p>
+<p>Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。
+通过Mybatis拦截器我们可以拦截某些方法的调用，我们可以选择在这些被拦截的方法执行前后加上某些逻辑，
+也可以在执行这些被拦截的方法时执行自己的逻辑而不再执行被拦截的方法。所以Mybatis拦截器的使用范围是非常广泛的。</p>
 <blockquote>
 <p>Mybatis里面的核心对象还是比较多，如下：</p>
 </blockquote>
@@ -206,8 +208,9 @@
 </tr>
 </tbody>
 </table>
-<pre><code>Mybatis拦截器并不是每个对象里面的方法都可以被拦截的。Mybatis拦截器只能拦截Executor、ParameterHandler、StatementHandler、ResultSetHandler四个对象里面的方法。
-</code></pre>
+<p>Mybatis拦截器并不是每个对象里面的方法都可以被拦截的。
+Mybatis拦截器只能拦截Executor、ParameterHandler、
+StatementHandler、ResultSetHandler四个对象里面的方法。</p>
 <ul>
 <li><code>Executor</code></li>
 </ul>
@@ -278,7 +281,9 @@
 </div><ul>
 <li>ParameterHandler</li>
 </ul>
-<p>ParameterHandler用来设置参数规则，当StatementHandler使用prepare()方法后，接下来就是使用它来设置参数。所以如果有对参数做自定义逻辑处理的时候，可以通过拦截ParameterHandler来实现。ParameterHandler里面可以拦截的方法解释如下：</p>
+<p>ParameterHandler用来设置参数规则，当StatementHandler使用prepare()方法后，
+接下来就是使用它来设置参数。所以如果有对参数做自定义逻辑处理的时候，可以通过拦截ParameterHandler来实现
+。ParameterHandler里面可以拦截的方法解释如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -406,8 +411,10 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>一般只拦截StatementHandler里面的prepare方法。</p>
-<pre><code>   在Mybatis里面RoutingStatementHandler是SimpleStatementHandler(对应Statement)、PreparedStatementHandler(对应PreparedStatement)、CallableStatementHandler(对应CallableStatement)的路由类，所有需要拦截StatementHandler里面的方法的时候，对RoutingStatementHandler做拦截处理就可以了，如下的写法可以过滤掉一些不必要的拦截类。
-</code></pre>
+<p>、在Mybatis里面RoutingStatementHandler是SimpleStatementHandler(对应Statement)、
+PreparedStatementHandler(对应PreparedStatement)、CallableStatementHandler
+(对应CallableStatement)的路由类，所有需要拦截StatementHandler里面的方法的时候，
+对RoutingStatementHandler做拦截处理就可以了，如下的写法可以过滤掉一些不必要的拦截类。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -470,7 +477,8 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>关于Statement、PreparedStatement和CallableStatement的一些区别。以及Statement和PreparedStatement相比PreparedStatement的优势在哪里。强烈建议大家去百度下。</p>
+</div><p>关于Statement、PreparedStatement和CallableStatement的一些区别。以及Statement和PreparedStatement
+相比PreparedStatement的优势在哪里。强烈建议大家去百度下。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -568,7 +576,8 @@
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="212-intercepts注解">2.1.2 @Intercepts注解</h3>
-<p>Intercepts注解需要一个Signature(拦截点)参数数组。通过Signature来指定拦截哪个对象里面的哪个方法。@Intercepts注解定义如下:</p>
+<p>Intercepts注解需要一个Signature(拦截点)参数数组。通过Signature来指定拦截哪个对象里面的哪个方法。
+@Intercepts注解定义如下:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -642,7 +651,8 @@
 <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>我们举一个例子来说明，比如我们自定义一个MybatisInterceptor类，来拦截Executor类里面的两个query。自定义拦截类MybatisInterceptor</p>
+</div><p>我们举一个例子来说明，比如我们自定义一个MybatisInterceptor类，来拦截Executor类里面的两个query。
+自定义拦截类MybatisInterceptor</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -760,7 +770,8 @@
 </code></pre></td></tr></table>
 </div>
 </div><h1 id="三-mybatis拦截器实例-自定义拦截器">三 Mybatis拦截器实例-自定义拦截器</h1>
-<p>上面讲了一大堆，最终的目的都是要使用上拦截器，接下来。我们通过几个简单的自定义拦截器来加深对Mybatis拦截器的理解。实例代码在链接地址：https://github.com/tuacy/microservice-framework 的 mybatis-interceptor module里面。</p>
+<p>上面讲了一大堆，最终的目的都是要使用上拦截器，接下来。我们通过几个简单的自定义拦截器来加深对Mybatis拦截器的理解。
+实例代码在链接地址：https://github.com/tuacy/microservice-framework 的 mybatis-interceptor module里面。</p>
 <h2 id="31-日志打印">3.1 日志打印</h2>
 <p>自定义LogInterceptor拦截器，打印出我们每次sq执行对应sql语句。</p>
 <h2 id="32-分页">3.2 分页</h2>
@@ -769,7 +780,8 @@
 <p>自定义拦截器TableShardInterceptor实现水平分表的功能。</p>
 <h2 id="34-对查询结果的某个字段加密">3.4 对查询结果的某个字段加密</h2>
 <p>自定义拦截器EncryptResultFieldInterceptor对查询回来的结果中的某个字段进行加密处理。</p>
-<p>上面拦截器的实现，在github <a href="https://github.com/tuacy/microservice-framework">https://github.com/tuacy/microservice-framework</a> 的 mybatis-interceptor module里面都能找到具体的实现。</p>
+<p>上面拦截器的实现，在github <a href="https://github.com/tuacy/microservice-framework">https://github.com/tuacy/microservice-framework</a> 的 mybatis-interceptor
+module里面都能找到具体的实现。</p>
 <p>转载 ：https://blog.csdn.net/wuyuxing24/article/details/89343951</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">

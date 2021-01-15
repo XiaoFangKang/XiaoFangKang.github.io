@@ -3,7 +3,9 @@
 
 
 # 一 Mybatis拦截器介绍
-Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。通过Mybatis拦截器我们可以拦截某些方法的调用，我们可以选择在这些被拦截的方法执行前后加上某些逻辑，也可以在执行这些被拦截的方法时执行自己的逻辑而不再执行被拦截的方法。所以Mybatis拦截器的使用范围是非常广泛的。
+Mybatis拦截器设计的初衷就是为了供用户在某些时候可以实现自己的逻辑而不必去动Mybatis固有的逻辑。
+通过Mybatis拦截器我们可以拦截某些方法的调用，我们可以选择在这些被拦截的方法执行前后加上某些逻辑，
+也可以在执行这些被拦截的方法时执行自己的逻辑而不再执行被拦截的方法。所以Mybatis拦截器的使用范围是非常广泛的。
 
 > Mybatis里面的核心对象还是比较多，如下：
 
@@ -20,7 +22,9 @@ SqlSource	|负责根据用户传递的parameterObject，动态地生成SQL语句
 BoundSql	|表示动态生成的SQL语句以及相应的参数信息
 Configuration	|MyBatis所有的配置信息都维持在Configuration对象之中
 
-    Mybatis拦截器并不是每个对象里面的方法都可以被拦截的。Mybatis拦截器只能拦截Executor、ParameterHandler、StatementHandler、ResultSetHandler四个对象里面的方法。
+Mybatis拦截器并不是每个对象里面的方法都可以被拦截的。
+Mybatis拦截器只能拦截Executor、ParameterHandler、
+StatementHandler、ResultSetHandler四个对象里面的方法。
 
 - `Executor`
 
@@ -60,7 +64,9 @@ public interface Executor {
 
 - ParameterHandler
 
-ParameterHandler用来设置参数规则，当StatementHandler使用prepare()方法后，接下来就是使用它来设置参数。所以如果有对参数做自定义逻辑处理的时候，可以通过拦截ParameterHandler来实现。ParameterHandler里面可以拦截的方法解释如下：
+ParameterHandler用来设置参数规则，当StatementHandler使用prepare()方法后，
+接下来就是使用它来设置参数。所以如果有对参数做自定义逻辑处理的时候，可以通过拦截ParameterHandler来实现
+。ParameterHandler里面可以拦截的方法解释如下：
 
 ```java
 public interface ParameterHandler {
@@ -129,7 +135,10 @@ public interface StatementHandler {
 
 一般只拦截StatementHandler里面的prepare方法。
 
-       在Mybatis里面RoutingStatementHandler是SimpleStatementHandler(对应Statement)、PreparedStatementHandler(对应PreparedStatement)、CallableStatementHandler(对应CallableStatement)的路由类，所有需要拦截StatementHandler里面的方法的时候，对RoutingStatementHandler做拦截处理就可以了，如下的写法可以过滤掉一些不必要的拦截类。
+、在Mybatis里面RoutingStatementHandler是SimpleStatementHandler(对应Statement)、
+PreparedStatementHandler(对应PreparedStatement)、CallableStatementHandler
+(对应CallableStatement)的路由类，所有需要拦截StatementHandler里面的方法的时候，
+对RoutingStatementHandler做拦截处理就可以了，如下的写法可以过滤掉一些不必要的拦截类。
 
 ```java
 @Intercepts({
@@ -161,7 +170,8 @@ public class TableShardInterceptor implements Interceptor {
     }
 }
 ```
-关于Statement、PreparedStatement和CallableStatement的一些区别。以及Statement和PreparedStatement相比PreparedStatement的优势在哪里。强烈建议大家去百度下。
+关于Statement、PreparedStatement和CallableStatement的一些区别。以及Statement和PreparedStatement
+相比PreparedStatement的优势在哪里。强烈建议大家去百度下。
 
 ```java
 ResultSetHandler
@@ -219,7 +229,8 @@ public interface Interceptor {
 ```
 
 ### 2.1.2 @Intercepts注解
-Intercepts注解需要一个Signature(拦截点)参数数组。通过Signature来指定拦截哪个对象里面的哪个方法。@Intercepts注解定义如下:
+Intercepts注解需要一个Signature(拦截点)参数数组。通过Signature来指定拦截哪个对象里面的哪个方法。
+@Intercepts注解定义如下:
 
 
 ```java
@@ -259,7 +270,8 @@ Class<?> type();
 }
 ```
 
-我们举一个例子来说明，比如我们自定义一个MybatisInterceptor类，来拦截Executor类里面的两个query。自定义拦截类MybatisInterceptor
+我们举一个例子来说明，比如我们自定义一个MybatisInterceptor类，来拦截Executor类里面的两个query。
+自定义拦截类MybatisInterceptor
 
 ```java
 @Intercepts({
@@ -322,7 +334,8 @@ public Object intercept(Invocation invocation) throws Throwable {
 ```
 
 # 三 Mybatis拦截器实例-自定义拦截器
-上面讲了一大堆，最终的目的都是要使用上拦截器，接下来。我们通过几个简单的自定义拦截器来加深对Mybatis拦截器的理解。实例代码在链接地址：https://github.com/tuacy/microservice-framework 的 mybatis-interceptor module里面。
+上面讲了一大堆，最终的目的都是要使用上拦截器，接下来。我们通过几个简单的自定义拦截器来加深对Mybatis拦截器的理解。
+实例代码在链接地址：https://github.com/tuacy/microservice-framework 的 mybatis-interceptor module里面。
 
 ## 3.1 日志打印
 自定义LogInterceptor拦截器，打印出我们每次sq执行对应sql语句。
@@ -336,6 +349,7 @@ public Object intercept(Invocation invocation) throws Throwable {
 ## 3.4 对查询结果的某个字段加密
 自定义拦截器EncryptResultFieldInterceptor对查询回来的结果中的某个字段进行加密处理。
 
-上面拦截器的实现，在github https://github.com/tuacy/microservice-framework 的 mybatis-interceptor module里面都能找到具体的实现。
+上面拦截器的实现，在github https://github.com/tuacy/microservice-framework 的 mybatis-interceptor 
+module里面都能找到具体的实现。
 
 转载 ：https://blog.csdn.net/wuyuxing24/article/details/89343951

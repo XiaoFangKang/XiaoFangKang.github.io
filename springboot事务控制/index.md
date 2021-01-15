@@ -74,7 +74,7 @@ this.transactionManagerCustomizers.customize(transactionManager);
         }
 
 ```
-![img_2.png](/static/images/img_2.png)
+![img_2.png](/images/img_2.png)
 备注：有兴趣可以了解一下DataSourceTransactionManager的写法和原理。
 
 ```
@@ -84,7 +84,7 @@ this.transactionManagerCustomizers.customize(transactionManager);
             return new TransactionTemplate(this.transactionManager);
         }
 ```
-![img_1.png](/static/images/img_1.png)
+![img_1.png](/images/img_1.png)
 
 注意，这里的所有事务传播方式包括处理，都需要自己手动去处理。
 
@@ -96,7 +96,7 @@ platformTransactionManager.rollback(transactionStatus);
 ```
 说明：这里开发事务过后，返回一个事务状态，这个状态记录了东西，用来控制事务的管理，当然，多个事务之间的控制需要人为控制。
 
-![img.png](/static/images/img.png)
+![img.png](/images/img.png)
 
 4）编程式的事务控制经量少用，因为控制程度上面来说spring的方式还是来的更加不错，编程式的方式，更多用于在需要事务的时候，没有办法加入事务，才采取手动控制事务的方式。
 
