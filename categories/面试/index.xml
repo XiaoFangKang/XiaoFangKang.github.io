@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>面试 - 分类 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/categories/%E9%9D%A2%E8%AF%95/</link>
+        <description>面试 - 分类 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Sat, 16 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/categories/%E9%9D%A2%E8%AF%95/" rel="self" type="application/rss+xml" /><item>
+    <title>面经pdf文档</title>
+    <link>https://xiaofangkang.gitee.io/%E9%9D%A2%E8%AF%95pdf%E6%96%87%E6%A1%A3/</link>
+    <pubDate>Sat, 16 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/%E9%9D%A2%E8%AF%95pdf%E6%96%87%E6%A1%A3/</guid>
+    <description><![CDATA[面试文档 Java基础知识篇.pdf Java集合框架常见面试题.pdf Java集合框架常见面试题夜间阅读版.pdf v4.0-JavaGuide]]></description>
+</item><item>
+    <title>面经手册</title>
+    <link>https://xiaofangkang.gitee.io/bugstack/</link>
+    <pubDate>Fri, 01 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/bugstack/</guid>
+    <description><![CDATA[转 &ndash; bugstack虫洞栈 2020-12-30 面经手册 · 第24篇《为了搞清楚类加载，竟然手撸JVM！》 2020-12-23 面经手册 · 第23篇《JDK、JRE、JVM，是什么关系]]></description>
+</item></channel>
+</rss>

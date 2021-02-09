@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>命令 - 标签 - FangKang.Xiao 博客</title>
+        <link>https://xiaofangkang.gitee.io/tags/%E5%91%BD%E4%BB%A4/</link>
+        <description>命令 - 标签 - FangKang.Xiao 博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>x66128@qq.com (FangKang.Xiao)</managingEditor>
+            <webMaster>x66128@qq.com (FangKang.Xiao)</webMaster><lastBuildDate>Mon, 25 Jan 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xiaofangkang.gitee.io/tags/%E5%91%BD%E4%BB%A4/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker 安装</title>
+    <link>https://xiaofangkang.gitee.io/ubuntu/</link>
+    <pubDate>Mon, 25 Jan 2021 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/ubuntu/</guid>
+    <description><![CDATA[Ubuntu Docker 安装 使用官方安装脚本自动安装 安装命令如下： 1 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun 也可以使用国内 daocloud 一键安装命令： 1 curl -sSL https://get.daocloud.io/docker | sh Docker 镜像加速 国内从 DockerHub 拉取镜像有时会]]></description>
+</item><item>
+    <title>MySQL 导(入,出)数据</title>
+    <link>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/mysql%E5%AF%BC%E5%87%BA%E5%AF%BC%E5%85%A5%E6%95%B0%E6%8D%AE/</guid>
+    <description><![CDATA[导出数据 使用 SELECT &hellip; INTO OUTFILE 语句导出数据 以下实例中我们将数据表 runoob_tbl 数据导出到 /tmp/runoob.txt 文件中: 1 2 SELECT * FROM runoob_tbl INTO OUTFILE &#39;/tmp/runoob.txt&#39;; 你可以通过命令选项来设置数据输出的指定格式，以]]></description>
+</item><item>
+    <title>Oracle中用exp/imp命令参数详解【转】</title>
+    <link>https://xiaofangkang.gitee.io/expandimp/</link>
+    <pubDate>Fri, 11 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/expandimp/</guid>
+    <description><![CDATA[Oracle中用exp/imp命令参数详解 1.【用 exp 数 据 导 出】： 1.1 将数据库TEST完全导出,用户名system 密码manager 导出到D:\]]></description>
+</item><item>
+    <title>systemctl使用方法</title>
+    <link>https://xiaofangkang.gitee.io/systemctl/</link>
+    <pubDate>Tue, 08 Dec 2020 00:00:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>https://xiaofangkang.gitee.io/systemctl/</guid>
+    <description><![CDATA[说明 每一个服务以.service结尾，一般会分为3部分：[Unit]、[Service]和[Install] vim /usr/lib/systemd/system/xxx.service 1 2 3 4 5 6 7 8 9 10 11 12 13 14]]></description>
+</item></channel>
+</rss>

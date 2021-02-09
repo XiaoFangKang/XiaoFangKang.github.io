@@ -6,7 +6,7 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title> Kubernetes 安装手册（非高可用版） 【转】  - FangKang.Xiao 博客</title><meta name="Description" content="这是我的全新博客"><meta property="og:title" content=" Kubernetes 安装手册（非高可用版） 【转】 " />
-<meta property="og:description" content="Kubernetes 安装手册（非高可用版） [TOC] 集群信息 1. 节点规划 部署k8s集群的节点按照用途可以划分为如下2类角色： master：集群的master节点，集群的" />
+<meta property="og:description" content="Kubernetes 安装手册（非高可用版） 集群信息 1. 节点规划 部署k8s集群的节点按照用途可以划分为如下2类角色： master：集群的master节点，集群的初" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xiaofangkang.gitee.io/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88/" />
 <meta property="og:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://xiaofangkang.gitee.io/images/me/avatar.jpeg"/>
 
 <meta name="twitter:title" content=" Kubernetes 安装手册（非高可用版） 【转】 "/>
-<meta name="twitter:description" content="Kubernetes 安装手册（非高可用版） [TOC] 集群信息 1. 节点规划 部署k8s集群的节点按照用途可以划分为如下2类角色： master：集群的master节点，集群的"/>
+<meta name="twitter:description" content="Kubernetes 安装手册（非高可用版） 集群信息 1. 节点规划 部署k8s集群的节点按照用途可以划分为如下2类角色： master：集群的master节点，集群的初"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/me/avatar.jpeg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xiaofangkang.gitee.io/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88/" /><link rel="prev" href="https://xiaofangkang.gitee.io/%E5%9F%BA%E4%BA%8Edocker%E5%92%8Ckubernetes%E7%9A%84%E4%BC%81%E4%B8%9A%E7%BA%A7devops%E5%AE%9E%E8%B7%B5%E8%AE%AD%E7%BB%83%E8%90%A5/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xiaofangkang.gitee.io\/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88\/"
-        },"genre": "posts","keywords": "Docker, Kubernetes, 学习","wordcount":  3413 ,
+        },"genre": "posts","keywords": "Docker, Kubernetes, 学习","wordcount":  3747 ,
         "url": "https:\/\/xiaofangkang.gitee.io\/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88\/","datePublished": "2021-02-09T00:00:00+00:00","dateModified": "2021-02-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,8 +118,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX"> Kubernetes 安装手册（非高可用版） 【转】 </h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/kubernetes/"><i class="far fa-folder fa-fw"></i>Kubernetes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-09">2021-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3413 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88/" class="leancloud_visitors" data-flag-title=" Kubernetes 安装手册（非高可用版） 【转】 ">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-09">2021-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3747 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88/" class="leancloud_visitors" data-flag-title=" Kubernetes 安装手册（非高可用版） 【转】 ">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -163,129 +163,72 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h1 id="kubernetes-安装手册非高可用版">Kubernetes 安装手册（非高可用版）</h1>
-<p>[TOC]</p>
 <h2 id="集群信息">集群信息</h2>
 <h3 id="1-节点规划">1. 节点规划</h3>
 <p>部署k8s集群的节点按照用途可以划分为如下2类角色：</p>
 <ul>
-<li><strong>master</strong>：集群的master节点，集群的初始化节点，基础配置不低于2C4G</li>
-<li><strong>slave</strong>：集群的slave节点，可以多台，基础配置不低于2C4G</li>
+<li>
+<p><strong>master</strong>：集群的master节点，集群的初始化节点，基础配置不低于2C4G</p>
+</li>
+<li>
+<p><strong>slave</strong>：集群的slave节点，可以多台，基础配置不低于2C4G</p>
+</li>
 </ul>
 <p><strong>本例为了演示slave节点的添加，会部署一台master+2台slave</strong>，节点规划如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">主机名</th>
-<th style="text-align:center">节点ip</th>
-<th style="text-align:center">角色</th>
-<th style="text-align:center">部署组件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">k8s-master</td>
-<td style="text-align:center">172.21.32.15</td>
-<td style="text-align:center">master</td>
-<td style="text-align:center">etcd, kube-apiserver, kube-controller-manager, kubectl, kubeadm, kubelet, kube-proxy, flannel</td>
-</tr>
-<tr>
-<td style="text-align:center">k8s-slave1</td>
-<td style="text-align:center">172.21.32.11</td>
-<td style="text-align:center">slave</td>
-<td style="text-align:center">kubectl, kubelet, kube-proxy, flannel</td>
-</tr>
-<tr>
-<td style="text-align:center">k8s-slave2</td>
-<td style="text-align:center">172.21.32.9</td>
-<td style="text-align:center">slave</td>
-<td style="text-align:center">kubectl, kubelet, kube-proxy, flannel</td>
-</tr>
-</tbody>
-</table>
+<p>|主机名 |  节点ip  | 角色 | 部署组件  |</p>
+<p>|:&ndash;: | :&ndash;:  | :&ndash;: | :&mdash;&mdash;&ndash;: |</p>
+<p>|k8s-master| 172.21.32.15 | master |  etcd, kube-apiserver, kube-controller-manager, kubectl, kubeadm, kubelet, kube-proxy, flannel|</p>
+<p>|k8s-slave1 | 172.21.32.11 | slave |  kubectl, kubelet, kube-proxy, flannel  |</p>
+<p>|k8s-slave2  | 172.21.32.9 |  slave  | kubectl, kubelet, kube-proxy, flannel |</p>
 <h3 id="2-组件版本">2. 组件版本</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">组件</th>
-<th style="text-align:center">版本</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">CentOS</td>
-<td style="text-align:center">7.6.1810</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">Kernel</td>
-<td style="text-align:center">Linux 3.10.0-1062.9.1.el7.x86_64</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">etcd</td>
-<td style="text-align:center">3.3.15</td>
-<td style="text-align:left">使用容器方式部署，默认数据挂载到本地路径</td>
-</tr>
-<tr>
-<td style="text-align:center">coredns</td>
-<td style="text-align:center">1.6.2</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">kubeadm</td>
-<td style="text-align:center">v1.16.2</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">kubectl</td>
-<td style="text-align:center">v1.16.2</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">kubelet</td>
-<td style="text-align:center">v1.16.2</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">kube-proxy</td>
-<td style="text-align:center">v1.16.2</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:center">flannel</td>
-<td style="text-align:center">v0.11.0</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
+<p>| 组件      |    版本 | 说明  |</p>
+<p>| :&ndash;: | :&ndash;:| :&ndash; |</p>
+<p>| CentOS  | 7.6.1810 |     |</p>
+<p>| Kernel  | Linux 3.10.0-1062.9.1.el7.x86_64 |   |</p>
+<p>| etcd    | 3.3.15 | 使用容器方式部署，默认数据挂载到本地路径 |</p>
+<p>| coredns | 1.6.2 |  |</p>
+<p>| kubeadm | v1.16.2 |  |</p>
+<p>| kubectl | v1.16.2 |  |</p>
+<p>| kubelet | v1.16.2 |  |</p>
+<p>| kube-proxy | v1.16.2 |  |</p>
+<p>| flannel | v0.11.0 |  |</p>
 <h2 id="安装前准备工作">安装前准备工作</h2>
 <h3 id="1-设置hosts解析">1. 设置hosts解析</h3>
 <p>操作节点：所有节点（<code>k8s-master，k8s-slave</code>）均需执行</p>
 <ul>
-<li><strong>修改hostname</strong>
-hostname必须只能包含小写字母、数字、&quot;,&quot;、&quot;-&quot;，且开头结尾必须是小写字母或数字</li>
+<li><strong>修改hostname</strong></li>
 </ul>
+<p>hostname必须只能包含小写字母、数字、&quot;,&quot;、&quot;-&quot;，且开头结尾必须是小写字母或数字</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 在master节点</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="c1"># 在master节点</span>
+
 <span class="err">$</span> <span class="n">hostnamectl</span> <span class="nb">set</span><span class="o">-</span><span class="n">hostname</span> <span class="n">k8s</span><span class="o">-</span><span class="n">master</span> <span class="c1">#设置master节点的hostname</span>
 
 <span class="c1"># 在slave-1节点</span>
+
 <span class="err">$</span> <span class="n">hostnamectl</span> <span class="nb">set</span><span class="o">-</span><span class="n">hostname</span> <span class="n">k8s</span><span class="o">-</span><span class="n">slave1</span> <span class="c1">#设置slave1节点的hostname</span>
 
 <span class="c1"># 在slave-2节点</span>
+
 <span class="err">$</span> <span class="n">hostnamectl</span> <span class="nb">set</span><span class="o">-</span><span class="n">hostname</span> <span class="n">k8s</span><span class="o">-</span><span class="n">slave2</span> <span class="c1">#设置slave2节点的hostname</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -293,18 +236,30 @@ hostname必须只能包含小写字母、数字、&quot;,&quot;、&quot;-&quot;�
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">cat</span> <span class="o">&gt;&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span><span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="err">$</span> <span class="n">cat</span> <span class="o">&gt;&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span><span class="o">&lt;&lt;</span><span class="n">EOF</span>
+
 <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.15</span> <span class="n">k8s</span><span class="o">-</span><span class="n">master</span>
+
 <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.11</span> <span class="n">k8s</span><span class="o">-</span><span class="n">slave1</span>
+
 <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.9</span> <span class="n">k8s</span><span class="o">-</span><span class="n">slave2</span>
+
 <span class="n">EOF</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="2-调整系统配置">2. 调整系统配置</h3>
@@ -315,18 +270,22 @@ hostname必须只能包含小写字母、数字、&quot;,&quot;、&quot;-&quot;�
 <ul>
 <li><strong>设置安全组开放端口</strong></li>
 </ul>
-<p>如果节点间无安全组限制（内网机器间可以任意访问），可以忽略，否则，至少保证如下端口可通：
-k8s-master节点：TCP：6443，2379，2380，60080，60081UDP协议端口全部打开
-k8s-slave节点：UDP协议端口全部打开</p>
+<p>如果节点间无安全组限制（内网机器间可以任意访问），可以忽略，否则，至少保证如下端口可通：</p>
+<p>k8s-master节点：TCP：6443，2379，2380，60080，60081UDP协议端口全部打开</p>
+<p>k8s-slave节点：UDP协议端口全部打开</p>
 <ul>
 <li><strong>设置iptables</strong></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">iptables</span> <span class="o">-</span><span class="n">P</span> <span class="n">FORWARD</span> <span class="n">ACCEPT</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">iptables</span> <span class="o">-</span><span class="n">P</span> <span class="n">FORWARD</span> <span class="n">ACCEPT</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -337,11 +296,19 @@ k8s-slave节点：UDP协议端口全部打开</p>
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">swapoff</span> <span class="o">-</span><span class="n">a</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">swapoff</span> <span class="o">-</span><span class="n">a</span>
+
 <span class="c1"># 防止开机自动挂载 swap 分区</span>
+
 <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;/ swap / s/^\(.*\)$/#</span><span class="se">\1</span><span class="s1">/g&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">fstab</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -352,11 +319,19 @@ k8s-slave节点：UDP协议端口全部打开</p>
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">sed</span> <span class="o">-</span><span class="n">ri</span> <span class="s1">&#39;s#(SELINUX=).*#</span><span class="se">\1</span><span class="s1">disabled#&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">selinux</span><span class="o">/</span><span class="n">config</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">sed</span> <span class="o">-</span><span class="n">ri</span> <span class="s1">&#39;s#(SELINUX=).*#</span><span class="se">\1</span><span class="s1">disabled#&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">selinux</span><span class="o">/</span><span class="n">config</span>
+
 <span class="n">setenforce</span> <span class="mi">0</span>
+
 <span class="n">systemctl</span> <span class="n">disable</span> <span class="n">firewalld</span> <span class="o">&amp;&amp;</span> <span class="n">systemctl</span> <span class="n">stop</span> <span class="n">firewalld</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -364,24 +339,42 @@ k8s-slave节点：UDP协议端口全部打开</p>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">k8s</span><span class="o">.</span><span class="n">conf</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span>  <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">k8s</span><span class="o">.</span><span class="n">conf</span>
+
 <span class="n">net</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">bridge</span><span class="o">-</span><span class="n">nf</span><span class="o">-</span><span class="n">call</span><span class="o">-</span><span class="n">ip6tables</span> <span class="o">=</span> <span class="mi">1</span>
+
 <span class="n">net</span><span class="o">.</span><span class="n">bridge</span><span class="o">.</span><span class="n">bridge</span><span class="o">-</span><span class="n">nf</span><span class="o">-</span><span class="n">call</span><span class="o">-</span><span class="n">iptables</span> <span class="o">=</span> <span class="mi">1</span>
+
 <span class="n">net</span><span class="o">.</span><span class="n">ipv4</span><span class="o">.</span><span class="n">ip_forward</span><span class="o">=</span><span class="mi">1</span>
+
 <span class="n">vm</span><span class="o">.</span><span class="n">max_map_count</span><span class="o">=</span><span class="mi">262144</span>
+
 <span class="n">EOF</span>
+
 <span class="n">modprobe</span> <span class="n">br_netfilter</span>
+
 <span class="n">sysctl</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">k8s</span><span class="o">.</span><span class="n">conf</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -402,21 +395,49 @@ k8s-slave节点：UDP协议端口全部打开</p>
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ curl -o /etc/yum.repos.d/Centos-7.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+$ curl -o /etc/yum.repos.d/Centos-7.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
 $ curl -o /etc/yum.repos.d/docker-ce.repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
 $ cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo
+
 [kubernetes]
+
 name=Kubernetes
+
 baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+
 enabled=1
+
 gpgcheck=0
+
 repo_gpgcheck=0
+
 gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
+
         http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+
 EOF
+
 $ yum clean all &amp;&amp; yum makecache
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="3-安装docker">3. 安装docker</h3>
@@ -442,27 +463,63 @@ $ yum clean all &amp;&amp; yum makecache
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"> <span class="c1">## 查看所有的可用版本</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+ <span class="c1">## 查看所有的可用版本</span>
+
 <span class="err">$</span> <span class="n">yum</span> <span class="nb">list</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span> <span class="o">--</span><span class="n">showduplicates</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">r</span>
+
 <span class="c1">##安装旧版本 yum install docker-ce-cli-18.09.9-3.el7  docker-ce-18.09.9-3.el7</span>
+
 <span class="c1">## 安装源里最新版本</span>
+
 <span class="err">$</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">ce</span>
 
 <span class="c1">## 配置docker加速</span>
+
 <span class="err">$</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">docker</span>
+
 <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">docker</span><span class="o">/</span><span class="n">daemon</span><span class="o">.</span><span class="n">json</span>
+
 <span class="p">{</span>
+
   <span class="s2">&#34;insecure-registries&#34;</span><span class="p">:</span> <span class="p">[</span>    
+
     <span class="s2">&#34;172.21.32.15:5000&#34;</span> 
+
   <span class="p">],</span>                          
+
   <span class="s2">&#34;registry-mirrors&#34;</span> <span class="p">:</span> <span class="p">[</span>
+
     <span class="s2">&#34;https://8xpk5wnt.mirror.aliyuncs.com&#34;</span>
+
   <span class="p">]</span>
+
 <span class="p">}</span>
+
 <span class="c1">## 启动docker</span>
+
 <span class="err">$</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">docker</span> <span class="o">&amp;&amp;</span> <span class="n">systemctl</span> <span class="n">start</span> <span class="n">docker</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="部署kubernetes">部署kubernetes</h2>
@@ -470,18 +527,30 @@ $ yum clean all &amp;&amp; yum makecache
 <p>操作节点： 所有的master和slave节点(<code>k8s-master,k8s-slave</code>) 需要执行</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">$</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">-y</span> <span class="n">kubelet</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="n">kubeadm</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="n">kubectl</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-disableexcludes</span><span class="p">=</span><span class="n">kubernetes</span>
+<pre class="chroma"><code class="language-powershell" data-lang="powershell">
+<span class="p">$</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">-y</span> <span class="n">kubelet</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="n">kubeadm</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="n">kubectl</span><span class="p">-</span><span class="n">1</span><span class="p">.</span><span class="n">16</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-disableexcludes</span><span class="p">=</span><span class="n">kubernetes</span>
+
 <span class="c">## 查看kubeadm 版本</span>
+
 <span class="p">$</span> <span class="n">kubeadm</span> <span class="n">version</span>
+
 <span class="c">## 设置kubelet开机启动</span>
+
 <span class="p">$</span> <span class="n">systemctl</span> <span class="n">enable</span> <span class="n">kubelet</span> 
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="2-初始化配置文件">2. 初始化配置文件</h3>
@@ -529,49 +598,133 @@ $ yum clean all &amp;&amp; yum makecache
 </span><span class="lnt">39
 </span><span class="lnt">40
 </span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="l">$ kubeadm config print init-defaults &gt; kubeadm.yaml</span><span class="w">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">
+</span><span class="w"></span><span class="l">$ kubeadm config print init-defaults &gt; kubeadm.yaml</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">$ cat kubeadm.yaml</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">kubeadm.k8s.io/v1beta2</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">bootstrapTokens</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span>- <span class="nt">groups</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span>- <span class="l">system:bootstrappers:kubeadm:default-node-token</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l">abcdef.0123456789abcdef</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">ttl</span><span class="p">:</span><span class="w"> </span><span class="l">24h0m0s</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">usages</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span>- <span class="l">signing</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span>- <span class="l">authentication</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">InitConfiguration</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">localAPIEndpoint</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">advertiseAddress</span><span class="p">:</span><span class="w"> </span><span class="m">172.21.32.15</span><span class="w">  </span><span class="c"># apiserver地址，因为单master，所以配置master的节点内网IP</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">bindPort</span><span class="p">:</span><span class="w"> </span><span class="m">6443</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">nodeRegistration</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">criSocket</span><span class="p">:</span><span class="w"> </span><span class="l">/var/run/dockershim.sock</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">k8s-master</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">taints</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span>- <span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l">NoSchedule</span><span class="w">
+</span><span class="w">
 </span><span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">node-role.kubernetes.io/master</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">apiServer</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">timeoutForControlPlane</span><span class="p">:</span><span class="w"> </span><span class="l">4m0s</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">kubeadm.k8s.io/v1beta2</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">certificatesDir</span><span class="p">:</span><span class="w"> </span><span class="l">/etc/kubernetes/pki</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">clusterName</span><span class="p">:</span><span class="w"> </span><span class="l">kubernetes</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">controllerManager</span><span class="p">:</span><span class="w"> </span>{}<span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">dns</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">CoreDNS</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">etcd</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">local</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">    </span><span class="nt">dataDir</span><span class="p">:</span><span class="w"> </span><span class="l">/var/lib/etcd</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">imageRepository</span><span class="p">:</span><span class="w"> </span><span class="l">registry.aliyuncs.com/google_containers </span><span class="w"> </span><span class="c"># 修改成阿里镜像源</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">ClusterConfiguration</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">kubernetesVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1.16.2</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">networking</span><span class="p">:</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">dnsDomain</span><span class="p">:</span><span class="w"> </span><span class="l">cluster.local</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">podSubnet</span><span class="p">:</span><span class="w"> </span><span class="m">10.244.0.0</span><span class="l">/16 </span><span class="w"> </span><span class="c"># Pod 网段，flannel插件需要使用这个网段</span><span class="w">
+</span><span class="w">
 </span><span class="w">  </span><span class="nt">serviceSubnet</span><span class="p">:</span><span class="w"> </span><span class="m">10.96.0.0</span><span class="l">/12</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">scheduler</span><span class="p">:</span><span class="w"> </span>{}<span class="w">
+</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -599,26 +752,64 @@ $ yum clean all &amp;&amp; yum makecache
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="c1"># 查看需要使用的镜像列表,若无问题，将得到如下列表</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+  <span class="c1"># 查看需要使用的镜像列表,若无问题，将得到如下列表</span>
+
 <span class="err">$</span> <span class="n">kubeadm</span> <span class="n">config</span> <span class="n">images</span> <span class="nb">list</span> <span class="o">--</span><span class="n">config</span> <span class="n">kubeadm</span><span class="o">.</span><span class="n">yaml</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">apiserver</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">controller</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">scheduler</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">proxy</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">pause</span><span class="p">:</span><span class="mf">3.1</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">etcd</span><span class="p">:</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">15</span><span class="o">-</span><span class="mi">0</span>
+
 <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">coredns</span><span class="p">:</span><span class="mf">1.6</span><span class="o">.</span><span class="mi">2</span>
+
   <span class="c1"># 提前下载镜像到本地</span>
+
 <span class="err">$</span> <span class="n">kubeadm</span> <span class="n">config</span> <span class="n">images</span> <span class="n">pull</span> <span class="o">--</span><span class="n">config</span> <span class="n">kubeadm</span><span class="o">.</span><span class="n">yaml</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">apiserver</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">controller</span><span class="o">-</span><span class="n">manager</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">scheduler</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">kube</span><span class="o">-</span><span class="n">proxy</span><span class="p">:</span><span class="n">v1</span><span class="o">.</span><span class="mf">16.0</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">pause</span><span class="p">:</span><span class="mf">3.1</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">etcd</span><span class="p">:</span><span class="mf">3.3</span><span class="o">.</span><span class="mi">15</span><span class="o">-</span><span class="mi">0</span>
+
 <span class="p">[</span><span class="n">config</span><span class="o">/</span><span class="n">images</span><span class="p">]</span> <span class="n">Pulled</span> <span class="n">registry</span><span class="o">.</span><span class="n">aliyuncs</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">google_containers</span><span class="o">/</span><span class="n">coredns</span><span class="p">:</span><span class="mf">1.6</span><span class="o">.</span><span class="mi">2</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><p>重要更新：如果出现不可用的情况，请使用如下方式来代替：</p>
@@ -640,21 +831,45 @@ $ yum clean all &amp;&amp; yum makecache
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nn">...</span><span class="w">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">
+</span><span class="w"></span><span class="nn">...</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nt">imageRepository</span><span class="p">:</span><span class="w"> </span><span class="l">k8s.gcr.io</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="nn">...</span><span class="w">
 </span><span class="w">   
 </span><span class="w"></span><span class="c">## 查看使用的镜像源</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">kubeadm config images list --config kubeadm.yaml</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/kube-apiserver:v1.16.0</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/kube-controller-manager:v1.16.0</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/kube-scheduler:v1.16.0</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/kube-proxy:v1.16.0</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/pause:3.1</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/etcd:3.3.15-0</span><span class="w">
+</span><span class="w">
 </span><span class="w"></span><span class="l">k8s.gcr.io/coredns:1.6.2</span><span class="w">
+</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div></li>
@@ -666,12 +881,22 @@ $ yum clean all &amp;&amp; yum makecache
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ docker pull mirrorgooglecontainers/kube-scheduler-amd64:v1.16.0
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+$ docker pull mirrorgooglecontainers/kube-scheduler-amd64:v1.16.0
+
 $ docker pull mirrorgooglecontainers/etcd-amd64:3.3.15-0
+
 ...
+
 $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
+
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -681,9 +906,13 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">kubeadm</span> <span class="n">init</span> <span class="o">--</span><span class="n">config</span> <span class="n">kubeadm</span><span class="o">.</span><span class="n">yaml</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">kubeadm</span> <span class="n">init</span> <span class="o">--</span><span class="n">config</span> <span class="n">kubeadm</span><span class="o">.</span><span class="n">yaml</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><p>若初始化成功后，最后会提示如下信息：</p>
@@ -706,25 +935,41 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">...</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="o">...</span>
+
 <span class="n">Your</span> <span class="n">Kubernetes</span> <span class="n">master</span> <span class="n">has</span> <span class="n">initialized</span> <span class="n">successfully</span><span class="err">!</span>
 
 <span class="n">To</span> <span class="n">start</span> <span class="n">using</span> <span class="n">your</span> <span class="n">cluster</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">run</span> <span class="n">the</span> <span class="n">following</span> <span class="k">as</span> <span class="n">a</span> <span class="n">regular</span> <span class="n">user</span><span class="p">:</span>
 
   <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span>
+
   <span class="n">sudo</span> <span class="n">cp</span> <span class="o">-</span><span class="n">i</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">admin</span><span class="o">.</span><span class="n">conf</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span><span class="o">/</span><span class="n">config</span>
+
   <span class="n">sudo</span> <span class="n">chown</span> <span class="err">$</span><span class="p">(</span><span class="nb">id</span> <span class="o">-</span><span class="n">u</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nb">id</span> <span class="o">-</span><span class="n">g</span><span class="p">)</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span><span class="o">/</span><span class="n">config</span>
 
 <span class="n">You</span> <span class="n">should</span> <span class="n">now</span> <span class="n">deploy</span> <span class="n">a</span> <span class="n">pod</span> <span class="n">network</span> <span class="n">to</span> <span class="n">the</span> <span class="n">cluster</span><span class="o">.</span>
+
 <span class="n">Run</span> <span class="s2">&#34;kubectl apply -f [podnetwork].yaml&#34;</span> <span class="k">with</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">options</span> <span class="n">listed</span> <span class="n">at</span><span class="p">:</span>
+
   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">concepts</span><span class="o">/</span><span class="n">cluster</span><span class="o">-</span><span class="n">administration</span><span class="o">/</span><span class="n">addons</span><span class="o">/</span>
 
 <span class="n">Then</span> <span class="n">you</span> <span class="n">can</span> <span class="n">join</span> <span class="nb">any</span> <span class="n">number</span> <span class="n">of</span> <span class="n">worker</span> <span class="n">nodes</span> <span class="n">by</span> <span class="n">running</span> <span class="n">the</span> <span class="n">following</span> <span class="n">on</span> <span class="n">each</span> <span class="k">as</span> <span class="n">root</span><span class="p">:</span>
 
 <span class="n">kubeadm</span> <span class="n">join</span> <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.15</span><span class="p">:</span><span class="mi">6443</span> <span class="o">--</span><span class="n">token</span> <span class="n">abcdef</span><span class="o">.</span><span class="mo">01234567</span><span class="mi">89</span><span class="n">abcdef</span> \
+
     <span class="o">--</span><span class="n">discovery</span><span class="o">-</span><span class="n">token</span><span class="o">-</span><span class="n">ca</span><span class="o">-</span><span class="n">cert</span><span class="o">-</span><span class="nb">hash</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">1</span><span class="n">c4305f032f4bf534f628c32f5039084f4b103c922ff71b12a5f0f98d1ca9a4f</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><p>接下来按照上述提示信息操作，配置kubectl客户端的认证</p>
@@ -733,28 +978,46 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+  <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span>
+
   <span class="n">sudo</span> <span class="n">cp</span> <span class="o">-</span><span class="n">i</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">admin</span><span class="o">.</span><span class="n">conf</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span><span class="o">/</span><span class="n">config</span>
+
   <span class="n">sudo</span> <span class="n">chown</span> <span class="err">$</span><span class="p">(</span><span class="nb">id</span> <span class="o">-</span><span class="n">u</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nb">id</span> <span class="o">-</span><span class="n">g</span><span class="p">)</span> <span class="err">$</span><span class="n">HOME</span><span class="o">/.</span><span class="n">kube</span><span class="o">/</span><span class="n">config</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>**⚠️注意：**此时使用 kubectl get nodes查看节点应该处于notReady状态，因为还未配置网络插件</p>
+</blockquote>
+<blockquote>
+</blockquote>
+<blockquote>
 <p>若执行初始化过程中出错，根据错误信息调整后，执行kubeadm reset后再次执行init操作即可</p>
 </blockquote>
 <h3 id="5-添加slave节点到集群中">5. 添加slave节点到集群中</h3>
-<p>操作节点：所有的slave节点（<code>k8s-slave</code>）需要执行
-在每台slave节点，执行如下命令，该命令是在kubeadm init成功后提示信息中打印出来的，需要替换成实际init后打印出的命令。</p>
+<p>操作节点：所有的slave节点（<code>k8s-slave</code>）需要执行</p>
+<p>在每台slave节点，执行如下命令，该命令是在kubeadm init成功后提示信息中打印出来的，需要替换成实际init后打印出的命令。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">kubeadm</span> <span class="n">join</span> <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.15</span><span class="p">:</span><span class="mi">6443</span> <span class="o">--</span><span class="n">token</span> <span class="n">abcdef</span><span class="o">.</span><span class="mo">01234567</span><span class="mi">89</span><span class="n">abcdef</span> \
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="n">kubeadm</span> <span class="n">join</span> <span class="mf">172.21</span><span class="o">.</span><span class="mf">32.15</span><span class="p">:</span><span class="mi">6443</span> <span class="o">--</span><span class="n">token</span> <span class="n">abcdef</span><span class="o">.</span><span class="mo">01234567</span><span class="mi">89</span><span class="n">abcdef</span> \
+
     <span class="o">--</span><span class="n">discovery</span><span class="o">-</span><span class="n">token</span><span class="o">-</span><span class="n">ca</span><span class="o">-</span><span class="n">cert</span><span class="o">-</span><span class="nb">hash</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">1</span><span class="n">c4305f032f4bf534f628c32f5039084f4b103c922ff71b12a5f0f98d1ca9a4f</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="6-安装flannel插件">6. 安装flannel插件</h3>
@@ -765,9 +1028,13 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="nb">wget </span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">raw</span><span class="p">.</span><span class="n">githubusercontent</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">coreos</span><span class="p">/</span><span class="n">flannel</span><span class="p">/</span><span class="n">2140ac876ef134e0ed5af15c65e414cf26827915</span><span class="p">/</span><span class="n">Documentation</span><span class="p">/</span><span class="n">kube-flannel</span><span class="p">.</span><span class="n">yml</span>
+<pre class="chroma"><code class="language-powershell" data-lang="powershell">
+<span class="nb">wget </span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">raw</span><span class="p">.</span><span class="n">githubusercontent</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">coreos</span><span class="p">/</span><span class="n">flannel</span><span class="p">/</span><span class="n">2140ac876ef134e0ed5af15c65e414cf26827915</span><span class="p">/</span><span class="n">Documentation</span><span class="p">/</span><span class="n">kube-flannel</span><span class="p">.</span><span class="n">yml</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -790,23 +1057,55 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ vi kube-flannel.yml
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+$ vi kube-flannel.yml
+
 ...      
+
       containers:
+
       - name: kube-flannel
+
         image: quay.io/coreos/flannel:v0.11.0-amd64
+
         command:
+
         - /opt/bin/flanneld
+
         args:
+
         - --ip-masq
+
         - --kube-subnet-mgr
+
         - --iface=eth0  # 如果机器存在多网卡的话，指定内网网卡的名称，默认不指定的话会找第一块网
+
         resources:
+
           requests:
+
             cpu: &#34;100m&#34;
+
 ...
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -818,12 +1117,22 @@ $ docker tag mirrorgooglecontainers/etcd-amd64:3.3.15-0 k8s.gcr.io/etcd:3.3.15-0
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 先拉取镜像,此过程国内速度比较慢
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+# 先拉取镜像,此过程国内速度比较慢
+
 $ docker pull quay.io/coreos/flannel:v0.11.0-amd64
+
 # 执行flannel安装
+
 $ kubectl create -f kube-flannel.yml
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="7--设置master节点是否可调度可选">7.  设置master节点是否可调度（可选）</h3>
@@ -832,9 +1141,13 @@ $ kubectl create -f kube-flannel.yml
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">kubectl</span> <span class="n">taint</span> <span class="n">node</span> <span class="n">k8s</span><span class="o">-</span><span class="n">master</span> <span class="n">node</span><span class="o">-</span><span class="n">role</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">master</span><span class="p">:</span><span class="n">NoSchedule</span><span class="o">-</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="err">$</span> <span class="n">kubectl</span> <span class="n">taint</span> <span class="n">node</span> <span class="n">k8s</span><span class="o">-</span><span class="n">master</span> <span class="n">node</span><span class="o">-</span><span class="n">role</span><span class="o">.</span><span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">master</span><span class="p">:</span><span class="n">NoSchedule</span><span class="o">-</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="8-验证集群">8. 验证集群</h3>
@@ -845,21 +1158,35 @@ $ kubectl create -f kube-flannel.yml
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">kubectl</span> <span class="n">get</span> <span class="n">nodes</span>  <span class="c1">#观察集群节点是否全部Ready</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="err">$</span> <span class="n">kubectl</span> <span class="n">get</span> <span class="n">nodes</span>  <span class="c1">#观察集群节点是否全部Ready</span>
+
 <span class="n">NAME</span>                <span class="n">STATUS</span>   <span class="n">ROLES</span>    <span class="n">AGE</span>   <span class="n">VERSION</span>
+
 <span class="n">k8s</span><span class="o">-</span><span class="n">master</span>   <span class="n">Ready</span>    <span class="n">master</span>   <span class="mi">22</span><span class="n">h</span>   <span class="n">v1</span><span class="o">.</span><span class="mf">13.3</span>
+
 <span class="n">k8s</span><span class="o">-</span><span class="n">slave</span>   <span class="n">Ready</span>    <span class="o">&lt;</span><span class="n">none</span><span class="o">&gt;</span>   <span class="mi">22</span><span class="n">h</span>   <span class="n">v1</span><span class="o">.</span><span class="mf">13.3</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><p>创建测试nginx服务</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">kubectl</span> <span class="n">run</span>  <span class="n">test</span><span class="o">-</span><span class="n">nginx</span> <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">nginx</span><span class="p">:</span><span class="n">alpine</span>
+<pre class="chroma"><code class="language-python" data-lang="python">
+<span class="err">$</span> <span class="n">kubectl</span> <span class="n">run</span>  <span class="n">test</span><span class="o">-</span><span class="n">nginx</span> <span class="o">--</span><span class="n">image</span><span class="o">=</span><span class="n">nginx</span><span class="p">:</span><span class="n">alpine</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><p>查看pod是否创建成功，并访问pod ip测试是否可用</p>
@@ -882,25 +1209,53 @@ $ kubectl create -f kube-flannel.yml
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">$</span> <span class="n">kubectl</span> <span class="n">get</span> <span class="n">po</span> <span class="n">-o</span> <span class="n">wide</span>
+<pre class="chroma"><code class="language-powershell" data-lang="powershell">
+<span class="p">$</span> <span class="n">kubectl</span> <span class="n">get</span> <span class="n">po</span> <span class="n">-o</span> <span class="n">wide</span>
+
 <span class="n">NAME</span>                          <span class="n">READY</span>   <span class="n">STATUS</span>    <span class="n">RESTARTS</span>   <span class="n">AGE</span>   <span class="n">IP</span>           <span class="n">NODE</span>         <span class="n">NOMINATED</span> <span class="n">NODE</span>   <span class="n">READINESS</span> <span class="n">GATES</span>
+
 <span class="nb">test-nginx</span><span class="p">-</span><span class="n">5bd8859b98</span><span class="p">-</span><span class="n">5nnnw</span>   <span class="n">1</span><span class="p">/</span><span class="n">1</span>     <span class="n">Running</span>   <span class="n">0</span>          <span class="n">9s</span>    <span class="n">10</span><span class="p">.</span><span class="n">244</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">2</span>   <span class="n">k8s-slave1</span>   <span class="p">&lt;</span><span class="n">none</span><span class="p">&gt;</span>           <span class="p">&lt;</span><span class="n">none</span><span class="p">&gt;</span>
+
 <span class="p">$</span> <span class="nb">curl </span><span class="n">10</span><span class="p">.</span><span class="n">244</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">2</span>
+
 <span class="p">...</span>
+
 <span class="p">&lt;</span><span class="n">h1</span><span class="p">&gt;</span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">nginx</span><span class="p">!&lt;/</span><span class="n">h1</span><span class="p">&gt;</span>
+
 <span class="p">&lt;</span><span class="n">p</span><span class="p">&gt;</span><span class="k">If</span> <span class="n">you</span> <span class="n">see</span> <span class="n">this</span> <span class="n">page</span><span class="p">,</span> <span class="n">the</span> <span class="n">nginx</span> <span class="n">web</span> <span class="n">server</span> <span class="n">is</span> <span class="n">successfully</span> <span class="n">installed</span> <span class="n">and</span>
+
 <span class="n">working</span><span class="p">.</span> <span class="n">Further</span> <span class="n">configuration</span> <span class="n">is</span> <span class="n">required</span><span class="p">.&lt;/</span><span class="n">p</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="n">p</span><span class="p">&gt;</span><span class="k">For</span> <span class="n">online</span> <span class="n">documentation</span> <span class="n">and</span> <span class="n">support</span> <span class="n">please</span> <span class="n">refer</span> <span class="n">to</span>
+
 <span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s2">&#34;http://nginx.org/&#34;</span><span class="p">&gt;</span><span class="n">nginx</span><span class="p">.</span><span class="n">org</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;.&lt;</span><span class="n">br</span><span class="p">/&gt;</span>
+
 <span class="n">Commercial</span> <span class="n">support</span> <span class="n">is</span> <span class="n">available</span> <span class="n">at</span>
+
 <span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s2">&#34;http://nginx.com/&#34;</span><span class="p">&gt;</span><span class="n">nginx</span><span class="p">.</span><span class="n">com</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;.&lt;/</span><span class="n">p</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="n">p</span><span class="p">&gt;&lt;</span><span class="n">em</span><span class="p">&gt;</span><span class="n">Thank</span> <span class="n">you</span> <span class="k">for</span> <span class="n">using</span> <span class="n">nginx</span><span class="p">.&lt;/</span><span class="n">em</span><span class="p">&gt;&lt;/</span><span class="n">p</span><span class="p">&gt;</span>
+
 <span class="p">&lt;/</span><span class="n">body</span><span class="p">&gt;</span>
+
 <span class="p">&lt;/</span><span class="n">html</span><span class="p">&gt;</span>
+
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="9-部署dashboard">9. 部署dashboard</h3>
@@ -929,28 +1284,70 @@ $ kubectl create -f kube-flannel.yml
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 推荐使用下面这种方式
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+# 推荐使用下面这种方式
+
 $ wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta5/aio/deploy/recommended.yaml
+
 $ vi recommended.yaml
+
 # 修改Service为NodePort类型
+
 ......
+
 kind: Service
+
 apiVersion: v1
+
 metadata:
+
   labels:
+
     k8s-app: kubernetes-dashboard
+
   name: kubernetes-dashboard
+
   namespace: kubernetes-dashboard
+
 spec:
+
   ports:
+
     - port: 443
+
       targetPort: 8443
+
   selector:
+
     k8s-app: kubernetes-dashboard
+
   type: NodePort  # 加上type=NodePort变成NodePort类型的服务
+
 ......
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -958,18 +1355,30 @@ spec:
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">kubectl</span> <span class="n">create</span> <span class="o">-f</span> <span class="n">recommended</span><span class="p">.</span><span class="n">yaml</span>
+<pre class="chroma"><code class="language-powershell" data-lang="powershell">
+<span class="n">kubectl</span> <span class="n">create</span> <span class="o">-f</span> <span class="n">recommended</span><span class="p">.</span><span class="n">yaml</span>
+
 <span class="n">kubectl</span> <span class="n">-n</span> <span class="n">kubernetes-dashboard</span> <span class="n">get</span> <span class="n">svc</span>
+
 <span class="n">NAME</span>                        <span class="nb">TYPE </span>       <span class="n">CLUSTER-IP</span>      <span class="n">EXTERNAL-IP</span>   <span class="n">PORT</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>         <span class="n">AGE</span>
+
 <span class="n">dashboard-metrics-scraper</span>   <span class="n">ClusterIP</span>   <span class="n">10</span><span class="p">.</span><span class="n">105</span><span class="p">.</span><span class="n">62</span><span class="p">.</span><span class="n">124</span>   <span class="p">&lt;</span><span class="n">none</span><span class="p">&gt;</span>        <span class="n">8000</span><span class="p">/</span><span class="n">TCP</span>        <span class="n">31m</span>
+
 <span class="n">kubernetes-dashboard</span>        <span class="n">NodePort</span>    <span class="n">10</span><span class="p">.</span><span class="n">103</span><span class="p">.</span><span class="n">74</span><span class="p">.</span><span class="n">46</span>    <span class="p">&lt;</span><span class="n">none</span><span class="p">&gt;</span>        <span class="n">443</span><span class="err">:</span><span class="n">30133</span><span class="p">/</span><span class="n">TCP</span>   <span class="n">31m</span> 
+
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1012,36 +1421,86 @@ spec:
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ vi admin.conf
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+$ vi admin.conf
+
 kind: ClusterRoleBinding
+
 apiVersion: rbac.authorization.k8s.io/v1beta1
+
 metadata:
+
   name: admin
+
   annotations:
+
     rbac.authorization.kubernetes.io/autoupdate: &#34;true&#34;
+
 roleRef:
+
   kind: ClusterRole
+
   name: cluster-admin
+
   apiGroup: rbac.authorization.k8s.io
+
 subjects:
+
 - kind: ServiceAccount
+
   name: admin
+
   namespace: kubernetes-dashboard
 
 ---
+
 apiVersion: v1
+
 kind: ServiceAccount
+
 metadata:
+
   name: admin
+
   namespace: kubernetes-dashboard
 
 $ kubectl create -f admin.conf
+
 $ kubectl -n kubernetes-dashboard get secret |grep admin-token
+
 admin-token-fqdpf                  kubernetes.io/service-account-token   3      7m17s
+
 # 使用该命令拿到token，然后粘贴到
+
 $ kubectl -n kubernetes-dashboard get secret admin-token-fqdpf -o jsonpath={.data.token}|base64 -d
+
 eyJhbGciOiJSUzI1NiIsImtpZCI6Ik1rb2xHWHMwbWFPMjJaRzhleGRqaExnVi1BLVNRc2txaEhETmVpRzlDeDQifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi10b2tlbi1mcWRwZiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJhZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjYyNWMxNjJlLTQ1ZG...
 
 </code></pre></td></tr></table>
@@ -1070,12 +1529,22 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6Ik1rb2xHWHMwbWFPMjJaRzhleGRqaExnVi1BLVNRc2txaEhETmVp
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ kubeadm reset
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+$ kubeadm reset
+
 $ ifconfig cni0 down &amp;&amp; ip link delete cni0
+
 $ ifconfig flannel.1 down &amp;&amp; ip link delete flannel.1
+
 $ rm -rf /var/lib/cni/
+
 </code></pre></td></tr></table>
 </div>
 </div></div><div class="post-footer" id="post-footer">
