@@ -165,7 +165,7 @@ Container Runtime：通过Linux内核虚拟化能力管理多个容器，多个�
 
 13年成立，15年开始，迎来了飞速发展。
 
-![](C:\Users\liyongxin\Desktop\wework\老男孩\训练营\/images/deplpment.png)
+![](/images/deplpment.png)
 
 Docker 1.8之前，使用[LXC](https://linuxcontainers.org/fr/lxc/introduction/)，Docker在上层做了封装， 把LXC复杂的容器创建与使用方式简化为自己的一套命令体系。 
 
@@ -5166,7 +5166,7 @@ Certificate:
 
  kubeadm在init初始引导集群启动过程中，创建了许多`default`的`role、clusterrole、rolebinding`和`clusterrolebinding`， 在k8s有关RBAC的官方文档中，我们看到下面一些`default clusterrole`列表: 
 
-![](C:\Users\liyongxin\Desktop\wework\老男孩\训练营\/images/kubeadm-default-clusterrole-list.png)
+![](/images/kubeadm-default-clusterrole-list.png)
 
 其中第一个cluster-admin这个cluster role binding绑定了system:masters group，这和authentication环节传递过来的身份信息不谋而合。 沿着system:masters group对应的cluster-admin clusterrolebinding“追查”下去，真相就会浮出水面。
 

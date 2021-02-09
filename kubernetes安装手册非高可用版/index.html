@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xiaofangkang.gitee.io\/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88\/"
-        },"genre": "posts","keywords": "Docker, Kubernetes, 学习","wordcount":  3747 ,
+        },"genre": "posts","keywords": "Docker, Kubernetes, 学习","wordcount":  3678 ,
         "url": "https:\/\/xiaofangkang.gitee.io\/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88\/","datePublished": "2021-02-09T00:00:00+00:00","dateModified": "2021-02-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -118,7 +118,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX"> Kubernetes 安装手册（非高可用版） 【转】 </h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/about/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>FangKang.Xiao</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/kubernetes/"><i class="far fa-folder fa-fw"></i>Kubernetes</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-09">2021-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3747 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-02-09">2021-02-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3678 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 8 分钟&nbsp;<span id="/kubernetes%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C%E9%9D%9E%E9%AB%98%E5%8F%AF%E7%94%A8%E7%89%88/" class="leancloud_visitors" data-flag-title=" Kubernetes 安装手册（非高可用版） 【转】 ">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -175,23 +175,93 @@
 </li>
 </ul>
 <p><strong>本例为了演示slave节点的添加，会部署一台master+2台slave</strong>，节点规划如下：</p>
-<p>|主机名 |  节点ip  | 角色 | 部署组件  |</p>
-<p>|:&ndash;: | :&ndash;:  | :&ndash;: | :&mdash;&mdash;&ndash;: |</p>
-<p>|k8s-master| 172.21.32.15 | master |  etcd, kube-apiserver, kube-controller-manager, kubectl, kubeadm, kubelet, kube-proxy, flannel|</p>
-<p>|k8s-slave1 | 172.21.32.11 | slave |  kubectl, kubelet, kube-proxy, flannel  |</p>
-<p>|k8s-slave2  | 172.21.32.9 |  slave  | kubectl, kubelet, kube-proxy, flannel |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">主机名</th>
+<th style="text-align:center">节点ip</th>
+<th style="text-align:center">角色</th>
+<th style="text-align:center">部署组件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">k8s-master</td>
+<td style="text-align:center">172.21.32.15</td>
+<td style="text-align:center">master</td>
+<td style="text-align:center">etcd, kube-apiserver, kube-controller-manager, kubectl, kubeadm, kubelet, kube-proxy, flannel</td>
+</tr>
+<tr>
+<td style="text-align:center">k8s-slave1</td>
+<td style="text-align:center">172.21.32.11</td>
+<td style="text-align:center">slave</td>
+<td style="text-align:center">kubectl, kubelet, kube-proxy, flannel</td>
+</tr>
+<tr>
+<td style="text-align:center">k8s-slave2</td>
+<td style="text-align:center">172.21.32.9</td>
+<td style="text-align:center">slave</td>
+<td style="text-align:center">kubectl, kubelet, kube-proxy, flannel</td>
+</tr>
+</tbody>
+</table>
 <h3 id="2-组件版本">2. 组件版本</h3>
-<p>| 组件      |    版本 | 说明  |</p>
-<p>| :&ndash;: | :&ndash;:| :&ndash; |</p>
-<p>| CentOS  | 7.6.1810 |     |</p>
-<p>| Kernel  | Linux 3.10.0-1062.9.1.el7.x86_64 |   |</p>
-<p>| etcd    | 3.3.15 | 使用容器方式部署，默认数据挂载到本地路径 |</p>
-<p>| coredns | 1.6.2 |  |</p>
-<p>| kubeadm | v1.16.2 |  |</p>
-<p>| kubectl | v1.16.2 |  |</p>
-<p>| kubelet | v1.16.2 |  |</p>
-<p>| kube-proxy | v1.16.2 |  |</p>
-<p>| flannel | v0.11.0 |  |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">组件</th>
+<th style="text-align:center">版本</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CentOS</td>
+<td style="text-align:center">7.6.1810</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">Kernel</td>
+<td style="text-align:center">Linux 3.10.0-1062.9.1.el7.x86_64</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">etcd</td>
+<td style="text-align:center">3.3.15</td>
+<td style="text-align:left">使用容器方式部署，默认数据挂载到本地路径</td>
+</tr>
+<tr>
+<td style="text-align:center">coredns</td>
+<td style="text-align:center">1.6.2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">kubeadm</td>
+<td style="text-align:center">v1.16.2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">kubectl</td>
+<td style="text-align:center">v1.16.2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">kubelet</td>
+<td style="text-align:center">v1.16.2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">kube-proxy</td>
+<td style="text-align:center">v1.16.2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">flannel</td>
+<td style="text-align:center">v0.11.0</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
 <h2 id="安装前准备工作">安装前准备工作</h2>
 <h3 id="1-设置hosts解析">1. 设置hosts解析</h3>
 <p>操作节点：所有节点（<code>k8s-master，k8s-slave</code>）均需执行</p>

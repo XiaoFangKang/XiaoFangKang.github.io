@@ -19,37 +19,23 @@
 **本例为了演示slave节点的添加，会部署一台master+2台slave**，节点规划如下：
 
 |主机名 |  节点ip  | 角色 | 部署组件  |
-
-|:--: | :--:  | :--: | :--------: |
-
+| :---: | :---: | :---: | :---: |
 |k8s-master| 172.21.32.15 | master |  etcd, kube-apiserver, kube-controller-manager, kubectl, kubeadm, kubelet, kube-proxy, flannel|
-
 |k8s-slave1 | 172.21.32.11 | slave |  kubectl, kubelet, kube-proxy, flannel  |
-
 |k8s-slave2  | 172.21.32.9 |  slave  | kubectl, kubelet, kube-proxy, flannel |
 
 ### 2. 组件版本
 
-| 组件      |    版本 | 说明  |
-
-| :--: | :--:| :-- |
-
+|  组件  | 版本  |说明  |
+| :---: | :---: |:--- |
 | CentOS  | 7.6.1810 |     |
-
 | Kernel  | Linux 3.10.0-1062.9.1.el7.x86_64 |   |
-
 | etcd    | 3.3.15 | 使用容器方式部署，默认数据挂载到本地路径 |
-
 | coredns | 1.6.2 |  |
-
 | kubeadm | v1.16.2 |  |
-
 | kubectl | v1.16.2 |  |
-
 | kubelet | v1.16.2 |  |
-
 | kube-proxy | v1.16.2 |  |
-
 | flannel | v0.11.0 |  |
 
 ## 安装前准备工作
